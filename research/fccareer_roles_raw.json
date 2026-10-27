@@ -1,0 +1,1680 @@
+{
+ "advanced_forward": {
+  "url": "https://www.fccareer.ai/roles/advanced_forward",
+  "positions": [
+   [
+    "ST",
+    [
+     "Attack",
+     "Versatile"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Runs the last defender's shoulder, stretches the line and attacks every depth run behind the back line.",
+   "Out of possession",
+   "Presses the centre-backs from the front and leads the counter-press."
+  ],
+  "Out of possession": [
+   "Presses the centre-backs from the front and leads the counter-press.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Can get isolated against a back three",
+   "Offers very little link play between the lines",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Fits every formation in the game",
+   "Maximum penalty-box presence",
+   "The simplest striker role to staff on any budget"
+  ],
+  "focusChanges": [
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Versatile",
+   "Adapts to the phase — joins the attack or drops in as the game demands.",
+   "Advertisement",
+   "Best",
+   "Advanced Forward"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Advanced Forward",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Pace",
+   "Shooting"
+  ],
+  "scout": "Pace, Shooting, Positioning, Composure"
+ },
+ "attacking_wingback": {
+  "url": "https://www.fccareer.ai/roles/attacking_wingback",
+  "positions": [
+   [
+    "LB",
+    [
+     "Support",
+     "Attack"
+    ]
+   ],
+   [
+    "RB",
+    [
+     "Support",
+     "Attack"
+    ]
+   ],
+   [
+    "LWB",
+    [
+     "Support",
+     "Attack"
+    ]
+   ],
+   [
+    "RWB",
+    [
+     "Support",
+     "Attack"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Plays as a winger: holds the byline, overlaps constantly and attacks the box as a genuine fifth attacker.",
+   "Out of possession",
+   "Recovers late and narrow, so the wide centre-back has to hold the channel behind him."
+  ],
+  "Out of possession": [
+   "Recovers late and narrow, so the wide centre-back has to hold the channel behind him.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "The space behind him is the obvious counter-attack target",
+   "Useless without three centre-backs covering behind",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Turns a back five into a front five in attack",
+   "Creates constant 2v1s down the flank",
+   "Highest assist volume of any defender role"
+  ],
+  "focusChanges": [
+   "Support",
+   "Offers a passing option and joins attacks in support without leading them.",
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Advertisement",
+   "Best",
+   "Attacking Wingback"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Attacking Wingback",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Pace",
+   "Crossing"
+  ],
+  "scout": "Pace, Crossing, Stamina, Dribbling"
+ },
+ "ball_playing_defender": {
+  "url": "https://www.fccareer.ai/roles/ball_playing_defender",
+  "positions": [
+   [
+    "CB",
+    [
+     "Defend",
+     "Build-Up"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Carries out of the back line, breaks the first line with a pass and effectively joins the midfield during the first phase.",
+   "Out of possession",
+   "Defends normally once the ball is lost, but can be caught high up the pitch on a turnover."
+  ],
+  "Out of possession": [
+   "Defends normally once the ball is lost, but can be caught high up the pitch on a turnover.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Out of position on turnovers",
+   "Needs a genuine passer — an average one makes the role pointless",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Turns a back four into a back three in possession",
+   "Beats a high press without spending a midfielder on it",
+   "Creates overloads in the first phase against a front two"
+  ],
+  "focusChanges": [
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Build-Up",
+   "Prioritises receiving and progressing the ball in the first phase.",
+   "Advertisement",
+   "Best",
+   "Ball-Playing Defender"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Ball-Playing Defender",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Passing",
+   "Composure"
+  ],
+  "scout": "Passing, Composure, Defending, Vision"
+ },
+ "ball_playing_keeper": {
+  "url": "https://www.fccareer.ai/roles/ball_playing_keeper",
+  "positions": [
+   [
+    "GK",
+    [
+     "Build-Up"
+    ]
+   ]
+  ],
+  "In possession": [
+   "The elite build-up outlet: finds the free man under pressure and breaks the first line with angled passes into the pivot or the wide centre-back.",
+   "Out of possession",
+   "Conservative — stays home, organises the wall and does not chase outside the box."
+  ],
+  "Out of possession": [
+   "Conservative — stays home, organises the wall and does not chase outside the box.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Will not sweep balls in behind — the high line is unprotected",
+   "A poor passer wastes the entire role",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Best distribution of any keeper role",
+   "Beats the first press without needing an extra deep midfielder",
+   "Keeps a reliable shot-stopping base underneath it"
+  ],
+  "focusChanges": [
+   "Build-Up",
+   "Prioritises receiving and progressing the ball in the first phase.",
+   "Advertisement",
+   "Best",
+   "Ball-Playing Keeper",
+   "players in",
+   "FC 27"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Ball-Playing Keeper",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Passing",
+   "Composure"
+  ],
+  "scout": "Passing, Composure, Vision, Kicking"
+ },
+ "box_crasher": {
+  "url": "https://www.fccareer.ai/roles/box_crasher",
+  "positions": [
+   [
+    "CDM",
+    [
+     "Balanced"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Joins the attack late, arriving in the box as a second wave once the move is already established.",
+   "Out of possession",
+   "Recovers straight back into the pivot and defends as a normal holding midfielder."
+  ],
+  "Out of possession": [
+   "Recovers straight back into the pivot and defends as a normal holding midfielder.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Leaves the pivot empty on turnovers",
+   "Needs a genuinely disciplined partner beside him",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Adds goals from midfield without a second striker",
+   "Arrives unmarked — defenders are already tracking the forwards",
+   "Perfect against a deep block that refuses to open up"
+  ],
+  "focusChanges": [
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Advertisement",
+   "Best",
+   "Box Crasher",
+   "players in",
+   "FC 27"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Box Crasher",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Stamina",
+   "Positioning"
+  ],
+  "scout": "Stamina, Positioning, Shooting, Passing"
+ },
+ "box_to_box": {
+  "url": "https://www.fccareer.ai/roles/box_to_box",
+  "positions": [
+   [
+    "CM",
+    [
+     "Balanced",
+     "Ball-Winning"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Arrives in the box, carries the ball forward and links all three thirds of the pitch.",
+   "Out of possession",
+   "Presses, tracks runners and recovers into the defensive block behind the ball."
+  ],
+  "Out of possession": [
+   "Presses, tracks runners and recovers into the defensive block behind the ball.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Highest stamina demand of any central role",
+   "Does nothing at an elite level without top-end stamina",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Covers every phase of the game from box to box",
+   "Fastest development curve for a wonderkid midfielder",
+   "Fits any midfield shape you can build"
+  ],
+  "focusChanges": [
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Ball-Winning",
+   "Hunts the ball — presses earlier and tackles more aggressively.",
+   "Advertisement",
+   "Best",
+   "Box-to-Box"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Box-to-Box",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Stamina",
+   "Passing"
+  ],
+  "scout": "Stamina, Passing, Defending, Shooting"
+ },
+ "centre_half": {
+  "url": "https://www.fccareer.ai/roles/centre_half",
+  "positions": [
+   [
+    "CDM",
+    [
+     "Defend"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Drops between the centre-backs to build a temporary back three, letting both fullbacks push on at the same time.",
+   "Out of possession",
+   "Sits as the deepest midfielder and guards the zone directly in front of the box."
+  ],
+  "Out of possession": [
+   "Sits as the deepest midfielder and guards the zone directly in front of the box.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Leaves a hole in midfield the moment possession is lost",
+   "Needs centre-backs who can pass, or the back three stalls",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Lets both fullbacks attack simultaneously",
+   "Turns a back four into a back three on the ball",
+   "Excellent against direct long-ball sides"
+  ],
+  "focusChanges": [
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Advertisement",
+   "Best",
+   "Centre-Half",
+   "players in",
+   "FC 27"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Centre-Half",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Defending",
+   "Physicality"
+  ],
+  "scout": "Defending, Physicality, Positioning, Passing"
+ },
+ "classic_10": {
+  "url": "https://www.fccareer.ai/roles/classic_10",
+  "positions": [
+   [
+    "CAM",
+    [
+     "Versatile",
+     "Wide",
+     "Attack"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Sits in the hole, receives between the lines and feeds both the striker and the wide players.",
+   "Out of possession",
+   "Stays high and presses the pivot rather than tracking back into midfield."
+  ],
+  "Out of possession": [
+   "Stays high and presses the pivot rather than tracking back into midfield.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Exposed against an opponent's midfield three",
+   "Needs a genuine ten profile — converted wingers struggle",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "The best link between midfield and attack",
+   "Three focuses let him attack, hold or drift wide in one role",
+   "Ideal for a 4-4-1-1 or a narrow 4-3-1-2"
+  ],
+  "focusChanges": [
+   "Versatile",
+   "Adapts to the phase — joins the attack or drops in as the game demands.",
+   "Wide",
+   "Holds or drifts into wide areas to stretch the opponent's shape.",
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Advertisement"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Classic 10",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Passing",
+   "Vision"
+  ],
+  "scout": "Passing, Vision, Dribbling, Composure"
+ },
+ "deep_lying_playmaker": {
+  "url": "https://www.fccareer.ai/roles/deep_lying_playmaker",
+  "positions": [
+   [
+    "CDM",
+    [
+     "Defend",
+     "Roaming"
+    ]
+   ],
+   [
+    "CM",
+    [
+     "Defend"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Dictates the tempo from in front of the back line: receives off the centre-backs, switches play and breaks lines.",
+   "Out of possession",
+   "Positions well and shields the passing lane, but is not a ball-winner — the tackling is somebody else's job."
+  ],
+  "Out of possession": [
+   "Positions well and shields the passing lane, but is not a ball-winner — the tackling is somebody else's job.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Weak in the tackle against a physical opponent",
+   "Needs a ball-winner right next to him",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "The single most influential passing role in the game",
+   "Beats the press from deep without losing a midfielder",
+   "Sets the tempo for a genuine possession side"
+  ],
+  "focusChanges": [
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Roaming",
+   "Leaves his zone to find space anywhere on the pitch.",
+   "Advertisement",
+   "Best",
+   "Deep-Lying Playmaker"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Deep-Lying Playmaker",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Passing",
+   "Vision"
+  ],
+  "scout": "Passing, Vision, Composure, Positioning"
+ },
+ "defender": {
+  "url": "https://www.fccareer.ai/roles/defender",
+  "positions": [
+   [
+    "CB",
+    [
+     "Defend",
+     "Balanced"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Keeps it simple: recycles along the back line and leaves progression to the midfield or the fullbacks.",
+   "Out of possession",
+   "Holds the line, blocks shots, wins aerial duels and covers the channel when a fullback is beaten."
+  ],
+  "Out of possession": [
+   "Holds the line, blocks shots, wins aerial duels and covers the channel when a fullback is beaten.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Contributes no progression from the back",
+   "Can be pressed into errors when he has no short outlet",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "The most positionally reliable centre-back role in the game",
+   "Excellent against pace-heavy front lines",
+   "No stamina drain — plays every minute of a three-game week"
+  ],
+  "focusChanges": [
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Advertisement",
+   "Best",
+   "Defender"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Defender",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Defending",
+   "Physicality"
+  ],
+  "scout": "Defending, Physicality, Heading, Positioning"
+ },
+ "false_9": {
+  "url": "https://www.fccareer.ai/roles/false_9",
+  "positions": [
+   [
+    "ST",
+    [
+     "Build-Up",
+     "Attack"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Drops into midfield to link play, dragging centre-backs out of the line and opening the channel for runners.",
+   "Out of possession",
+   "Presses the opposition pivot and closes the central passing lane."
+  ],
+  "Out of possession": [
+   "Presses the opposition pivot and closes the central passing lane.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Leaves no penalty-box presence whatsoever",
+   "Useless without runners arriving from wide and midfield",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Creates a 4v3 overload in midfield",
+   "Drags defenders out and opens the channel behind them",
+   "Perfect for a creative forward with no pace"
+  ],
+  "focusChanges": [
+   "Build-Up",
+   "Prioritises receiving and progressing the ball in the first phase.",
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Advertisement",
+   "Best",
+   "False 9"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "False 9",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Passing",
+   "Dribbling"
+  ],
+  "scout": "Passing, Dribbling, Vision, Composure"
+ },
+ "falseback": {
+  "url": "https://www.fccareer.ai/roles/falseback",
+  "positions": [
+   [
+    "LB",
+    [
+     "Defend",
+     "Balanced"
+    ]
+   ],
+   [
+    "RB",
+    [
+     "Defend",
+     "Balanced"
+    ]
+   ],
+   [
+    "LWB",
+    [
+     "Defend",
+     "Balanced"
+    ]
+   ],
+   [
+    "RWB",
+    [
+     "Defend",
+     "Balanced"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Inverts next to the holding midfielder, forming a back three and a double pivot on the ball without changing the formation.",
+   "Out of possession",
+   "Recovers into the back four and defends as a normal fullback the moment possession is lost."
+  ],
+  "Out of possession": [
+   "Recovers into the back four and defends as a normal fullback the moment possession is lost.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Leaves the flank empty during the opposition's transition",
+   "Needs a midfielder genuinely comfortable receiving under pressure",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Adds midfield numbers without switching to a back three",
+   "Builds a 3-2 rest defence that smothers counters",
+   "Beats opponents who press the pivot man-to-man"
+  ],
+  "focusChanges": [
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Advertisement",
+   "Best",
+   "Falseback"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Falseback",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Passing",
+   "Composure"
+  ],
+  "scout": "Passing, Composure, Defending, Positioning"
+ },
+ "fullback": {
+  "url": "https://www.fccareer.ai/roles/fullback",
+  "positions": [
+   [
+    "LB",
+    [
+     "Defend",
+     "Balanced",
+     "Versatile"
+    ]
+   ],
+   [
+    "RB",
+    [
+     "Defend",
+     "Balanced",
+     "Versatile"
+    ]
+   ],
+   [
+    "LWB",
+    [
+     "Defend",
+     "Balanced",
+     "Versatile"
+    ]
+   ],
+   [
+    "RWB",
+    [
+     "Defend",
+     "Balanced",
+     "Versatile"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Offers a safe pass along the flank and overlaps only when the space in front of him is guaranteed.",
+   "Out of possession",
+   "Stays connected to the centre-backs, holds the line and protects the box instead of chasing the ball."
+  ],
+  "Out of possession": [
+   "Stays connected to the centre-backs, holds the line and protects the box instead of chasing the ball.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Contributes almost nothing in the final third",
+   "Can leave your attack narrow and predictable",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Fewest counter-attacking concessions of any wide role",
+   "Cheap to staff — no special athletic profile required",
+   "Keeps a back four compact and hard to play through"
+  ],
+  "focusChanges": [
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Versatile",
+   "Adapts to the phase — joins the attack or drops in as the game demands.",
+   "Advertisement"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Fullback",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Defending",
+   "Stamina"
+  ],
+  "scout": "Defending, Stamina, Positioning, Pace"
+ },
+ "goalkeeper": {
+  "url": "https://www.fccareer.ai/roles/goalkeeper",
+  "positions": [
+   [
+    "GK",
+    [
+     "Defend",
+     "Balanced"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Stays on his line and offers a short outlet when the back line is pressed. Distribution stays simple and low-risk — he resets play rather than starting it.",
+   "Out of possession",
+   "Holds the six-yard box, claims crosses inside the small area and only leaves his line when a through ball forces him out."
+  ],
+  "Out of possession": [
+   "Holds the six-yard box, claims crosses inside the small area and only leaves his line when a through ball forces him out.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Gives you nothing against balls played in behind",
+   "Adds no value to build-up against a committed high press",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "The safest shot-stopping base in the game",
+   "Almost never caught out of position",
+   "Any keeper profile can play it — no specialist needed"
+  ],
+  "focusChanges": [
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Advertisement",
+   "Best",
+   "Goalkeeper"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Goalkeeper",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Reflexes",
+   "Positioning"
+  ],
+  "scout": "Reflexes, Positioning, Handling, Composure"
+ },
+ "half_winger": {
+  "url": "https://www.fccareer.ai/roles/half_winger",
+  "positions": [
+   [
+    "CM",
+    [
+     "Support",
+     "Balanced",
+     "Attack"
+    ]
+   ],
+   [
+    "CAM",
+    [
+     "Roaming",
+     "Balanced",
+     "Attack"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Drifts to the touchline to create a wide overload, then plays back inside once the flank is loaded.",
+   "Out of possession",
+   "Tucks back into the central block and defends as a third or fourth midfielder."
+  ],
+  "Out of possession": [
+   "Tucks back into the central block and defends as a third or fourth midfielder.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Can leave the middle of the pitch underloaded",
+   "Redundant if you already field two out-and-out wingers",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Gives width without needing a natural winger",
+   "Hard to mark — starts central and ends up wide",
+   "Keeps the defensive block compact and narrow"
+  ],
+  "focusChanges": [
+   "Support",
+   "Offers a passing option and joins attacks in support without leading them.",
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Roaming"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Half-Winger",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Passing",
+   "Dribbling"
+  ],
+  "scout": "Passing, Dribbling, Stamina, Positioning"
+ },
+ "holding": {
+  "url": "https://www.fccareer.ai/roles/holding",
+  "positions": [
+   [
+    "CDM",
+    [
+     "Defend",
+     "Roaming"
+    ]
+   ],
+   [
+    "CM",
+    [
+     "Defend"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Screens the back line, recycles possession sideways and rarely advances past the ball.",
+   "Out of possession",
+   "Breaks up play, screens the passing lanes into the ten and drops in as an extra defender."
+  ],
+  "Out of possession": [
+   "Breaks up play, screens the passing lanes into the ten and drops in as an extra defender.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Offers almost nothing going forward",
+   "Can be bypassed by a roaming number ten",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "The best counter-attack protection in the game",
+   "Frees both fullbacks to attack at once",
+   "Simple to staff — any defensive midfielder can do the job"
+  ],
+  "focusChanges": [
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Roaming",
+   "Leaves his zone to find space anywhere on the pitch.",
+   "Advertisement",
+   "Best",
+   "Holding"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Holding",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Defending",
+   "Physicality"
+  ],
+  "scout": "Defending, Physicality, Positioning, Stamina"
+ },
+ "inside_forward": {
+  "url": "https://www.fccareer.ai/roles/inside_forward",
+  "positions": [
+   [
+    "LM",
+    [
+     "Balanced",
+     "Attack"
+    ]
+   ],
+   [
+    "RM",
+    [
+     "Balanced",
+     "Attack"
+    ]
+   ],
+   [
+    "LW",
+    [
+     "Balanced",
+     "Attack",
+     "Roaming"
+    ]
+   ],
+   [
+    "RW",
+    [
+     "Balanced",
+     "Attack",
+     "Roaming"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Starts wide and cuts onto his stronger foot into the box, vacating the touchline for the fullback.",
+   "Out of possession",
+   "Presses the opposition fullback and recovers into a mid-block rather than chasing to the byline."
+  ],
+  "Out of possession": [
+   "Presses the opposition fullback and recovers into a mid-block rather than chasing to the byline.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Leaves the touchline empty when he comes inside",
+   "Ineffective if the fullback behind him does not attack",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Highest goal output of any wide role",
+   "Opens the whole flank for an overlapping fullback",
+   "Ideal for inverted wingers playing on their strong foot"
+  ],
+  "focusChanges": [
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Roaming",
+   "Leaves his zone to find space anywhere on the pitch.",
+   "Advertisement"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Inside Forward",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Shooting",
+   "Pace"
+  ],
+  "scout": "Shooting, Pace, Dribbling, Positioning"
+ },
+ "inverted_wingback": {
+  "url": "https://www.fccareer.ai/roles/inverted_wingback",
+  "positions": [
+   [
+    "LB",
+    [
+     "Build-Up",
+     "Attack"
+    ]
+   ],
+   [
+    "RB",
+    [
+     "Build-Up",
+     "Attack"
+    ]
+   ],
+   [
+    "LWB",
+    [
+     "Build-Up",
+     "Attack"
+    ]
+   ],
+   [
+    "RWB",
+    [
+     "Build-Up",
+     "Attack"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Tucks in next to the pivot, creating a 3-2 rest defence and central overloads without spending a midfielder.",
+   "Out of possession",
+   "Defends centrally first, then shuffles wide only once the ball moves into the channel."
+  ],
+  "Out of possession": [
+   "Defends centrally first, then shuffles wide only once the ball moves into the channel.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Leaves the flank open for the opposition winger",
+   "Needs a wide centre-back who can actually defend the channel",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Central overloads without a third central midfielder",
+   "Strong rest defence against the counter",
+   "Very hard to press because the passing lane is always short"
+  ],
+  "focusChanges": [
+   "Build-Up",
+   "Prioritises receiving and progressing the ball in the first phase.",
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Advertisement",
+   "Best",
+   "Inverted Wingback"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Inverted Wingback",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Passing",
+   "Positioning"
+  ],
+  "scout": "Passing, Positioning, Defending, Composure"
+ },
+ "playmaker": {
+  "url": "https://www.fccareer.ai/roles/playmaker",
+  "positions": [
+   [
+    "CM",
+    [
+     "Attack",
+     "Roaming"
+    ]
+   ],
+   [
+    "CAM",
+    [
+     "Balanced",
+     "Roaming"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Roams between the lines, receives on the half-turn and plays the final pass into the channel.",
+   "Out of possession",
+   "Does not track runners — his job is to stay high and available for the transition."
+  ],
+  "Out of possession": [
+   "Does not track runners — his job is to stay high and available for the transition.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Can be man-marked out of an entire match",
+   "Leaves the midfield light defensively",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Highest chance-creation ceiling of any role",
+   "Unlocks a low block with a single pass",
+   "Thrives as the free ten in a 4-2-3-1"
+  ],
+  "focusChanges": [
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Roaming",
+   "Leaves his zone to find space anywhere on the pitch.",
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Advertisement"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Playmaker",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Passing",
+   "Vision"
+  ],
+  "scout": "Passing, Vision, Dribbling, Composure"
+ },
+ "poacher": {
+  "url": "https://www.fccareer.ai/roles/poacher",
+  "positions": [
+   [
+    "ST",
+    [
+     "Attack",
+     "Versatile"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Stays central and high, attacks the six-yard box and does almost nothing else.",
+   "Out of possession",
+   "Does not defend — he stays up as the outlet for every clearance."
+  ],
+  "Out of possession": [
+   "Does not defend — he stays up as the outlet for every clearance.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Invisible when the team cannot get crosses or cutbacks in",
+   "Contributes nothing at all to the build-up",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Highest pure goal volume of any role in the game",
+   "Always in the right place for a cutback",
+   "Thrives in a front two next to a creator"
+  ],
+  "focusChanges": [
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Versatile",
+   "Adapts to the phase — joins the attack or drops in as the game demands.",
+   "Advertisement",
+   "Best",
+   "Poacher"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Poacher",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Positioning",
+   "Finishing"
+  ],
+  "scout": "Positioning, Finishing, Composure, Reactions"
+ },
+ "shadow_striker": {
+  "url": "https://www.fccareer.ai/roles/shadow_striker",
+  "positions": [
+   [
+    "CAM",
+    [
+     "Attack"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Attacks the box from deep, arriving on the striker's shoulder as a genuine second forward.",
+   "Out of possession",
+   "Stays high and presses the centre-backs instead of dropping into midfield."
+  ],
+  "Out of possession": [
+   "Stays high and presses the centre-backs instead of dropping into midfield.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Leaves a gap between midfield and attack",
+   "Needs two holders behind him to survive the transition",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Highest goal output of any midfield role",
+   "Overloads the box against a back four",
+   "Works in a 4-2-1-3, 4-2-2-2 or 4-1-2-1-2 diamond"
+  ],
+  "focusChanges": [
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Advertisement",
+   "Best",
+   "Shadow Striker",
+   "players in",
+   "FC 27"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Shadow Striker",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Positioning",
+   "Shooting"
+  ],
+  "scout": "Positioning, Shooting, Pace, Composure"
+ },
+ "stopper": {
+  "url": "https://www.fccareer.ai/roles/stopper",
+  "positions": [
+   [
+    "CB",
+    [
+     "Balanced",
+     "Defend"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Steps into midfield with the ball occasionally, but is mainly a clearer and resetter rather than a progressive passer.",
+   "Out of possession",
+   "Leaves the line to intercept, tackles early and leads the press from the back before the attack can settle."
+  ],
+  "Out of possession": [
+   "Leaves the line to intercept, tackles early and leads the press from the back before the attack can settle.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Leaves a hole behind him when the jump is mistimed",
+   "Useless without a covering partner who holds position",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Kills attacks before they ever reach your box",
+   "Outstanding against a lone striker",
+   "Front-foot defending that wins the ball high up the pitch"
+  ],
+  "focusChanges": [
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Advertisement",
+   "Best",
+   "Stopper"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Stopper",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Defending",
+   "Aggression"
+  ],
+  "scout": "Defending, Aggression, Pace, Reactions"
+ },
+ "sweeper_keeper": {
+  "url": "https://www.fccareer.ai/roles/sweeper_keeper",
+  "positions": [
+   [
+    "GK",
+    [
+     "Balanced",
+     "Build-Up"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Acts as an eleventh outfield player: steps into the back line to receive, then switches play or launches the counter with long distribution.",
+   "Out of possession",
+   "Sprints off his line to clear through balls and sweep the whole space behind a high defensive line."
+  ],
+  "Out of possession": [
+   "Sprints off his line to clear through balls and sweep the whole space behind a high defensive line.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Punished by chips and long shots from distance",
+   "Wasted on a slow keeper — the role is 90% acceleration off the line",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Neutralises the through-ball heavy opponents that break a high line",
+   "Turns a defensive clearance into an instant attack",
+   "Essential the moment your line height goes past 60"
+  ],
+  "focusChanges": [
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Build-Up",
+   "Prioritises receiving and progressing the ball in the first phase.",
+   "Advertisement",
+   "Best",
+   "Sweeper Keeper"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Sweeper Keeper",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Reactions",
+   "Speed"
+  ],
+  "scout": "Reactions, Speed, Rushing Out, Passing"
+ },
+ "target_forward": {
+  "url": "https://www.fccareer.ai/roles/target_forward",
+  "positions": [
+   [
+    "ST",
+    [
+     "Balanced",
+     "Attack",
+     "Wide"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Holds the ball up under pressure, wins the first contact and brings the wide runners into the game.",
+   "Out of possession",
+   "Stays high as the outlet and contests every clearance and long ball."
+  ],
+  "Out of possession": [
+   "Stays high as the outlet and contests every clearance and long ball.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Slows the build-up through the middle",
+   "Ineffective without runners arriving around him",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Turns long balls and clearances into attacks",
+   "Dominant in both boxes at set pieces",
+   "Frees the wide players to attack the second ball"
+  ],
+  "focusChanges": [
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Wide",
+   "Holds or drifts into wide areas to stretch the opponent's shape.",
+   "Advertisement"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Target Forward",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Physicality",
+   "Heading"
+  ],
+  "scout": "Physicality, Heading, Strength, Shooting"
+ },
+ "wide_back": {
+  "url": "https://www.fccareer.ai/roles/wide_back",
+  "positions": [
+   [
+    "CB",
+    [
+     "Defend",
+     "Aggressive",
+     "Support"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Slides into the fullback lane with the ball and can carry up the flank when the wingback is marked out.",
+   "Out of possession",
+   "Defends the wide channel, tracks the winger and covers the space an attacking wingback leaves behind."
+  ],
+  "Out of possession": [
+   "Defends the wide channel, tracks the winger and covers the space an attacking wingback leaves behind.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Leaves the middle thin every time he steps out",
+   "Demands two centre-backs who are strong in the air",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Shuts down wide overloads that normally break a back three",
+   "Gives a back three genuine defensive width",
+   "Covers perfectly for a flying wingback in front of him"
+  ],
+  "focusChanges": [
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Aggressive",
+   "Steps out of the defensive line to intercept before the attack settles.",
+   "Support",
+   "Offers a passing option and joins attacks in support without leading them.",
+   "Advertisement"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Wide Back",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Pace",
+   "Defending"
+  ],
+  "scout": "Pace, Defending, Stamina, Positioning"
+ },
+ "wide_half": {
+  "url": "https://www.fccareer.ai/roles/wide_half",
+  "positions": [
+   [
+    "CDM",
+    [
+     "Build-Up",
+     "Defend"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Shades to one flank, forming a back three on that side and freeing the fullback to attack.",
+   "Out of possession",
+   "Defends the half-space and helps the fullback against 2v1s down the flank."
+  ],
+  "Out of possession": [
+   "Defends the half-space and helps the fullback against 2v1s down the flank.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Leaves the middle of the pitch thinner",
+   "Hard to staff — needs a midfielder with real defensive discipline",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Fixes an asymmetric overload problem mid-game",
+   "Gives the fullback licence to attack that side",
+   "Ideal when the opponent attacks down one flank only"
+  ],
+  "focusChanges": [
+   "Build-Up",
+   "Prioritises receiving and progressing the ball in the first phase.",
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Advertisement",
+   "Best",
+   "Wide Half"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Wide Half",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Positioning",
+   "Defending"
+  ],
+  "scout": "Positioning, Defending, Passing, Stamina"
+ },
+ "wide_midfielder": {
+  "url": "https://www.fccareer.ai/roles/wide_midfielder",
+  "positions": [
+   [
+    "LM",
+    [
+     "Defend",
+     "Support",
+     "Build-Up"
+    ]
+   ],
+   [
+    "RM",
+    [
+     "Defend",
+     "Support",
+     "Build-Up"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Holds the touchline, gives the fullback a short pass and delivers from wide areas rather than cutting in.",
+   "Out of possession",
+   "Tracks the opposition fullback all game and helps form a bank of four across the pitch."
+  ],
+  "Out of possession": [
+   "Tracks the opposition fullback all game and helps form a bank of four across the pitch.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Low goal and assist output compared with a winger",
+   "Can make your attacking play predictable",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Best defensive discipline of any wide role",
+   "Keeps a 4-4-2 compact and very hard to break down",
+   "Cheap to staff on a relegation budget"
+  ],
+  "focusChanges": [
+   "Defend",
+   "Prioritises defensive position — holds shape and covers instead of joining in.",
+   "Support",
+   "Offers a passing option and joins attacks in support without leading them.",
+   "Build-Up",
+   "Prioritises receiving and progressing the ball in the first phase.",
+   "Advertisement"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Wide Midfielder",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Stamina",
+   "Crossing"
+  ],
+  "scout": "Stamina, Crossing, Positioning, Passing"
+ },
+ "wide_playmaker": {
+  "url": "https://www.fccareer.ai/roles/wide_playmaker",
+  "positions": [
+   [
+    "LM",
+    [
+     "Attack"
+    ]
+   ],
+   [
+    "RM",
+    [
+     "Attack"
+    ]
+   ],
+   [
+    "LW",
+    [
+     "Attack"
+    ]
+   ],
+   [
+    "RW",
+    [
+     "Attack"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Comes inside from the flank to combine centrally and play the final ball rather than crossing.",
+   "Out of possession",
+   "Stays high, presses the centre-back and does not track the opposition fullback."
+  ],
+  "Out of possession": [
+   "Stays high, presses the centre-back and does not track the opposition fullback.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Almost no defensive contribution on that flank",
+   "Needs a defensive fullback or wingback covering behind",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Creates from wide areas instead of just delivering crosses",
+   "Adds a second creator to an otherwise narrow shape",
+   "Hard to press — he receives between the lines, not on the touchline"
+  ],
+  "focusChanges": [
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Advertisement",
+   "Best",
+   "Wide Playmaker",
+   "players in",
+   "FC 27"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Wide Playmaker",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Passing",
+   "Vision"
+  ],
+  "scout": "Passing, Vision, Dribbling, Composure"
+ },
+ "wingback": {
+  "url": "https://www.fccareer.ai/roles/wingback",
+  "positions": [
+   [
+    "LB",
+    [
+     "Balanced",
+     "Versatile"
+    ]
+   ],
+   [
+    "RB",
+    [
+     "Balanced",
+     "Versatile"
+    ]
+   ],
+   [
+    "LWB",
+    [
+     "Balanced",
+     "Versatile"
+    ]
+   ],
+   [
+    "RWB",
+    [
+     "Balanced",
+     "Versatile"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Provides the width: overlaps to the byline, reaches the corner flag and delivers crosses into the box.",
+   "Out of possession",
+   "Tracks back to the touchline and defends the wide channel as a de facto fullback."
+  ],
+  "Out of possession": [
+   "Tracks back to the touchline and defends the wide channel as a de facto fullback.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Highest stamina demand of any defensive role",
+   "Needs rotating — a tired wingback concedes the channel",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "Covers the whole flank in one player",
+   "Endless crossing supply for a physical striker",
+   "The standard wide role for every back-five system"
+  ],
+  "focusChanges": [
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Versatile",
+   "Adapts to the phase — joins the attack or drops in as the game demands.",
+   "Advertisement",
+   "Best",
+   "Wingback"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Wingback",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Stamina",
+   "Pace"
+  ],
+  "scout": "Stamina, Pace, Crossing, Defending"
+ },
+ "winger": {
+  "url": "https://www.fccareer.ai/roles/winger",
+  "positions": [
+   [
+    "LM",
+    [
+     "Balanced",
+     "Attack"
+    ]
+   ],
+   [
+    "RM",
+    [
+     "Balanced",
+     "Attack"
+    ]
+   ],
+   [
+    "LW",
+    [
+     "Balanced",
+     "Attack",
+     "Versatile"
+    ]
+   ],
+   [
+    "RW",
+    [
+     "Balanced",
+     "Attack",
+     "Versatile"
+    ]
+   ]
+  ],
+  "In possession": [
+   "Hugs the touchline, takes his fullback on and reaches the byline to deliver crosses.",
+   "Out of possession",
+   "Recovers toward his own fullback, but stays higher than a wide midfielder would."
+  ],
+  "Out of possession": [
+   "Recovers toward his own fullback, but stays higher than a wide midfielder would.",
+   "Strengths & what to watch",
+   "Why you pick it"
+  ],
+  "The cost": [
+   "Predictable against a genuinely good defensive fullback",
+   "Low central goal threat",
+   "Attributes to scout for"
+  ],
+  "Why you pick it": [
+   "The most reliable source of width in the game",
+   "Perfect supply line for a target forward",
+   "Mechanically simple — any pacy wide player fits it"
+  ],
+  "focusChanges": [
+   "Balanced",
+   "Splits the duty: supports attacks but recovers as a default.",
+   "Attack",
+   "Commits forward at every opportunity; defensive cover is somebody else's job.",
+   "Versatile",
+   "Adapts to the phase — joins the attack or drops in as the game demands.",
+   "Advertisement"
+  ],
+  "attrs": [
+   "The profile that makes",
+   "Winger",
+   "work — use it as a shortlist filter rather than a rating threshold.",
+   "Pace",
+   "Dribbling"
+  ],
+  "scout": "Pace, Dribbling, Crossing, Stamina"
+ }
+}

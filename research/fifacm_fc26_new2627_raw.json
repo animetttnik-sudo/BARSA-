@@ -1,0 +1,349 @@
+[
+ {
+  "url": "https://www.fifacm.com/26/player/231866/rodrigo-hernandez-cascante",
+  "title": " Rodrigo Hernández Cascante EA FC 26 - Rating and Potential - Career Mode | FIFACM",
+  "fullName": "Rodrigo Hernández Cascante",
+  "ovr": 89,
+  "pot": 89,
+  "mainPos": "CDM",
+  "age": 29,
+  "sm": 3,
+  "wf": 4,
+  "foot": "Right",
+  "wrAtt": "Med",
+  "wrDef": "Med",
+  "height": 190,
+  "attr": {
+   "Crossing": 76,
+   "Finishing": 74,
+   "Heading Acc.": 80,
+   "Short Pass": 92,
+   "Volleys": 71,
+   "Dribbling": 81,
+   "Curve": 86,
+   "FK Acc.": 64,
+   "Long Pass": 90,
+   "Ball Control": 89,
+   "Shot Power": 90,
+   "Jumping": 83,
+   "Stamina": 86,
+   "Strength": 83,
+   "Long Shots": 87,
+   "Acceleration": 65,
+   "Sprint Speed": 65,
+   "Agility": 65,
+   "Reactions": 89,
+   "Balance": 67,
+   "Aggression": 85,
+   "Interceptions": 84,
+   "Att. Position": 76,
+   "Vision": 84,
+   "Penalties": 62,
+   "Composure": 92,
+   "Def. Awareness": 88,
+   "Stand Tackle": 87,
+   "Slide Tackle": 82,
+   "GK Diving": 10,
+   "GK Handling": 10,
+   "GK Kicking": 7,
+   "GK Positioning": 14,
+   "GK Reflexes": 8
+  },
+  "roles": {
+   "CDM": [
+    "Deep-Lying Playmaker++"
+   ],
+   "CM": [
+    "Deep-Lying Playmaker++"
+   ]
+  },
+  "playstyles": [
+   "Power Shot",
+   "Long Ball Pass",
+   "Press Proven",
+   "Bruiser"
+  ],
+  "playstylesPlus": [
+   "Tiki Taka"
+  ],
+  "positions": [
+   "CDM",
+   "CM"
+  ]
+ },
+ {
+  "url": "https://www.fifacm.com/26/player/230666/gabriel-fernando-de-jesus",
+  "title": " Gabriel Fernando de Jesus EA FC 26 - Rating and Potential - Career Mode | FIFACM",
+  "fullName": "Gabriel Fernando de Jesus",
+  "ovr": 80,
+  "pot": 80,
+  "mainPos": "ST",
+  "age": 28,
+  "sm": 4,
+  "wf": 3,
+  "foot": "Right",
+  "wrAtt": "Med",
+  "wrDef": "Med",
+  "height": 175,
+  "attr": {
+   "Crossing": 73,
+   "Finishing": 80,
+   "Heading Acc.": 76,
+   "Short Pass": 79,
+   "Volleys": 77,
+   "Dribbling": 87,
+   "Curve": 75,
+   "FK Acc.": 54,
+   "Long Pass": 66,
+   "Ball Control": 84,
+   "Shot Power": 82,
+   "Jumping": 84,
+   "Stamina": 62,
+   "Strength": 65,
+   "Long Shots": 75,
+   "Acceleration": 85,
+   "Sprint Speed": 78,
+   "Agility": 88,
+   "Reactions": 80,
+   "Balance": 89,
+   "Aggression": 82,
+   "Interceptions": 32,
+   "Att. Position": 81,
+   "Vision": 78,
+   "Penalties": 75,
+   "Composure": 79,
+   "Def. Awareness": 45,
+   "Stand Tackle": 30,
+   "Slide Tackle": 28,
+   "GK Diving": 13,
+   "GK Handling": 8,
+   "GK Kicking": 6,
+   "GK Positioning": 6,
+   "GK Reflexes": 15
+  },
+  "roles": {
+   "ST": [
+    "False 9+",
+    "Advanced Forward+"
+   ]
+  },
+  "playstyles": [
+   "Technical",
+   "First Touch",
+   "Relentless"
+  ],
+  "playstylesPlus": [],
+  "positions": [
+   "ST",
+   "CAM"
+  ]
+ },
+ {
+  "url": "https://www.fifacm.com/26/player/251852/karim-adeyemi",
+  "title": " Karim Adeyemi EA FC 26 - Rating and Potential - Career Mode | FIFACM",
+  "fullName": "Karim Adeyemi",
+  "ovr": 82,
+  "pot": 86,
+  "mainPos": "RM",
+  "age": 23,
+  "sm": 4,
+  "wf": 3,
+  "foot": "Left",
+  "wrAtt": "Med",
+  "wrDef": "Med",
+  "height": 180,
+  "attr": {
+   "Crossing": 73,
+   "Finishing": 81,
+   "Heading Acc.": 75,
+   "Short Pass": 74,
+   "Volleys": 71,
+   "Dribbling": 84,
+   "Curve": 69,
+   "FK Acc.": 62,
+   "Long Pass": 69,
+   "Ball Control": 80,
+   "Shot Power": 86,
+   "Jumping": 93,
+   "Stamina": 77,
+   "Strength": 67,
+   "Long Shots": 76,
+   "Acceleration": 96,
+   "Sprint Speed": 96,
+   "Agility": 86,
+   "Reactions": 82,
+   "Balance": 81,
+   "Aggression": 59,
+   "Interceptions": 31,
+   "Att. Position": 82,
+   "Vision": 74,
+   "Penalties": 70,
+   "Composure": 76,
+   "Def. Awareness": 25,
+   "Stand Tackle": 34,
+   "Slide Tackle": 49,
+   "GK Diving": 12,
+   "GK Handling": 12,
+   "GK Kicking": 7,
+   "GK Positioning": 12,
+   "GK Reflexes": 7
+  },
+  "roles": {
+   "RM": [
+    "Inside Forward+",
+    "Winger+"
+   ],
+   "LW": [
+    "Inside Forward+"
+   ]
+  },
+  "playstyles": [
+   "Power Shot",
+   "Rapid"
+  ],
+  "playstylesPlus": [
+   "Quick Step"
+  ],
+  "positions": [
+   "RM",
+   "LW",
+   "CAM",
+   "RW"
+  ]
+ },
+ {
+  "url": "https://www.fifacm.com/26/player/242964/anthony-gordon",
+  "title": " Anthony Gordon EA FC 26 - Rating and Potential - Career Mode | FIFACM",
+  "fullName": "Anthony Gordon",
+  "ovr": 82,
+  "pot": 85,
+  "mainPos": "LW",
+  "age": 24,
+  "sm": 3,
+  "wf": 3,
+  "foot": "Right",
+  "wrAtt": "Med",
+  "wrDef": "Med",
+  "height": 183,
+  "attr": {
+   "Crossing": 80,
+   "Finishing": 78,
+   "Heading Acc.": 59,
+   "Short Pass": 78,
+   "Volleys": 74,
+   "Dribbling": 84,
+   "Curve": 82,
+   "FK Acc.": 66,
+   "Long Pass": 66,
+   "Ball Control": 82,
+   "Shot Power": 80,
+   "Jumping": 75,
+   "Stamina": 87,
+   "Strength": 61,
+   "Long Shots": 76,
+   "Acceleration": 89,
+   "Sprint Speed": 92,
+   "Agility": 78,
+   "Reactions": 82,
+   "Balance": 71,
+   "Aggression": 80,
+   "Interceptions": 40,
+   "Att. Position": 80,
+   "Vision": 79,
+   "Penalties": 80,
+   "Composure": 80,
+   "Def. Awareness": 49,
+   "Stand Tackle": 56,
+   "Slide Tackle": 48,
+   "GK Diving": 5,
+   "GK Handling": 6,
+   "GK Kicking": 14,
+   "GK Positioning": 7,
+   "GK Reflexes": 8
+  },
+  "roles": {
+   "LW": [
+    "Winger+",
+    "Inside Forward+"
+   ]
+  },
+  "playstyles": [
+   "Finesse Shot",
+   "Whipped Pass",
+   "Rapid",
+   "Quick Step"
+  ],
+  "playstylesPlus": [],
+  "positions": [
+   "LW",
+   "ST",
+   "RW",
+   "LM"
+  ]
+ },
+ {
+  "url": "https://www.fifacm.com/26/player/241671",
+  "title": " Dominik Livaković EA FC 26 - Rating and Potential - Career Mode | FIFACM",
+  "fullName": "Dominik Livaković",
+  "ovr": 78,
+  "pot": 78,
+  "mainPos": "GK",
+  "age": 30,
+  "sm": 1,
+  "wf": 2,
+  "foot": "Right",
+  "wrAtt": "Med",
+  "wrDef": "Med",
+  "height": 188,
+  "attr": {
+   "Crossing": 13,
+   "Finishing": 12,
+   "Heading Acc.": 13,
+   "Short Pass": 50,
+   "Volleys": 10,
+   "Dribbling": 19,
+   "Curve": 12,
+   "FK Acc.": 11,
+   "Long Pass": 60,
+   "Ball Control": 28,
+   "Shot Power": 53,
+   "Jumping": 73,
+   "Stamina": 32,
+   "Strength": 75,
+   "Long Shots": 9,
+   "Acceleration": 57,
+   "Sprint Speed": 54,
+   "Agility": 65,
+   "Reactions": 78,
+   "Balance": 30,
+   "Aggression": 26,
+   "Interceptions": 21,
+   "Att. Position": 11,
+   "Vision": 60,
+   "Penalties": 15,
+   "Composure": 64,
+   "Def. Awareness": 24,
+   "Stand Tackle": 20,
+   "Slide Tackle": 21,
+   "GK Diving": 78,
+   "GK Handling": 75,
+   "GK Kicking": 70,
+   "GK Positioning": 78,
+   "GK Reflexes": 80
+  },
+  "roles": {
+   "GK": [
+    "Goalkeeper+"
+   ]
+  },
+  "playstyles": [
+   "Far Throw",
+   "Footwork",
+   "Career Injury Prone"
+  ],
+  "playstylesPlus": [],
+  "positions": [
+   "GK"
+  ]
+ }
+]

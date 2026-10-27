@@ -1,0 +1,2912 @@
+{
+ "_meta": {
+  "sources": [
+   "https://www.ea.com/en/games/ea-sports-fc/fc-26/news/pitch-notes-fc26-gameplay-deep-dive",
+   "https://futall.com/roles/",
+   "https://fifauteam.com/fc-26-roles/",
+   "https://www.fccareer.ai/roles",
+   "https://www.futbin.com/26/roles",
+   "https://fifaindex.com/roles/fc26"
+  ],
+  "note": "Role names/focuses/descriptions from sources. Numeric vectors v{} are HEURISTIC (0..1) estimates of behaviour derived from the official focus tags — edit freely. adv=forward shift with ball (pitch fraction), inward=move to centre with ball, wide=hug touchline, att/def=attacking/defensive involvement, press=pressing, runs=runs in behind, create=creativity/build-up, box=box presence, roam=leaves position, stam=stamina usage, stepOut=CB steps out of line, screen=protects zone in front of defence, sweep=GK rushing, hold=hold-up play, dropBack=drops into back line with ball.",
+  "discrepancies": [
+   "Stopper Defend focus listed only by fifauteam; futall/futbin show Balanced+Aggressive (we use Balanced+Aggressive).",
+   "Wingback focuses: futall Balanced+Support, fccareer Balanced+Versatile (we use Balanced+Support per fifauteam descriptions).",
+   "Poacher/Advanced Forward \"Support\" focus listed by futall only — not included.",
+   "CM Holding Ball-Winning: futall/fifauteam yes, fccareer no — included."
+  ]
+ },
+ "roles": [
+  {
+   "id": "goalkeeper",
+   "nameEn": "Goalkeeper",
+   "nameRu": "Вратарь",
+   "positions": [
+    "GK"
+   ],
+   "descEn": "A traditional goalkeeper who stays on their line and focuses on shot-stopping.",
+   "descRu": "Классический вратарь: стоит на линии, главное — сейвы.",
+   "keyAttrs": [
+    "GK Reflexes",
+    "GK Positioning",
+    "GK Handling"
+   ],
+   "focuses": [
+    {
+     "id": "Defend",
+     "nameRu": "Защита",
+     "descRu": "Не выбегает за длинными и отскочившими мячами. Минимум риска, но и не страхует пространство за высокой линией.",
+     "tags": [
+      "Stay in Position",
+      "Defending",
+      "Low Risk"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0,
+      "att": 0,
+      "press": 0.4,
+      "runs": 0.2,
+      "create": 0.15,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.5,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0.05,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 1
+     }
+    },
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Иногда покидает штрафную, чтобы забрать длинный/свободный мяч.",
+     "tags": [
+      "Stay in Position",
+      "Some Risk",
+      "Rush"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0,
+      "att": 0,
+      "press": 0.4,
+      "runs": 0.2,
+      "create": 0.25,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.5,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0.3,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 1
+     }
+    }
+   ],
+   "focusByPosition": {
+    "GK": [
+     "Defend",
+     "Balanced"
+    ]
+   }
+  },
+  {
+   "id": "sweeper_keeper",
+   "nameEn": "Sweeper Keeper",
+   "nameRu": "Вратарь-чистильщик",
+   "positions": [
+    "GK"
+   ],
+   "descEn": "Rushes off his line to sweep through balls; reworked in FC 26 to focus on rushing out during defence.",
+   "descRu": "Выбегает далеко из ворот и подчищает передачи в спину. В FC 26 переработан: больше выходов, меньше участия в розыгрыше.",
+   "keyAttrs": [
+    "GK Reflexes",
+    "Sprint Speed",
+    "Rush Out"
+   ],
+   "focuses": [
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Выходит за мячами рядом со штрафной.",
+     "tags": [
+      "Rush",
+      "Pass Option",
+      "Some Risk"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0,
+      "att": 0,
+      "press": 0.4,
+      "runs": 0.2,
+      "create": 0.3,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.5,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0.65,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 1
+     }
+    },
+    {
+     "id": "Build-Up",
+     "nameRu": "Розыгрыш",
+     "descRu": "Поднимается ещё выше, чтобы забирать мяч и помогать в розыгрыше.",
+     "tags": [
+      "Rush",
+      "Pass Option",
+      "Some Risk"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0,
+      "att": 0,
+      "press": 0.4,
+      "runs": 0.2,
+      "create": 0.45,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.5,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0.85,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 1
+     }
+    }
+   ],
+   "focusByPosition": {
+    "GK": [
+     "Balanced",
+     "Build-Up"
+    ]
+   }
+  },
+  {
+   "id": "ball_playing_keeper",
+   "nameEn": "Ball-Playing Keeper",
+   "nameRu": "Вратарь-распасовщик",
+   "positions": [
+    "GK"
+   ],
+   "descEn": "New in FC 26: supports build-up as a passing option, stays on his line when defending.",
+   "descRu": "Новинка FC 26: даёт безопасный вариант паса в розыгрыше, в обороне стоит на линии.",
+   "keyAttrs": [
+    "GK Kicking",
+    "Short Pass",
+    "Composure"
+   ],
+   "focuses": [
+    {
+     "id": "Build-Up",
+     "nameRu": "Розыгрыш",
+     "descRu": "Активно участвует в розыгрыше, но далеко из штрафной не выбегает.",
+     "tags": [
+      "Pass Option",
+      "Build-Up",
+      "Low Risk",
+      "Stay in Position"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0,
+      "att": 0,
+      "press": 0.4,
+      "runs": 0.2,
+      "create": 0.8,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.5,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0.2,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 1
+     }
+    }
+   ],
+   "focusByPosition": {
+    "GK": [
+     "Build-Up"
+    ]
+   }
+  },
+  {
+   "id": "fullback",
+   "nameEn": "Fullback",
+   "nameRu": "Крайний защитник",
+   "positions": [
+    "LB",
+    "RB",
+    "LWB",
+    "RWB"
+   ],
+   "descEn": "A wide defender that prioritises protecting their own goal.",
+   "descRu": "Крайний защитник, который в первую очередь защищает ворота: держит линию и даёт безопасный пас.",
+   "keyAttrs": [
+    "Def. Awareness",
+    "Stand Tackle",
+    "Sprint Speed",
+    "Stamina"
+   ],
+   "focuses": [
+    {
+     "id": "Defend",
+     "nameRu": "Защита",
+     "descRu": "С мячом смещается внутрь и образует тройку защитников. Фланг под контролем, атака без него.",
+     "tags": [
+      "Stays Back",
+      "Defending",
+      "Limited Versatility",
+      "Wide Support"
+     ],
+     "v": {
+      "adv": 0.03,
+      "inward": 0.35,
+      "wide": 0,
+      "att": 0.12,
+      "press": 0.35,
+      "runs": 0.05,
+      "create": 0.25,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.35,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.95
+     }
+    },
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Чуть больше свободы: подключается шире и выше, но остаётся защитником.",
+     "tags": [
+      "Defending",
+      "Stays Back",
+      "Pass Option",
+      "Attack Support"
+     ],
+     "v": {
+      "adv": 0.17,
+      "inward": 0,
+      "wide": 0.5,
+      "att": 0.38,
+      "press": 0.4,
+      "runs": 0.2,
+      "create": 0.3,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.5,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.8
+     }
+    },
+    {
+     "id": "Versatile",
+     "nameRu": "Универсал",
+     "descRu": "Новый фокус FC 26: действует по ситуации — то подключается, то страхует.",
+     "tags": [
+      "Versatile",
+      "Adaptive"
+     ],
+     "v": {
+      "adv": 0.2,
+      "inward": 0.1,
+      "wide": 0.45,
+      "att": 0.45,
+      "press": 0.4,
+      "runs": 0.25,
+      "create": 0.35,
+      "box": 0.1,
+      "roam": 0.3,
+      "stam": 0.55,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.72
+     }
+    }
+   ],
+   "focusByPosition": {
+    "LB": [
+     "Defend",
+     "Balanced",
+     "Versatile"
+    ],
+    "RB": [
+     "Defend",
+     "Balanced",
+     "Versatile"
+    ],
+    "LWB": [
+     "Defend",
+     "Balanced",
+     "Versatile"
+    ],
+    "RWB": [
+     "Defend",
+     "Balanced",
+     "Versatile"
+    ]
+   }
+  },
+  {
+   "id": "wingback",
+   "nameEn": "Wingback",
+   "nameRu": "Вингбек",
+   "positions": [
+    "LB",
+    "RB",
+    "LWB",
+    "RWB"
+   ],
+   "descEn": "Versatility and stamina allow them to push upfield to support attacks, before returning to their defensive position.",
+   "descRu": "Ходит вверх-вниз по флангу: поддерживает атаку и возвращается. Сильно тратит выносливость.",
+   "keyAttrs": [
+    "Stamina",
+    "Sprint Speed",
+    "Crossing",
+    "Def. Awareness"
+   ],
+   "focuses": [
+    {
+     "id": "Support",
+     "nameRu": "Поддержка",
+     "descRu": "Атакует только при контролируемом владении, в обороне — сразу назад.",
+     "tags": [
+      "Wide Support",
+      "Defence Option",
+      "Stamina Usage"
+     ],
+     "v": {
+      "adv": 0.3,
+      "inward": 0,
+      "wide": 0.8,
+      "att": 0.55,
+      "press": 0.4,
+      "runs": 0.35,
+      "create": 0.35,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.75,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.75
+     }
+    },
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Может оставаться впереди даже без мяча или откатываться — по ситуации.",
+     "tags": [
+      "Wide Support",
+      "Movement",
+      "Versatile",
+      "Stamina Usage"
+     ],
+     "v": {
+      "adv": 0.36,
+      "inward": 0,
+      "wide": 0.85,
+      "att": 0.62,
+      "press": 0.4,
+      "runs": 0.45,
+      "create": 0.35,
+      "box": 0.12,
+      "roam": 0.2,
+      "stam": 0.8,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.55
+     }
+    }
+   ],
+   "focusByPosition": {
+    "LB": [
+     "Support",
+     "Balanced"
+    ],
+    "RB": [
+     "Support",
+     "Balanced"
+    ],
+    "LWB": [
+     "Support",
+     "Balanced"
+    ],
+    "RWB": [
+     "Support",
+     "Balanced"
+    ]
+   }
+  },
+  {
+   "id": "falseback",
+   "nameEn": "Falseback",
+   "nameRu": "Фальшивый фулбек",
+   "positions": [
+    "LB",
+    "RB",
+    "LWB",
+    "RWB"
+   ],
+   "descEn": "Pushes up the field, adopting a central position, when their team has the ball.",
+   "descRu": "С мячом уходит в центр (как полузащитник). Центр усилен, но фланг за ним пустой.",
+   "keyAttrs": [
+    "Short Pass",
+    "Composure",
+    "Def. Awareness",
+    "Interceptions"
+   ],
+   "focuses": [
+    {
+     "id": "Defend",
+     "nameRu": "Защита",
+     "descRu": "С мячом встаёт опорником (CDM). Хорошая страховка от контратак по центру.",
+     "tags": [
+      "Defending",
+      "Build-Up Support",
+      "Limited Width",
+      "Out of Position"
+     ],
+     "v": {
+      "adv": 0.18,
+      "inward": 0.72,
+      "wide": 0,
+      "att": 0.3,
+      "press": 0.5,
+      "runs": 0.2,
+      "create": 0.55,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.55,
+      "stepOut": 0,
+      "screen": 0.45,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.85
+     }
+    },
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "С мячом встаёт центральным полузащитником (CM).",
+     "tags": [
+      "Build-Up Support",
+      "Defence Support",
+      "Limited Width",
+      "Out of Position"
+     ],
+     "v": {
+      "adv": 0.32,
+      "inward": 0.72,
+      "wide": 0,
+      "att": 0.45,
+      "press": 0.55,
+      "runs": 0.2,
+      "create": 0.62,
+      "box": 0.1,
+      "roam": 0.25,
+      "stam": 0.6,
+      "stepOut": 0,
+      "screen": 0.3,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.7
+     }
+    }
+   ],
+   "focusByPosition": {
+    "LB": [
+     "Defend",
+     "Balanced"
+    ],
+    "RB": [
+     "Defend",
+     "Balanced"
+    ],
+    "LWB": [
+     "Defend",
+     "Balanced"
+    ],
+    "RWB": [
+     "Defend",
+     "Balanced"
+    ]
+   }
+  },
+  {
+   "id": "attacking_wingback",
+   "nameEn": "Attacking Wingback",
+   "nameRu": "Атакующий вингбек",
+   "positions": [
+    "LB",
+    "RB",
+    "LWB",
+    "RWB"
+   ],
+   "descEn": "More concerned with getting forward and offering width to the attack.",
+   "descRu": "По сути вингер на позиции защитника: ширина и подачи, защита — во вторую очередь.",
+   "keyAttrs": [
+    "Sprint Speed",
+    "Crossing",
+    "Stamina",
+    "Dribbling"
+   ],
+   "focuses": [
+    {
+     "id": "Support",
+     "nameRu": "Поддержка",
+     "descRu": "Редко спринтует назад, если только команду не ловят на контратаке.",
+     "tags": [
+      "Wide Support",
+      "Attacking",
+      "Stamina Usage",
+      "Defending"
+     ],
+     "v": {
+      "adv": 0.5,
+      "inward": 0,
+      "wide": 0.92,
+      "att": 0.75,
+      "press": 0.4,
+      "runs": 0.6,
+      "create": 0.4,
+      "box": 0.15,
+      "roam": 0.1,
+      "stam": 0.88,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.42
+     }
+    },
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Поднимается ещё выше и почти не защищается.",
+     "tags": [
+      "Attacking",
+      "Wide Support",
+      "Out of Position",
+      "Defending"
+     ],
+     "v": {
+      "adv": 0.62,
+      "inward": 0,
+      "wide": 0.96,
+      "att": 0.9,
+      "press": 0.4,
+      "runs": 0.75,
+      "create": 0.4,
+      "box": 0.25,
+      "roam": 0.1,
+      "stam": 0.95,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.25
+     }
+    }
+   ],
+   "focusByPosition": {
+    "LB": [
+     "Support",
+     "Attack"
+    ],
+    "RB": [
+     "Support",
+     "Attack"
+    ],
+    "LWB": [
+     "Support",
+     "Attack"
+    ],
+    "RWB": [
+     "Support",
+     "Attack"
+    ]
+   }
+  },
+  {
+   "id": "inverted_wingback",
+   "nameEn": "Inverted Wingback",
+   "nameRu": "Инвертированный вингбек",
+   "positions": [
+    "LB",
+    "RB",
+    "LWB",
+    "RWB"
+   ],
+   "descEn": "New in FC 26: gets forward and adopts a central position high up the pitch; Build-Up = Playmaker, Attack = Shadow Striker.",
+   "descRu": "Новинка FC 26: с мячом поднимается высоко и уходит в центр. Розыгрыш — как плеймейкер, Атака — как теневой форвард.",
+   "keyAttrs": [
+    "Short Pass",
+    "Vision",
+    "Att. Position",
+    "Stamina"
+   ],
+   "focuses": [
+    {
+     "id": "Build-Up",
+     "nameRu": "Розыгрыш",
+     "descRu": "Действует как центральный плеймейкер в атаке.",
+     "tags": [
+      "Build-Up",
+      "Creative",
+      "Out of Position",
+      "Stamina Usage"
+     ],
+     "v": {
+      "adv": 0.38,
+      "inward": 0.68,
+      "wide": 0,
+      "att": 0.55,
+      "press": 0.4,
+      "runs": 0.2,
+      "create": 0.72,
+      "box": 0.1,
+      "roam": 0.3,
+      "stam": 0.7,
+      "stepOut": 0,
+      "screen": 0.15,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.52
+     }
+    },
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Действует как теневой нападающий в финальной трети.",
+     "tags": [
+      "Attacking Runs",
+      "Versatile",
+      "Stamina Usage",
+      "Defending"
+     ],
+     "v": {
+      "adv": 0.55,
+      "inward": 0.62,
+      "wide": 0,
+      "att": 0.82,
+      "press": 0.4,
+      "runs": 0.5,
+      "create": 0.45,
+      "box": 0.45,
+      "roam": 0.1,
+      "stam": 0.85,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.32
+     }
+    }
+   ],
+   "focusByPosition": {
+    "LB": [
+     "Build-Up",
+     "Attack"
+    ],
+    "RB": [
+     "Build-Up",
+     "Attack"
+    ],
+    "LWB": [
+     "Build-Up",
+     "Attack"
+    ],
+    "RWB": [
+     "Build-Up",
+     "Attack"
+    ]
+   }
+  },
+  {
+   "id": "defender",
+   "nameEn": "Defender",
+   "nameRu": "Защитник",
+   "positions": [
+    "CB"
+   ],
+   "descEn": "A no-nonsense centre-back who excels at the basics, including maintaining the defensive line.",
+   "descRu": "Надёжный центрбек без изысков: держит линию, не выходит из неё.",
+   "keyAttrs": [
+    "Def. Awareness",
+    "Stand Tackle",
+    "Heading Acc.",
+    "Strength"
+   ],
+   "focuses": [
+    {
+     "id": "Defend",
+     "nameRu": "Защита",
+     "descRu": "Только оборонительные обязанности.",
+     "tags": [
+      "Stays Back",
+      "Defending",
+      "Limited Versatility",
+      "Pass Option"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.02,
+      "press": 0.2,
+      "runs": 0.2,
+      "create": 0.2,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.3,
+      "stepOut": 0.1,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 1
+     }
+    },
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Выходит навстречу нападающему, когда нужно.",
+     "tags": [
+      "Stays Back",
+      "Defending",
+      "Limited Versatility",
+      "Limited Width"
+     ],
+     "v": {
+      "adv": 0.02,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.05,
+      "press": 0.35,
+      "runs": 0.2,
+      "create": 0.22,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.35,
+      "stepOut": 0.3,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.95
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CB": [
+     "Defend",
+     "Balanced"
+    ]
+   }
+  },
+  {
+   "id": "stopper",
+   "nameEn": "Stopper",
+   "nameRu": "Стоппер",
+   "positions": [
+    "CB"
+   ],
+   "descEn": "A ball-winning centre back who will step forward from the defensive line to make tackles, intercept passes, and lead the press.",
+   "descRu": "Агрессивный центрбек: выходит из линии на перехват и в отбор. Оставляет дыры за собой.",
+   "keyAttrs": [
+    "Aggression",
+    "Stand Tackle",
+    "Interceptions",
+    "Sprint Speed"
+   ],
+   "focuses": [
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Перехватывает и давит на нападающего при приёме мяча.",
+     "tags": [
+      "Defending",
+      "Pressure",
+      "Aggressiveness",
+      "Leave Gaps"
+     ],
+     "v": {
+      "adv": 0.03,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.05,
+      "press": 0.65,
+      "runs": 0.2,
+      "create": 0.2,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.45,
+      "stepOut": 0.6,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.88
+     }
+    },
+    {
+     "id": "Aggressive",
+     "nameRu": "Агрессия",
+     "descRu": "Поднимается к линии опорников, чтобы перехватывать и прессинговать.",
+     "tags": [
+      "Pressure",
+      "Aggressiveness",
+      "Defence Support",
+      "Leaves Gaps"
+     ],
+     "v": {
+      "adv": 0.1,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.08,
+      "press": 0.85,
+      "runs": 0.2,
+      "create": 0.2,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.55,
+      "stepOut": 0.85,
+      "screen": 0.25,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.8
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CB": [
+     "Balanced",
+     "Aggressive"
+    ]
+   }
+  },
+  {
+   "id": "ball_playing_defender",
+   "nameEn": "Ball-Playing Defender",
+   "nameRu": "Центрбек-распасовщик",
+   "positions": [
+    "CB"
+   ],
+   "descEn": "A modern centre back comfortable on the ball; can move forward or wider to support build-up.",
+   "descRu": "Современный центрбек: подключается к розыгрышу, может выходить в среднюю линию.",
+   "keyAttrs": [
+    "Short Pass",
+    "Long Pass",
+    "Composure",
+    "Def. Awareness"
+   ],
+   "focuses": [
+    {
+     "id": "Defend",
+     "nameRu": "Защита",
+     "descRu": "Чуть поднимается, чтобы помочь при владении, но в основном защищается.",
+     "tags": [
+      "Defending",
+      "Build-Up Support",
+      "Stays Back",
+      "Leave Gaps"
+     ],
+     "v": {
+      "adv": 0.05,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.08,
+      "press": 0.35,
+      "runs": 0.2,
+      "create": 0.55,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.35,
+      "stepOut": 0.3,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.9
+     }
+    },
+    {
+     "id": "Build-Up",
+     "nameRu": "Розыгрыш",
+     "descRu": "С мячом поднимается почти в позицию опорника.",
+     "tags": [
+      "Build-Up Support",
+      "Defence Support",
+      "Versatile",
+      "Out of Position"
+     ],
+     "v": {
+      "adv": 0.18,
+      "inward": 0.2,
+      "wide": 0,
+      "att": 0.15,
+      "press": 0.4,
+      "runs": 0.2,
+      "create": 0.8,
+      "box": 0.1,
+      "roam": 0.3,
+      "stam": 0.45,
+      "stepOut": 0.35,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.72
+     }
+    },
+    {
+     "id": "Aggressive",
+     "nameRu": "Агрессия",
+     "descRu": "Перехваты и выход на соперника.",
+     "tags": [
+      "Pressure",
+      "Aggressiveness",
+      "Build-Up Support",
+      "Leave Gaps"
+     ],
+     "v": {
+      "adv": 0.06,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.08,
+      "press": 0.7,
+      "runs": 0.2,
+      "create": 0.5,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.5,
+      "stepOut": 0.7,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.82
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CB": [
+     "Defend",
+     "Build-Up",
+     "Aggressive"
+    ]
+   }
+  },
+  {
+   "id": "wide_back",
+   "nameEn": "Wide Back",
+   "nameRu": "Широкий центрбек",
+   "positions": [
+    "CB"
+   ],
+   "descEn": "New in FC 26: a central defender who opens wide to cover for the fullbacks; ideal in a back three.",
+   "descRu": "Новинка FC 26: центрбек, который смещается на фланг и страхует крайнего (лучше в схеме с тремя защитниками).",
+   "keyAttrs": [
+    "Sprint Speed",
+    "Def. Awareness",
+    "Stamina",
+    "Stand Tackle"
+   ],
+   "focuses": [
+    {
+     "id": "Defend",
+     "nameRu": "Защита",
+     "descRu": "Прикрывает линию и сопровождает соперника по флангу.",
+     "tags": [
+      "Wide Support",
+      "Defending",
+      "Central Coverage",
+      "Less Overlap"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0.55,
+      "att": 0.05,
+      "press": 0.35,
+      "runs": 0.2,
+      "create": 0.25,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.45,
+      "stepOut": 0.2,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.95
+     }
+    },
+    {
+     "id": "Aggressive",
+     "nameRu": "Агрессия",
+     "descRu": "Выходит выше/шире, чтобы прессинговать рано. Оставляет центр.",
+     "tags": [
+      "Wide Pressure",
+      "Early Press",
+      "Leaves Central Gaps"
+     ],
+     "v": {
+      "adv": 0.06,
+      "inward": 0,
+      "wide": 0.65,
+      "att": 0.1,
+      "press": 0.7,
+      "runs": 0.2,
+      "create": 0.3,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.55,
+      "stepOut": 0.65,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.82
+     }
+    },
+    {
+     "id": "Support",
+     "nameRu": "Поддержка",
+     "descRu": "Страхует и помогает продолжить владение по флангу.",
+     "tags": [
+      "Defensive + Build-Up Support",
+      "Wide Passing",
+      "Flank Transition"
+     ],
+     "v": {
+      "adv": 0.12,
+      "inward": 0,
+      "wide": 0.65,
+      "att": 0.22,
+      "press": 0.4,
+      "runs": 0.2,
+      "create": 0.45,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.55,
+      "stepOut": 0.3,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.8
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CB": [
+     "Defend",
+     "Aggressive",
+     "Support"
+    ]
+   }
+  },
+  {
+   "id": "holding",
+   "nameEn": "Holding",
+   "nameRu": "Опорник",
+   "positions": [
+    "CDM",
+    "CM"
+   ],
+   "descEn": "A defence-minded midfielder guarding the backline and covering against counters, with limited attacking support.",
+   "descRu": "Опорник-разрушитель: закрывает зону перед защитой и страхует от контратак, почти не атакует.",
+   "keyAttrs": [
+    "Def. Awareness",
+    "Interceptions",
+    "Stamina",
+    "Strength"
+   ],
+   "focuses": [
+    {
+     "id": "Defend",
+     "nameRu": "Защита",
+     "descRu": "Стоит глубоко, прикрывает защиту и даёт простой пас.",
+     "tags": [
+      "Defending",
+      "Stays Back",
+      "Pass Option",
+      "Lacks Mobility"
+     ],
+     "v": {
+      "adv": -0.02,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.12,
+      "press": 0.45,
+      "runs": 0.2,
+      "create": 0.3,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.45,
+      "stepOut": 0,
+      "screen": 1,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 1
+     }
+    },
+    {
+     "id": "Roaming",
+     "nameRu": "Свободный",
+     "descRu": "Перемещается по ширине, закрывает линии паса и прессингует (только CDM).",
+     "tags": [
+      "Defending",
+      "Movement",
+      "Pass Option",
+      "Stamina Usage"
+     ],
+     "v": {
+      "adv": 0.03,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.18,
+      "press": 0.7,
+      "runs": 0.2,
+      "create": 0.3,
+      "box": 0.1,
+      "roam": 0.35,
+      "stam": 0.7,
+      "stepOut": 0,
+      "screen": 0.72,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.85
+     }
+    },
+    {
+     "id": "Ball-Winning",
+     "nameRu": "Отбор",
+     "descRu": "Агрессивно отбирает и перехватывает.",
+     "tags": [
+      "Defending",
+      "Aggressiveness",
+      "Limited Versatility",
+      "Pass Option"
+     ],
+     "v": {
+      "adv": 0.03,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.15,
+      "press": 0.85,
+      "runs": 0.2,
+      "create": 0.25,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.65,
+      "stepOut": 0,
+      "screen": 0.75,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.9
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CDM": [
+     "Defend",
+     "Roaming",
+     "Ball-Winning"
+    ],
+    "CM": [
+     "Defend",
+     "Ball-Winning"
+    ]
+   }
+  },
+  {
+   "id": "deep_lying_playmaker",
+   "nameEn": "Deep-Lying Playmaker",
+   "nameRu": "Глубинный плеймейкер",
+   "positions": [
+    "CDM",
+    "CM"
+   ],
+   "descEn": "The key cog to building up play from the back; often the catalyst for attacks.",
+   "descRu": "Мозг розыгрыша снизу: начинает атаки, принимает мяч от защитников.",
+   "keyAttrs": [
+    "Short Pass",
+    "Long Pass",
+    "Vision",
+    "Composure"
+   ],
+   "focuses": [
+    {
+     "id": "Defend",
+     "nameRu": "Защита",
+     "descRu": "Держит позицию, перехватывает и раздаёт из глубины.",
+     "tags": [
+      "Defending",
+      "Creative",
+      "Intercepts Passes"
+     ],
+     "v": {
+      "adv": 0.02,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.22,
+      "press": 0.45,
+      "runs": 0.2,
+      "create": 0.8,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.45,
+      "stepOut": 0,
+      "screen": 0.75,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.8
+     }
+    },
+    {
+     "id": "Roaming",
+     "nameRu": "Свободный",
+     "descRu": "Перемещается по ширине поля, предлагая себя (только CDM).",
+     "tags": [
+      "Creative",
+      "Movement",
+      "Pass Option",
+      "Out of Position"
+     ],
+     "v": {
+      "adv": 0.08,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.32,
+      "press": 0.45,
+      "runs": 0.2,
+      "create": 0.85,
+      "box": 0.1,
+      "roam": 0.5,
+      "stam": 0.6,
+      "stepOut": 0,
+      "screen": 0.5,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.6
+     }
+    },
+    {
+     "id": "Build-Up",
+     "nameRu": "Розыгрыш",
+     "descRu": "Поднимается выше и поддерживает атаку передачами.",
+     "tags": [
+      "Creative",
+      "Versatile",
+      "Pass Option",
+      "Support the Defence"
+     ],
+     "v": {
+      "adv": 0.14,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.38,
+      "press": 0.5,
+      "runs": 0.2,
+      "create": 0.9,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.55,
+      "stepOut": 0,
+      "screen": 0.55,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.6
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CDM": [
+     "Defend",
+     "Roaming",
+     "Build-Up"
+    ],
+    "CM": [
+     "Defend",
+     "Build-Up"
+    ]
+   }
+  },
+  {
+   "id": "centre_half",
+   "nameEn": "Centre-Half",
+   "nameRu": "Центр-хав (опускается в оборону)",
+   "positions": [
+    "CDM"
+   ],
+   "descEn": "Drops between the centre-backs in possession to offer protection against the counter.",
+   "descRu": "С мячом опускается между центрбеками — третий защитник в страховке от контратак.",
+   "keyAttrs": [
+    "Def. Awareness",
+    "Strength",
+    "Stand Tackle",
+    "Short Pass"
+   ],
+   "focuses": [
+    {
+     "id": "Defend",
+     "nameRu": "Защита",
+     "descRu": "Остаётся рядом с защитой и прикрывает её.",
+     "tags": [
+      "Defending",
+      "Supports Centrally",
+      "Limited Versatility"
+     ],
+     "v": {
+      "adv": -0.12,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.08,
+      "press": 0.35,
+      "runs": 0.2,
+      "create": 0.4,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.4,
+      "stepOut": 0,
+      "screen": 0.7,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 1,
+      "def": 1
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CDM": [
+     "Defend"
+    ]
+   }
+  },
+  {
+   "id": "wide_half",
+   "nameEn": "Wide Half",
+   "nameRu": "Опорник-страховщик фланга",
+   "positions": [
+    "CDM"
+   ],
+   "descEn": "A defensive midfielder covering the sides of the pitch.",
+   "descRu": "Опорник, который страхует фланги и закрывает позицию крайнего защитника при необходимости.",
+   "keyAttrs": [
+    "Def. Awareness",
+    "Stamina",
+    "Short Pass",
+    "Sprint Speed"
+   ],
+   "focuses": [
+    {
+     "id": "Defend",
+     "nameRu": "Защита",
+     "descRu": "Опускается на место крайнего защитника/вингбека, когда нужно.",
+     "tags": [
+      "Defending",
+      "Wide Support",
+      "Stays Back",
+      "Supports Centrally"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0.5,
+      "att": 0.15,
+      "press": 0.5,
+      "runs": 0.2,
+      "create": 0.35,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.6,
+      "stepOut": 0,
+      "screen": 0.6,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.92
+     }
+    },
+    {
+     "id": "Build-Up",
+     "nameRu": "Розыгрыш",
+     "descRu": "Поддерживает игру на фланге и поднимается в широкие зоны.",
+     "tags": [
+      "Pass Option",
+      "Wide Support",
+      "Supports Defence"
+     ],
+     "v": {
+      "adv": 0.1,
+      "inward": 0,
+      "wide": 0.55,
+      "att": 0.3,
+      "press": 0.5,
+      "runs": 0.2,
+      "create": 0.55,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.65,
+      "stepOut": 0,
+      "screen": 0.45,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.72
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CDM": [
+     "Defend",
+     "Build-Up"
+    ]
+   }
+  },
+  {
+   "id": "box_crasher",
+   "nameEn": "Box Crasher",
+   "nameRu": "Опорник-разрушитель штрафной (Box Crasher)",
+   "positions": [
+    "CDM"
+   ],
+   "descEn": "New in FC 26: gets forward making trailing runs into the box; slow to return to defensive duties.",
+   "descRu": "Новинка FC 26: опорник, который поздно врывается в штрафную. Медленно возвращается в оборону!",
+   "keyAttrs": [
+    "Stamina",
+    "Att. Position",
+    "Long Shots",
+    "Short Pass"
+   ],
+   "focuses": [
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Подключается вторым темпом в штрафную, защита не в приоритете.",
+     "tags": [
+      "Attack Support",
+      "Late Runs",
+      "Slow Defensive Recovery"
+     ],
+     "v": {
+      "adv": 0.32,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.75,
+      "press": 0.5,
+      "runs": 0.35,
+      "create": 0.4,
+      "box": 0.6,
+      "roam": 0.1,
+      "stam": 0.8,
+      "stepOut": 0,
+      "screen": 0.2,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.35
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CDM": [
+     "Balanced"
+    ]
+   }
+  },
+  {
+   "id": "box_to_box",
+   "nameEn": "Box-to-Box",
+   "nameRu": "Бокс-ту-бокс",
+   "positions": [
+    "CM"
+   ],
+   "descEn": "Operates between the two boxes, involved in everything in-between.",
+   "descRu": "Работяга от штрафной до штрафной: и в атаке, и в обороне.",
+   "keyAttrs": [
+    "Stamina",
+    "Short Pass",
+    "Stand Tackle",
+    "Long Shots"
+   ],
+   "focuses": [
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Равномерно участвует в атаке и обороне.",
+     "tags": [
+      "Attack Support",
+      "Defence Support",
+      "Versatile",
+      "Stamina Usage"
+     ],
+     "v": {
+      "adv": 0.2,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.6,
+      "press": 0.6,
+      "runs": 0.3,
+      "create": 0.5,
+      "box": 0.35,
+      "roam": 0.1,
+      "stam": 0.9,
+      "stepOut": 0,
+      "screen": 0.45,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.65
+     }
+    },
+    {
+     "id": "Ball-Winning",
+     "nameRu": "Отбор",
+     "descRu": "Новый фокус FC 26: упор на возврат мяча между штрафными.",
+     "tags": [
+      "Defensive Recovery",
+      "Presses",
+      "High Workrate",
+      "Stamina Usage"
+     ],
+     "v": {
+      "adv": 0.14,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.5,
+      "press": 0.82,
+      "runs": 0.2,
+      "create": 0.45,
+      "box": 0.25,
+      "roam": 0.1,
+      "stam": 0.95,
+      "stepOut": 0,
+      "screen": 0.55,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.76
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CM": [
+     "Balanced",
+     "Ball-Winning"
+    ]
+   }
+  },
+  {
+   "id": "playmaker",
+   "nameEn": "Playmaker",
+   "nameRu": "Плеймейкер",
+   "positions": [
+    "CM",
+    "CAM"
+   ],
+   "descEn": "The creative fulcrum, given license to roam. Likely to be out of position if the opposition counters.",
+   "descRu": "Творческий центр команды со свободой перемещения. Часто не на позиции при контратаке соперника.",
+   "keyAttrs": [
+    "Vision",
+    "Short Pass",
+    "Dribbling",
+    "Composure"
+   ],
+   "focuses": [
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Поднимается выше и двигает атаку (CM).",
+     "tags": [
+      "Creative",
+      "Attack Support",
+      "Limited Width",
+      "Defence Support"
+     ],
+     "v": {
+      "adv": 0.3,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.75,
+      "press": 0.5,
+      "runs": 0.25,
+      "create": 0.9,
+      "box": 0.3,
+      "roam": 0.1,
+      "stam": 0.6,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.32
+     }
+    },
+    {
+     "id": "Roaming",
+     "nameRu": "Свободный",
+     "descRu": "Свободно ищет пространство по всему полю.",
+     "tags": [
+      "Creative",
+      "Movement",
+      "Out of Position",
+      "Defence Support"
+     ],
+     "v": {
+      "adv": 0.22,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.68,
+      "press": 0.45,
+      "runs": 0.2,
+      "create": 0.92,
+      "box": 0.2,
+      "roam": 0.8,
+      "stam": 0.65,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.28
+     }
+    },
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Творит, но и помогает в обороне (CAM).",
+     "tags": [
+      "Creative",
+      "Versatile",
+      "Pass Option",
+      "Stamina Usage"
+     ],
+     "v": {
+      "adv": 0.0,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.7,
+      "press": 0.55,
+      "runs": 0.2,
+      "create": 0.88,
+      "box": 0.3,
+      "roam": 0.1,
+      "stam": 0.65,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.45
+     }
+    },
+    {
+     "id": "Build-Up",
+     "nameRu": "Розыгрыш",
+     "descRu": "Опускается глубже, чтобы получать мяч и дирижировать (CAM).",
+     "tags": [
+      "Creative",
+      "Build-Up Support",
+      "Movement",
+      "Supports Attacks"
+     ],
+     "v": {
+      "adv": -0.12,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.55,
+      "press": 0.5,
+      "runs": 0.2,
+      "create": 0.92,
+      "box": 0.15,
+      "roam": 0.1,
+      "stam": 0.6,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.48
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CM": [
+     "Attack",
+     "Roaming"
+    ],
+    "CAM": [
+     "Balanced",
+     "Roaming",
+     "Build-Up"
+    ]
+   }
+  },
+  {
+   "id": "half_winger",
+   "nameEn": "Half-Winger",
+   "nameRu": "Полу-вингер",
+   "positions": [
+    "CM",
+    "CAM"
+   ],
+   "descEn": "Provides width in possession, moving along the flanks; effective as one of three central midfielders.",
+   "descRu": "С мячом уходит в полуфланг/на фланг и даёт ширину; без мяча возвращается в центр.",
+   "keyAttrs": [
+    "Stamina",
+    "Dribbling",
+    "Short Pass",
+    "Att. Position"
+   ],
+   "focuses": [
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Чередует атаку на фланге и возврат.",
+     "tags": [
+      "Wide Support",
+      "Versatile",
+      "Movement",
+      "Stamina Usage"
+     ],
+     "v": {
+      "adv": 0.2,
+      "inward": 0,
+      "wide": 0.45,
+      "att": 0.6,
+      "press": 0.55,
+      "runs": 0.35,
+      "create": 0.55,
+      "box": 0.25,
+      "roam": 0.1,
+      "stam": 0.78,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.55
+     }
+    },
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Агрессивнее идёт вперёд, жертвуя обороной.",
+     "tags": [
+      "Wide Support",
+      "Attacking",
+      "Out of Position",
+      "Defence Support"
+     ],
+     "v": {
+      "adv": 0.32,
+      "inward": 0,
+      "wide": 0.55,
+      "att": 0.8,
+      "press": 0.5,
+      "runs": 0.5,
+      "create": 0.5,
+      "box": 0.4,
+      "roam": 0.1,
+      "stam": 0.85,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.35
+     }
+    },
+    {
+     "id": "Support",
+     "nameRu": "Поддержка",
+     "descRu": "Связывает центр и фланг, держит владение (CM).",
+     "tags": [
+      "Linking Play",
+      "Wide & Central Support",
+      "Transitional",
+      "Less Advanced"
+     ],
+     "v": {
+      "adv": 0.1,
+      "inward": 0,
+      "wide": 0.4,
+      "att": 0.45,
+      "press": 0.55,
+      "runs": 0.2,
+      "create": 0.62,
+      "box": 0.12,
+      "roam": 0.1,
+      "stam": 0.7,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.66
+     }
+    },
+    {
+     "id": "Roaming",
+     "nameRu": "Свободный",
+     "descRu": "Меняет фланги прямо в атаке, ищет пространство между линиями (CAM).",
+     "tags": [
+      "Creative Runs",
+      "Switches Side",
+      "Finds Space"
+     ],
+     "v": {
+      "adv": 0.18,
+      "inward": 0,
+      "wide": 0.35,
+      "att": 0.75,
+      "press": 0.45,
+      "runs": 0.45,
+      "create": 0.65,
+      "box": 0.35,
+      "roam": 0.75,
+      "stam": 0.8,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.35
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CM": [
+     "Balanced",
+     "Attack",
+     "Support"
+    ],
+    "CAM": [
+     "Balanced",
+     "Attack",
+     "Roaming"
+    ]
+   }
+  },
+  {
+   "id": "shadow_striker",
+   "nameEn": "Shadow Striker",
+   "nameRu": "Теневой нападающий",
+   "positions": [
+    "CAM"
+   ],
+   "descEn": "Plays in the hole behind the strikers; well-timed runs into the box.",
+   "descRu": "Играет «в дырке» за нападающим и врывается в штрафную.",
+   "keyAttrs": [
+    "Att. Position",
+    "Finishing",
+    "Acceleration",
+    "Composure"
+   ],
+   "focuses": [
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Поздние забегания в штрафную: создаёт и завершает.",
+     "tags": [
+      "Attacking Runs",
+      "Support Centrally",
+      "Stamina Usage",
+      "Defence Support"
+     ],
+     "v": {
+      "adv": 0.14,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.95,
+      "press": 0.5,
+      "runs": 0.6,
+      "create": 0.5,
+      "box": 0.85,
+      "roam": 0.1,
+      "stam": 0.8,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.22
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CAM": [
+     "Attack"
+    ]
+   }
+  },
+  {
+   "id": "classic_10",
+   "nameEn": "Classic 10",
+   "nameRu": "Классическая «десятка»",
+   "positions": [
+    "CAM"
+   ],
+   "descEn": "A traditional attacking midfielder, through whom most creative play goes.",
+   "descRu": "Классический распасовщик под нападающим — через него идёт всё творчество.",
+   "keyAttrs": [
+    "Vision",
+    "Short Pass",
+    "Dribbling",
+    "Composure"
+   ],
+   "focuses": [
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Остаётся «в кармане» за нападающим, мало бегает назад.",
+     "tags": [
+      "Supports Attacks",
+      "Creative",
+      "Limited Versatility",
+      "Lacks Mobility"
+     ],
+     "v": {
+      "adv": 0.05,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.85,
+      "press": 0.2,
+      "runs": 0.2,
+      "create": 0.95,
+      "box": 0.4,
+      "roam": 0.1,
+      "stam": 0.3,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.1
+     }
+    },
+    {
+     "id": "Wide",
+     "nameRu": "Фланг",
+     "descRu": "Уходит на фланг и начинает атаки оттуда.",
+     "tags": [
+      "Support Attacks",
+      "Creative",
+      "Wide Support"
+     ],
+     "v": {
+      "adv": 0.05,
+      "inward": 0,
+      "wide": 0.5,
+      "att": 0.8,
+      "press": 0.3,
+      "runs": 0.2,
+      "create": 0.9,
+      "box": 0.25,
+      "roam": 0.1,
+      "stam": 0.45,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.25
+     }
+    },
+    {
+     "id": "Versatile",
+     "nameRu": "Универсал",
+     "descRu": "Новый фокус FC 26: подстраивается под ситуацию.",
+     "tags": [
+      "Creative",
+      "Adapts Play",
+      "Space Utilization",
+      "Unpredictable"
+     ],
+     "v": {
+      "adv": 0.08,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.85,
+      "press": 0.3,
+      "runs": 0.2,
+      "create": 0.9,
+      "box": 0.4,
+      "roam": 0.6,
+      "stam": 0.45,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.2
+     }
+    }
+   ],
+   "focusByPosition": {
+    "CAM": [
+     "Attack",
+     "Wide",
+     "Versatile"
+    ]
+   }
+  },
+  {
+   "id": "winger",
+   "nameEn": "Winger",
+   "nameRu": "Вингер",
+   "positions": [
+    "LM",
+    "RM",
+    "LW",
+    "RW"
+   ],
+   "descEn": "A wide midfielder who will always stay wide, hugging the touchline.",
+   "descRu": "Всегда держит ширину у бровки, работает на фланге во всех фазах.",
+   "keyAttrs": [
+    "Sprint Speed",
+    "Dribbling",
+    "Crossing",
+    "Stamina"
+   ],
+   "focuses": [
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Чередует забегания в спину и открывание под пас; помогает в обороне.",
+     "tags": [
+      "Wide Support",
+      "Pass Option",
+      "Versatile",
+      "Stamina Usage"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 1,
+      "att": 0.7,
+      "press": 0.55,
+      "runs": 0.5,
+      "create": 0.45,
+      "box": 0.2,
+      "roam": 0.1,
+      "stam": 0.75,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.55
+     }
+    },
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Выше, предпочитает бежать в спину, а не принимать в ноги.",
+     "tags": [
+      "Wide Support",
+      "Attack Support",
+      "Pass Option",
+      "Defending"
+     ],
+     "v": {
+      "adv": 0.08,
+      "inward": 0,
+      "wide": 1,
+      "att": 0.85,
+      "press": 0.45,
+      "runs": 0.85,
+      "create": 0.4,
+      "box": 0.25,
+      "roam": 0.1,
+      "stam": 0.8,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.3
+     }
+    },
+    {
+     "id": "Versatile",
+     "nameRu": "Универсал",
+     "descRu": "Новый фокус FC 26 (только LW/RW): ширина, центр или забегание — по ситуации.",
+     "tags": [
+      "Adaptive",
+      "Wide or Central",
+      "Creative",
+      "Less Predictable"
+     ],
+     "v": {
+      "adv": 0.05,
+      "inward": 0.15,
+      "wide": 0.7,
+      "att": 0.8,
+      "press": 0.5,
+      "runs": 0.6,
+      "create": 0.55,
+      "box": 0.35,
+      "roam": 0.5,
+      "stam": 0.75,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.42
+     }
+    }
+   ],
+   "focusByPosition": {
+    "LM": [
+     "Balanced",
+     "Attack"
+    ],
+    "RM": [
+     "Balanced",
+     "Attack"
+    ],
+    "LW": [
+     "Balanced",
+     "Attack",
+     "Versatile"
+    ],
+    "RW": [
+     "Balanced",
+     "Attack",
+     "Versatile"
+    ]
+   }
+  },
+  {
+   "id": "wide_midfielder",
+   "nameEn": "Wide Midfielder",
+   "nameRu": "Крайний полузащитник",
+   "positions": [
+    "LM",
+    "RM"
+   ],
+   "descEn": "Stays wide providing passing and defensive support but rarely ventures forward. Reworked in FC 26 to be more defensive.",
+   "descRu": "Держит фланг, помогает защите, редко идёт вперёд. В FC 26 стал более оборонительным.",
+   "keyAttrs": [
+    "Stamina",
+    "Crossing",
+    "Def. Awareness",
+    "Short Pass"
+   ],
+   "focuses": [
+    {
+     "id": "Defend",
+     "nameRu": "Защита",
+     "descRu": "Отходит назад, как вингбек, прикрывая линию опорников.",
+     "tags": [
+      "Wide Support",
+      "Stays Back",
+      "Pass Option"
+     ],
+     "v": {
+      "adv": -0.06,
+      "inward": 0,
+      "wide": 0.8,
+      "att": 0.3,
+      "press": 0.5,
+      "runs": 0.15,
+      "create": 0.35,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.6,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.95
+     }
+    },
+    {
+     "id": "Support",
+     "nameRu": "Поддержка",
+     "descRu": "Держит ширину, помогает во владении и обороне.",
+     "tags": [
+      "Wide Support",
+      "Versatile",
+      "Pass Option",
+      "Lacks Mobility"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0.9,
+      "att": 0.48,
+      "press": 0.5,
+      "runs": 0.25,
+      "create": 0.45,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.65,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.78
+     }
+    },
+    {
+     "id": "Build-Up",
+     "nameRu": "Розыгрыш",
+     "descRu": "Чуть поднимается для связи, но возвращается.",
+     "tags": [
+      "Build-Up Play",
+      "Wide Support",
+      "Ball Circulation",
+      "Defensive Awareness"
+     ],
+     "v": {
+      "adv": 0.05,
+      "inward": 0,
+      "wide": 0.75,
+      "att": 0.55,
+      "press": 0.5,
+      "runs": 0.25,
+      "create": 0.58,
+      "box": 0.1,
+      "roam": 0.1,
+      "stam": 0.65,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.7
+     }
+    }
+   ],
+   "focusByPosition": {
+    "LM": [
+     "Defend",
+     "Support",
+     "Build-Up"
+    ],
+    "RM": [
+     "Defend",
+     "Support",
+     "Build-Up"
+    ]
+   }
+  },
+  {
+   "id": "wide_playmaker",
+   "nameEn": "Wide Playmaker",
+   "nameRu": "Фланговый плеймейкер",
+   "positions": [
+    "LM",
+    "RM",
+    "LW",
+    "RW"
+   ],
+   "descEn": "A creative outlet positioned out wide, but able to move inside to create chances.",
+   "descRu": "Творческий игрок с фланга, который смещается внутрь, чтобы вскрывать оборону.",
+   "keyAttrs": [
+    "Vision",
+    "Short Pass",
+    "Dribbling",
+    "Composure"
+   ],
+   "focuses": [
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Принимает мяч широко и двигает атаку вперёд.",
+     "tags": [
+      "Creative",
+      "Attack Support",
+      "Wide Support",
+      "Defence Support"
+     ],
+     "v": {
+      "adv": 0.03,
+      "inward": 0.3,
+      "wide": 0,
+      "att": 0.75,
+      "press": 0.45,
+      "runs": 0.3,
+      "create": 0.82,
+      "box": 0.3,
+      "roam": 0.1,
+      "stam": 0.6,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.35
+     }
+    },
+    {
+     "id": "Build-Up",
+     "nameRu": "Розыгрыш",
+     "descRu": "Открывается коротко под пас, помогает защите.",
+     "tags": [
+      "Creative",
+      "Build-Up Support",
+      "Supports Defence",
+      "Support Centrally"
+     ],
+     "v": {
+      "adv": -0.06,
+      "inward": 0.35,
+      "wide": 0,
+      "att": 0.55,
+      "press": 0.5,
+      "runs": 0.15,
+      "create": 0.85,
+      "box": 0.2,
+      "roam": 0.1,
+      "stam": 0.55,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.52
+     }
+    }
+   ],
+   "focusByPosition": {
+    "LM": [
+     "Attack",
+     "Build-Up"
+    ],
+    "RM": [
+     "Attack",
+     "Build-Up"
+    ],
+    "LW": [
+     "Attack",
+     "Build-Up"
+    ],
+    "RW": [
+     "Attack",
+     "Build-Up"
+    ]
+   }
+  },
+  {
+   "id": "inside_forward",
+   "nameEn": "Inside Forward",
+   "nameRu": "Инвертированный вингер (Inside Forward)",
+   "positions": [
+    "LM",
+    "RM",
+    "LW",
+    "RW"
+   ],
+   "descEn": "Starts on the wing and regularly cuts inside onto their preferred foot to shoot or play the final pass; runs in behind.",
+   "descRu": "Начинает с фланга и режет внутрь на сильную ногу — удар или последний пас, забегания в спину.",
+   "keyAttrs": [
+    "Finishing",
+    "Acceleration",
+    "Dribbling",
+    "Att. Position"
+   ],
+   "focuses": [
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Иногда держит мяч и даёт вариант паса, мало помогает в обороне.",
+     "tags": [
+      "Attack Support",
+      "Pass Option",
+      "Cut Inside",
+      "Stamina Usage"
+     ],
+     "v": {
+      "adv": 0.05,
+      "inward": 0.42,
+      "wide": 0,
+      "att": 0.75,
+      "press": 0.5,
+      "runs": 0.6,
+      "create": 0.5,
+      "box": 0.5,
+      "roam": 0.1,
+      "stam": 0.7,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.4
+     }
+    },
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Режет внутрь и делает агрессивные забегания в центр.",
+     "tags": [
+      "Attacking",
+      "Support Centrally",
+      "Cut Inside",
+      "Defence Support"
+     ],
+     "v": {
+      "adv": 0.1,
+      "inward": 0.52,
+      "wide": 0,
+      "att": 0.9,
+      "press": 0.45,
+      "runs": 0.8,
+      "create": 0.45,
+      "box": 0.7,
+      "roam": 0.1,
+      "stam": 0.75,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.24
+     }
+    },
+    {
+     "id": "Roaming",
+     "nameRu": "Свободный",
+     "descRu": "Свободно ищет дыры в обороне соперника (только LW/RW).",
+     "tags": [
+      "Movement",
+      "Attack Support",
+      "Cut Inside",
+      "Out of Position"
+     ],
+     "v": {
+      "adv": 0.08,
+      "inward": 0.4,
+      "wide": 0,
+      "att": 0.85,
+      "press": 0.45,
+      "runs": 0.65,
+      "create": 0.55,
+      "box": 0.6,
+      "roam": 0.8,
+      "stam": 0.75,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.25
+     }
+    }
+   ],
+   "focusByPosition": {
+    "LM": [
+     "Balanced",
+     "Attack"
+    ],
+    "RM": [
+     "Balanced",
+     "Attack"
+    ],
+    "LW": [
+     "Balanced",
+     "Attack",
+     "Roaming"
+    ],
+    "RW": [
+     "Balanced",
+     "Attack",
+     "Roaming"
+    ]
+   }
+  },
+  {
+   "id": "advanced_forward",
+   "nameEn": "Advanced Forward",
+   "nameRu": "Форвард на острие",
+   "positions": [
+    "ST"
+   ],
+   "descEn": "Stays close to the opposition's defensive line; makes runs in behind.",
+   "descRu": "Живёт на плече последнего защитника: забегания в спину и завершение.",
+   "keyAttrs": [
+    "Acceleration",
+    "Finishing",
+    "Att. Position",
+    "Composure"
+   ],
+   "focuses": [
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Высоко и по центру, максимум голевых моментов.",
+     "tags": [
+      "Attacking",
+      "Pass Option",
+      "Versatile",
+      "Limited Width"
+     ],
+     "v": {
+      "adv": 0.03,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.95,
+      "press": 0.4,
+      "runs": 0.85,
+      "create": 0.35,
+      "box": 0.9,
+      "roam": 0.1,
+      "stam": 0.6,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.15
+     }
+    },
+    {
+     "id": "Versatile",
+     "nameRu": "Универсал",
+     "descRu": "Уходит на фланг, опускается или стоит в центре по ситуации.",
+     "tags": [
+      "Adaptive Movement",
+      "Attacking",
+      "Disruptive",
+      "Constant Threat"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.9,
+      "press": 0.55,
+      "runs": 0.7,
+      "create": 0.45,
+      "box": 0.75,
+      "roam": 0.5,
+      "stam": 0.7,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.3
+     }
+    }
+   ],
+   "focusByPosition": {
+    "ST": [
+     "Attack",
+     "Versatile"
+    ]
+   }
+  },
+  {
+   "id": "poacher",
+   "nameEn": "Poacher",
+   "nameRu": "Чистый бомбардир (Poacher)",
+   "positions": [
+    "ST"
+   ],
+   "descEn": "One objective: score goals. Stays forward making runs in behind.",
+   "descRu": "Одна задача — забивать. Остаётся впереди, бежит в спину, почти не защищается.",
+   "keyAttrs": [
+    "Finishing",
+    "Att. Position",
+    "Reactions",
+    "Composure"
+   ],
+   "focuses": [
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Караулит у линии обороны, ловит ошибки.",
+     "tags": [
+      "Attacking Runs",
+      "Support Centrally",
+      "Limited Width",
+      "Defence Support"
+     ],
+     "v": {
+      "adv": 0.05,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.95,
+      "press": 0.15,
+      "runs": 0.82,
+      "create": 0.2,
+      "box": 1,
+      "roam": 0.1,
+      "stam": 0.45,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.05
+     }
+    },
+    {
+     "id": "Versatile",
+     "nameRu": "Универсал",
+     "descRu": "Новый фокус FC 26: прессингует, уходит на фланг или ждёт в центре.",
+     "tags": [
+      "Attacking Runs",
+      "Adaptive",
+      "Constant Pressure",
+      "High Workrate"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.9,
+      "press": 0.65,
+      "runs": 0.75,
+      "create": 0.25,
+      "box": 0.85,
+      "roam": 0.4,
+      "stam": 0.75,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.3
+     }
+    }
+   ],
+   "focusByPosition": {
+    "ST": [
+     "Attack",
+     "Versatile"
+    ]
+   }
+  },
+  {
+   "id": "false_9",
+   "nameEn": "False 9",
+   "nameRu": "Ложная «девятка»",
+   "positions": [
+    "ST"
+   ],
+   "descEn": "Drops deep to dictate play in front of the defence and contributes defensively.",
+   "descRu": "Опускается в полузащиту, раздаёт и тащит центрбеков за собой; помогает в обороне.",
+   "keyAttrs": [
+    "Vision",
+    "Short Pass",
+    "Dribbling",
+    "Composure"
+   ],
+   "focuses": [
+    {
+     "id": "Build-Up",
+     "nameRu": "Розыгрыш",
+     "descRu": "Опускается от линии обороны и раздаёт как плеймейкер.",
+     "tags": [
+      "Creative",
+      "Build-Up Support",
+      "Movement",
+      "Attacking"
+     ],
+     "v": {
+      "adv": -0.15,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.7,
+      "press": 0.55,
+      "runs": 0.25,
+      "create": 0.85,
+      "box": 0.4,
+      "roam": 0.1,
+      "stam": 0.6,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.45
+     }
+    },
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Новый фокус FC 26: из глубины врывается в штрафную вслед за мячом.",
+     "tags": [
+      "Playmaker",
+      "Advanced Threat",
+      "Versatile",
+      "Less Support Deep"
+     ],
+     "v": {
+      "adv": -0.05,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.85,
+      "press": 0.5,
+      "runs": 0.5,
+      "create": 0.7,
+      "box": 0.7,
+      "roam": 0.1,
+      "stam": 0.65,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0,
+      "dropBack": 0,
+      "def": 0.3
+     }
+    }
+   ],
+   "focusByPosition": {
+    "ST": [
+     "Build-Up",
+     "Attack"
+    ]
+   }
+  },
+  {
+   "id": "target_forward",
+   "nameEn": "Target Forward",
+   "nameRu": "Таргетмен",
+   "positions": [
+    "ST"
+   ],
+   "descEn": "Physicality allows them to hold up play, shield the ball, and bring others in; feeds on crosses.",
+   "descRu": "Физически мощный форвард: держит мяч спиной, скидывает, играет на подачах.",
+   "keyAttrs": [
+    "Strength",
+    "Heading Acc.",
+    "Jumping",
+    "Finishing"
+   ],
+   "focuses": [
+    {
+     "id": "Balanced",
+     "nameRu": "Баланс",
+     "descRu": "Опускается, держит мяч и скидывает партнёрам.",
+     "tags": [
+      "Physical",
+      "Build-Up Support",
+      "Defence Support",
+      "Lacks Mobility"
+     ],
+     "v": {
+      "adv": -0.05,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.75,
+      "press": 0.45,
+      "runs": 0.2,
+      "create": 0.45,
+      "box": 0.8,
+      "roam": 0.1,
+      "stam": 0.5,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 1,
+      "dropBack": 0,
+      "def": 0.35
+     }
+    },
+    {
+     "id": "Attack",
+     "nameRu": "Атака",
+     "descRu": "Только вперёд и завершение.",
+     "tags": [
+      "Physical",
+      "Attacking",
+      "Build-Up Support",
+      "Lacks Mobility"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0,
+      "att": 0.9,
+      "press": 0.35,
+      "runs": 0.3,
+      "create": 0.35,
+      "box": 0.95,
+      "roam": 0.1,
+      "stam": 0.45,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0.9,
+      "dropBack": 0,
+      "def": 0.15
+     }
+    },
+    {
+     "id": "Wide",
+     "nameRu": "Фланг",
+     "descRu": "Уходит к краям штрафной, открывая пространство и атакуя подачи.",
+     "tags": [
+      "Physical",
+      "Wide Support",
+      "Attacking",
+      "Central Support"
+     ],
+     "v": {
+      "adv": 0,
+      "inward": 0,
+      "wide": 0.35,
+      "att": 0.8,
+      "press": 0.4,
+      "runs": 0.3,
+      "create": 0.4,
+      "box": 0.7,
+      "roam": 0.1,
+      "stam": 0.5,
+      "stepOut": 0,
+      "screen": 0,
+      "sweep": 0,
+      "hold": 0.8,
+      "dropBack": 0,
+      "def": 0.25
+     }
+    }
+   ],
+   "focusByPosition": {
+    "ST": [
+     "Balanced",
+     "Attack",
+     "Wide"
+    ]
+   }
+  }
+ ]
+}

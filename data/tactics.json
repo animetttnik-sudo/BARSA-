@@ -1,0 +1,32 @@
+{
+ "_meta": {
+  "sources": [
+   "https://www.ea.com/en/games/ea-sports-fc/fc-25/news/pitch-notes-fc-iq-deep-dive (via https://fifauteam.com/fc-26-tactics/)",
+   "https://www.ea.com/en/games/ea-sports-fc/fc-26/news/pitch-notes-fc26-gameplay-deep-dive"
+  ],
+  "note": "В FC 25/26 нет ползунков ширины/глубины: Ширина и Длина есть только в «паутинке» тактического резюме. Глубина = Line Height (1–100)."
+ },
+ "buildUp": [
+  {"id": "Short", "nameRu": "Короткий пас", "nameEn": "Short Passing", "descRu": "Игроки открываются коротко под мяч, терпеливый переход из обороны в атаку.", "transition": "patient", "forwardRuns": 0.25, "shortOptions": 0.9},
+  {"id": "Balanced", "nameRu": "Сбалансированный", "nameEn": "Balanced", "descRu": "Смесь открываний под пас и забеганий вперёд, обычный темп перехода.", "transition": "normal", "forwardRuns": 0.55, "shortOptions": 0.6},
+  {"id": "Counter", "nameRu": "Контратака", "nameEn": "Counter", "descRu": "Игроки сразу бегут вперёд, быстрый переход в атаку после отбора.", "transition": "quick", "forwardRuns": 0.9, "shortOptions": 0.3}
+ ],
+ "defensiveApproach": [
+  {"id": "Deep", "nameRu": "Глубокий блок", "nameEn": "Deep", "lineMin": 1, "lineMax": 30, "lineDefault": 25, "runTracking": "Отходит вместе с забеганиями", "pressure": "Нет", "trackRuns": 1.0, "pressBonus": 0, "staminaMult": 0.9, "offsideTrap": false},
+  {"id": "Balanced", "nameRu": "Сбалансированный", "nameEn": "Balanced", "lineMin": 31, "lineMax": 60, "lineDefault": 50, "runTracking": "Гибко", "pressure": "Нет", "trackRuns": 0.75, "pressBonus": 0.05, "staminaMult": 1.0, "offsideTrap": false},
+  {"id": "High", "nameRu": "Высокая линия", "nameEn": "High", "lineMin": 61, "lineMax": 90, "lineDefault": 70, "runTracking": "Редко сопровождает забегания", "pressure": "Минимальное", "trackRuns": 0.4, "pressBonus": 0.15, "staminaMult": 1.07, "offsideTrap": false},
+  {"id": "Aggressive", "nameRu": "Агрессивный", "nameEn": "Aggressive", "lineMin": 91, "lineMax": 100, "lineDefault": 95, "runTracking": "Никогда — ловит в офсайд", "pressure": "Прессинг на плохом приёме, доп. расход выносливости", "trackRuns": 0.15, "pressBonus": 0.3, "staminaMult": 1.18, "offsideTrap": true}
+ ],
+ "quickTactics": [
+  {"id": "OffsideTrap", "nameRu": "Ловушка офсайда", "descRu": "Вся линия делает шаг вперёд. Риск при ошибке."},
+  {"id": "TeamPress", "nameRu": "Командный прессинг", "descRu": "20 секунд прессинга, потом перезарядка 100 с."},
+  {"id": "OverloadSetPieces", "nameRu": "Перегрузка стандартов", "descRu": "Больше игроков в штрафную на стандартах."},
+  {"id": "GetInBox", "nameRu": "Все в штрафную", "descRu": "Больше игроков врываются в штрафную."}
+ ],
+ "tacticalFocus": [
+  {"id": "Default", "nameRu": "Обычный"},
+  {"id": "Attacking", "nameRu": "Атакующий", "descRu": "Сдвигает стиль розыгрыша и подход в обороне на шаг в сторону атаки, фокусы ролей становятся атакующими."},
+  {"id": "Defending", "nameRu": "Оборонительный", "descRu": "Сдвигает на шаг в сторону обороны, фокусы ролей становятся оборонительными."}
+ ],
+ "suggestions": ["Balanced", "Tiki-Taka", "Long Ball", "Counter Attack", "Wing Play", "Park the Bus", "Pressing"]
+}

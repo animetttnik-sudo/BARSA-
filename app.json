@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Барса · тактика",
+    "slug": "barca",
+    "owner": "adil-baike-help",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#070B16",
+    "primaryColor": "#A50044",
+    "splash": { "backgroundColor": "#070B16" },
+    "runtimeVersion": { "policy": "sdkVersion" },
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.adilbaike.barca" },
+    "android": { "package": "com.adilbaike.barca", "edgeToEdgeEnabled": true },
+    "web": { "bundler": "metro", "output": "single" }
+  }
+}

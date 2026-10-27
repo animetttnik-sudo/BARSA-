@@ -1,0 +1,3558 @@
+{
+ "_meta": {
+  "game": "EA SPORTS FC 26",
+  "dataSource": "fifacm.com FC 26 live database (latest update 23 Jun 2026) — attributes, positions, roles+/++, PlayStyles/PlayStyles+",
+  "ovrLaunchSource": "EA official FC 26 ratings reveal (Sept 2025) via sportskeeda.com / beebom.com articles",
+  "real2627Source": "fcbarcelona.com first-team squad page + 2026/27 jersey numbers news (02 Sep 2026) + en.wikipedia.org/wiki/2026–27_FC_Barcelona_season",
+  "faceFormula": "Face stats computed from detailed attributes with standard weights (verified against EA ratings page): PAC=.45Acc+.55Spr, SHO, PAS, DRI(approx.), DEF, PHY",
+  "notes": [
+   "Work rates are not used: since FC 25 they are replaced by Roles (FC IQ); fifacm shows Med/Med for everyone.",
+   "Ages are database ages (at game data date), not real current ages.",
+   "OVR is stored for display only — the danger rating NEVER uses OVR."
+  ],
+  "missingFromFc26": [
+   {
+    "name": "Brian Fariñas",
+    "number": 4,
+    "pos": "MF",
+    "reason": "Not found in FC 26 database (no FC 26 card found on fifacm/futbin search results)"
+   },
+   {
+    "name": "Bisiwu",
+    "number": 27,
+    "pos": "FW",
+    "reason": "Youth/new player, no FC 26 data found"
+   },
+   {
+    "name": "Hamza Abdelkarim",
+    "number": 29,
+    "pos": "FW",
+    "reason": "Not found in FC 26 database"
+   }
+  ]
+ },
+ "players": [
+  {
+   "id": "szczesny",
+   "name": "Szczęsny",
+   "nameRu": "Щенсны",
+   "fullName": "Wojciech Szczęsny",
+   "number": 13,
+   "age": 35,
+   "heightCm": 195,
+   "foot": "R",
+   "skillMoves": 1,
+   "weakFoot": 3,
+   "positions": [
+    "GK"
+   ],
+   "ovr": 83,
+   "ovrLaunch": 84,
+   "face": {
+    "DIV": 80,
+    "HAN": 82,
+    "KIC": 74,
+    "REF": 82,
+    "SPD": 47,
+    "POS": 83
+   },
+   "attr": {
+    "Crossing": 12,
+    "Finishing": 12,
+    "Heading Acc.": 16,
+    "Short Pass": 52,
+    "Volleys": 14,
+    "Dribbling": 11,
+    "Curve": 16,
+    "FK Acc.": 14,
+    "Long Pass": 62,
+    "Ball Control": 22,
+    "Shot Power": 56,
+    "Jumping": 68,
+    "Stamina": 45,
+    "Strength": 65,
+    "Long Shots": 14,
+    "Acceleration": 49,
+    "Sprint Speed": 46,
+    "Agility": 55,
+    "Reactions": 80,
+    "Balance": 51,
+    "Aggression": 40,
+    "Interceptions": 15,
+    "Att. Position": 14,
+    "Vision": 48,
+    "Penalties": 18,
+    "Composure": 65,
+    "Def. Awareness": 20,
+    "Stand Tackle": 13,
+    "Slide Tackle": 12,
+    "GK Diving": 80,
+    "GK Handling": 82,
+    "GK Kicking": 74,
+    "GK Positioning": 83,
+    "GK Reflexes": 82
+   },
+   "roles": {
+    "GK": [
+     {
+      "role": "Goalkeeper",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/186153/wojciech-szczesny"
+  },
+  {
+   "id": "lewandowski",
+   "name": "Lewandowski",
+   "nameRu": "Левандовски",
+   "fullName": "Robert Lewandowski",
+   "number": 9,
+   "age": 36,
+   "heightCm": 186,
+   "foot": "R",
+   "skillMoves": 4,
+   "weakFoot": 4,
+   "positions": [
+    "ST"
+   ],
+   "ovr": 86,
+   "ovrLaunch": 88,
+   "face": {
+    "PAC": 71,
+    "SHO": 87,
+    "PAS": 79,
+    "DRI": 82,
+    "DEF": 44,
+    "PHY": 82
+   },
+   "attr": {
+    "Crossing": 76,
+    "Finishing": 90,
+    "Heading Acc.": 87,
+    "Short Pass": 83,
+    "Volleys": 86,
+    "Dribbling": 81,
+    "Curve": 79,
+    "FK Acc.": 81,
+    "Long Pass": 70,
+    "Ball Control": 86,
+    "Shot Power": 88,
+    "Jumping": 89,
+    "Stamina": 76,
+    "Strength": 86,
+    "Long Shots": 78,
+    "Acceleration": 70,
+    "Sprint Speed": 71,
+    "Agility": 72,
+    "Reactions": 88,
+    "Balance": 83,
+    "Aggression": 80,
+    "Interceptions": 49,
+    "Att. Position": 88,
+    "Vision": 81,
+    "Penalties": 86,
+    "Composure": 87,
+    "Def. Awareness": 35,
+    "Stand Tackle": 42,
+    "Slide Tackle": 19,
+    "GK Diving": 15,
+    "GK Handling": 6,
+    "GK Kicking": 12,
+    "GK Positioning": 8,
+    "GK Reflexes": 10
+   },
+   "roles": {
+    "ST": [
+     {
+      "role": "Advanced Forward",
+      "level": 2
+     }
+    ]
+   },
+   "playstyles": [
+    "Finesse Shot",
+    "Power Shot",
+    "Precision Header",
+    "Low Driven Shot",
+    "Gamechanger",
+    "First Touch"
+   ],
+   "playstylesPlus": [
+    "Chip Shot"
+   ],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/188545/robert-lewandowski"
+  },
+  {
+   "id": "ter-stegen",
+   "name": "ter Stegen",
+   "nameRu": "тер Штеген",
+   "fullName": "Marc-André ter Stegen",
+   "number": 1,
+   "age": 33,
+   "heightCm": 187,
+   "foot": "R",
+   "skillMoves": 1,
+   "weakFoot": 4,
+   "positions": [
+    "GK"
+   ],
+   "ovr": 84,
+   "ovrLaunch": 86,
+   "face": {
+    "DIV": 82,
+    "HAN": 82,
+    "KIC": 86,
+    "REF": 82,
+    "SPD": 45,
+    "POS": 83
+   },
+   "attr": {
+    "Crossing": 18,
+    "Finishing": 14,
+    "Heading Acc.": 11,
+    "Short Pass": 62,
+    "Volleys": 14,
+    "Dribbling": 21,
+    "Curve": 18,
+    "FK Acc.": 12,
+    "Long Pass": 63,
+    "Ball Control": 30,
+    "Shot Power": 65,
+    "Jumping": 68,
+    "Stamina": 35,
+    "Strength": 75,
+    "Long Shots": 10,
+    "Acceleration": 41,
+    "Sprint Speed": 48,
+    "Agility": 37,
+    "Reactions": 82,
+    "Balance": 43,
+    "Aggression": 43,
+    "Interceptions": 22,
+    "Att. Position": 11,
+    "Vision": 70,
+    "Penalties": 25,
+    "Composure": 70,
+    "Def. Awareness": 25,
+    "Stand Tackle": 13,
+    "Slide Tackle": 10,
+    "GK Diving": 82,
+    "GK Handling": 82,
+    "GK Kicking": 86,
+    "GK Positioning": 83,
+    "GK Reflexes": 82
+   },
+   "roles": {
+    "GK": [
+     {
+      "role": "Ball-Playing Keeper",
+      "level": 2
+     }
+    ]
+   },
+   "playstyles": [
+    "Rush Out"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/192448/marc-andre-ter-stegen"
+  },
+  {
+   "id": "cancelo",
+   "name": "Cancelo",
+   "nameRu": "Канселу",
+   "fullName": "João Pedro Cavaco Cancelo",
+   "number": 2,
+   "age": 31,
+   "heightCm": 182,
+   "foot": "R",
+   "skillMoves": 4,
+   "weakFoot": 4,
+   "positions": [
+    "RB",
+    "LB",
+    "RM"
+   ],
+   "ovr": 84,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 82,
+    "SHO": 73,
+    "PAS": 84,
+    "DRI": 84,
+    "DEF": 77,
+    "PHY": 71
+   },
+   "attr": {
+    "Crossing": 86,
+    "Finishing": 69,
+    "Heading Acc.": 72,
+    "Short Pass": 86,
+    "Volleys": 62,
+    "Dribbling": 85,
+    "Curve": 87,
+    "FK Acc.": 69,
+    "Long Pass": 79,
+    "Ball Control": 86,
+    "Shot Power": 80,
+    "Jumping": 82,
+    "Stamina": 77,
+    "Strength": 65,
+    "Long Shots": 79,
+    "Acceleration": 88,
+    "Sprint Speed": 78,
+    "Agility": 79,
+    "Reactions": 84,
+    "Balance": 78,
+    "Aggression": 76,
+    "Interceptions": 79,
+    "Att. Position": 81,
+    "Vision": 85,
+    "Penalties": 52,
+    "Composure": 85,
+    "Def. Awareness": 75,
+    "Stand Tackle": 81,
+    "Slide Tackle": 77,
+    "GK Diving": 6,
+    "GK Handling": 9,
+    "GK Kicking": 15,
+    "GK Positioning": 14,
+    "GK Reflexes": 14
+   },
+   "roles": {
+    "RB": [
+     {
+      "role": "Attacking Wingback",
+      "level": 1
+     }
+    ],
+    "LB": [
+     {
+      "role": "Attacking Wingback",
+      "level": 1
+     }
+    ],
+    "RM": [
+     {
+      "role": "Inside Forward",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Whipped Pass",
+    "Inventive",
+    "Technical",
+    "First Touch"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/210514/joao-pedro-cavaco-cancelo"
+  },
+  {
+   "id": "christensen",
+   "name": "Christensen",
+   "nameRu": "Кристенсен",
+   "fullName": "Andreas Christensen",
+   "number": 15,
+   "age": 29,
+   "heightCm": 189,
+   "foot": "R",
+   "skillMoves": 2,
+   "weakFoot": 3,
+   "positions": [
+    "CB",
+    "CM",
+    "CDM"
+   ],
+   "ovr": 80,
+   "ovrLaunch": 80,
+   "face": {
+    "PAC": 71,
+    "SHO": 32,
+    "PAS": 67,
+    "DRI": 69,
+    "DEF": 82,
+    "PHY": 73
+   },
+   "attr": {
+    "Crossing": 51,
+    "Finishing": 36,
+    "Heading Acc.": 78,
+    "Short Pass": 81,
+    "Volleys": 25,
+    "Dribbling": 66,
+    "Curve": 41,
+    "FK Acc.": 39,
+    "Long Pass": 79,
+    "Ball Control": 76,
+    "Shot Power": 37,
+    "Jumping": 83,
+    "Stamina": 67,
+    "Strength": 76,
+    "Long Shots": 20,
+    "Acceleration": 68,
+    "Sprint Speed": 74,
+    "Agility": 59,
+    "Reactions": 78,
+    "Balance": 60,
+    "Aggression": 72,
+    "Interceptions": 81,
+    "Att. Position": 32,
+    "Vision": 62,
+    "Penalties": 36,
+    "Composure": 79,
+    "Def. Awareness": 84,
+    "Stand Tackle": 81,
+    "Slide Tackle": 81,
+    "GK Diving": 10,
+    "GK Handling": 12,
+    "GK Kicking": 8,
+    "GK Positioning": 6,
+    "GK Reflexes": 8
+   },
+   "roles": {
+    "CB": [
+     {
+      "role": "Stopper",
+      "level": 1
+     },
+     {
+      "role": "Wide Back",
+      "level": 1
+     }
+    ],
+    "CM": [
+     {
+      "role": "Box-To-Box",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Aerial Fortress"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/213661/andreas-christensen"
+  },
+  {
+   "id": "de-jong",
+   "name": "de Jong",
+   "nameRu": "де Йонг",
+   "fullName": "Frenkie de Jong",
+   "number": 21,
+   "age": 28,
+   "heightCm": 181,
+   "foot": "R",
+   "skillMoves": 4,
+   "weakFoot": 3,
+   "positions": [
+    "CM",
+    "CDM",
+    "CAM"
+   ],
+   "ovr": 87,
+   "ovrLaunch": 87,
+   "face": {
+    "PAC": 82,
+    "SHO": 71,
+    "PAS": 85,
+    "DRI": 87,
+    "DEF": 78,
+    "PHY": 77
+   },
+   "attr": {
+    "Crossing": 78,
+    "Finishing": 75,
+    "Heading Acc.": 72,
+    "Short Pass": 90,
+    "Volleys": 70,
+    "Dribbling": 86,
+    "Curve": 84,
+    "FK Acc.": 64,
+    "Long Pass": 87,
+    "Ball Control": 88,
+    "Shot Power": 68,
+    "Jumping": 82,
+    "Stamina": 87,
+    "Strength": 73,
+    "Long Shots": 69,
+    "Acceleration": 80,
+    "Sprint Speed": 83,
+    "Agility": 87,
+    "Reactions": 87,
+    "Balance": 79,
+    "Aggression": 74,
+    "Interceptions": 82,
+    "Att. Position": 78,
+    "Vision": 88,
+    "Penalties": 53,
+    "Composure": 90,
+    "Def. Awareness": 76,
+    "Stand Tackle": 78,
+    "Slide Tackle": 77,
+    "GK Diving": 7,
+    "GK Handling": 13,
+    "GK Kicking": 10,
+    "GK Positioning": 10,
+    "GK Reflexes": 9
+   },
+   "roles": {
+    "CM": [
+     {
+      "role": "Playmaker",
+      "level": 2
+     }
+    ],
+    "CDM": [
+     {
+      "role": "Centre-Half",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Incisive Pass",
+    "Inventive",
+    "Press Proven"
+   ],
+   "playstylesPlus": [
+    "Tiki Taka"
+   ],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/228702/frenkie-de-jong"
+  },
+  {
+   "id": "rashford",
+   "name": "Rashford",
+   "nameRu": "Рэшфорд",
+   "fullName": "Marcus Rashford",
+   "number": 14,
+   "age": 27,
+   "heightCm": 188,
+   "foot": "R",
+   "skillMoves": 5,
+   "weakFoot": 3,
+   "positions": [
+    "LW",
+    "LM",
+    "ST"
+   ],
+   "ovr": 82,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 91,
+    "SHO": 83,
+    "PAS": 78,
+    "DRI": 81,
+    "DEF": 32,
+    "PHY": 68
+   },
+   "attr": {
+    "Crossing": 82,
+    "Finishing": 82,
+    "Heading Acc.": 71,
+    "Short Pass": 78,
+    "Volleys": 73,
+    "Dribbling": 84,
+    "Curve": 80,
+    "FK Acc.": 79,
+    "Long Pass": 72,
+    "Ball Control": 81,
+    "Shot Power": 93,
+    "Jumping": 85,
+    "Stamina": 70,
+    "Strength": 71,
+    "Long Shots": 80,
+    "Acceleration": 89,
+    "Sprint Speed": 93,
+    "Agility": 77,
+    "Reactions": 78,
+    "Balance": 69,
+    "Aggression": 52,
+    "Interceptions": 27,
+    "Att. Position": 82,
+    "Vision": 80,
+    "Penalties": 84,
+    "Composure": 78,
+    "Def. Awareness": 30,
+    "Stand Tackle": 29,
+    "Slide Tackle": 24,
+    "GK Diving": 11,
+    "GK Handling": 6,
+    "GK Kicking": 15,
+    "GK Positioning": 7,
+    "GK Reflexes": 14
+   },
+   "roles": {
+    "LW": [
+     {
+      "role": "Inside Forward",
+      "level": 1
+     },
+     {
+      "role": "Winger",
+      "level": 1
+     }
+    ],
+    "LM": [
+     {
+      "role": "Inside Forward",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Power Shot",
+    "Dead Ball",
+    "Rapid",
+    "Quick Step"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/231677/marcus-rashford"
+  },
+  {
+   "id": "raphinha",
+   "name": "Raphinha",
+   "nameRu": "Рафинья",
+   "fullName": "Raphael Dias Belloli",
+   "number": 11,
+   "age": 28,
+   "heightCm": 176,
+   "foot": "L",
+   "skillMoves": 4,
+   "weakFoot": 4,
+   "positions": [
+    "LW",
+    "CAM",
+    "RW",
+    "LM"
+   ],
+   "ovr": 89,
+   "ovrLaunch": 89,
+   "face": {
+    "PAC": 91,
+    "SHO": 85,
+    "PAS": 85,
+    "DRI": 88,
+    "DEF": 54,
+    "PHY": 76
+   },
+   "attr": {
+    "Crossing": 86,
+    "Finishing": 87,
+    "Heading Acc.": 74,
+    "Short Pass": 85,
+    "Volleys": 76,
+    "Dribbling": 88,
+    "Curve": 85,
+    "FK Acc.": 84,
+    "Long Pass": 80,
+    "Ball Control": 88,
+    "Shot Power": 84,
+    "Jumping": 83,
+    "Stamina": 91,
+    "Strength": 67,
+    "Long Shots": 84,
+    "Acceleration": 90,
+    "Sprint Speed": 91,
+    "Agility": 88,
+    "Reactions": 87,
+    "Balance": 83,
+    "Aggression": 79,
+    "Interceptions": 56,
+    "Att. Position": 89,
+    "Vision": 87,
+    "Penalties": 81,
+    "Composure": 85,
+    "Def. Awareness": 49,
+    "Stand Tackle": 54,
+    "Slide Tackle": 38,
+    "GK Diving": 8,
+    "GK Handling": 7,
+    "GK Kicking": 13,
+    "GK Positioning": 8,
+    "GK Reflexes": 14
+   },
+   "roles": {
+    "LW": [
+     {
+      "role": "Inside Forward",
+      "level": 2
+     }
+    ],
+    "CAM": [
+     {
+      "role": "Shadow Striker",
+      "level": 1
+     }
+    ],
+    "RW": [
+     {
+      "role": "Inside Forward",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Finesse Shot",
+    "Power Shot",
+    "Trickster",
+    "Quick Step",
+    "Relentless"
+   ],
+   "playstylesPlus": [
+    "Rapid"
+   ],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/233419/raphael-dias-belloli"
+  },
+  {
+   "id": "ferran-torres",
+   "name": "Ferran Torres",
+   "nameRu": "Ферран",
+   "fullName": "Ferran Torres García",
+   "number": 7,
+   "age": 25,
+   "heightCm": 183,
+   "foot": "R",
+   "skillMoves": 4,
+   "weakFoot": 4,
+   "positions": [
+    "ST",
+    "LW",
+    "LM"
+   ],
+   "ovr": 84,
+   "ovrLaunch": 83,
+   "face": {
+    "PAC": 84,
+    "SHO": 84,
+    "PAS": 78,
+    "DRI": 83,
+    "DEF": 40,
+    "PHY": 74
+   },
+   "attr": {
+    "Crossing": 78,
+    "Finishing": 86,
+    "Heading Acc.": 82,
+    "Short Pass": 82,
+    "Volleys": 84,
+    "Dribbling": 83,
+    "Curve": 76,
+    "FK Acc.": 60,
+    "Long Pass": 77,
+    "Ball Control": 84,
+    "Shot Power": 82,
+    "Jumping": 91,
+    "Stamina": 74,
+    "Strength": 76,
+    "Long Shots": 83,
+    "Acceleration": 86,
+    "Sprint Speed": 82,
+    "Agility": 85,
+    "Reactions": 84,
+    "Balance": 78,
+    "Aggression": 67,
+    "Interceptions": 36,
+    "Att. Position": 86,
+    "Vision": 79,
+    "Penalties": 74,
+    "Composure": 82,
+    "Def. Awareness": 35,
+    "Stand Tackle": 36,
+    "Slide Tackle": 28,
+    "GK Diving": 12,
+    "GK Handling": 9,
+    "GK Kicking": 11,
+    "GK Positioning": 15,
+    "GK Reflexes": 12
+   },
+   "roles": {
+    "ST": [
+     {
+      "role": "Poacher",
+      "level": 1
+     },
+     {
+      "role": "False 9",
+      "level": 1
+     }
+    ],
+    "LW": [
+     {
+      "role": "Inside Forward",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Finesse Shot",
+    "Technical"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/241461/ferran-torres-garcia"
+  },
+  {
+   "id": "kounde",
+   "name": "Koundé",
+   "nameRu": "Кундэ",
+   "fullName": "Jules Koundé",
+   "number": 23,
+   "age": 26,
+   "heightCm": 181,
+   "foot": "R",
+   "skillMoves": 3,
+   "weakFoot": 3,
+   "positions": [
+    "RB",
+    "RM"
+   ],
+   "ovr": 86,
+   "ovrLaunch": 87,
+   "face": {
+    "PAC": 84,
+    "SHO": 53,
+    "PAS": 74,
+    "DRI": 78,
+    "DEF": 83,
+    "PHY": 83
+   },
+   "attr": {
+    "Crossing": 75,
+    "Finishing": 57,
+    "Heading Acc.": 80,
+    "Short Pass": 81,
+    "Volleys": 32,
+    "Dribbling": 77,
+    "Curve": 64,
+    "FK Acc.": 26,
+    "Long Pass": 75,
+    "Ball Control": 81,
+    "Shot Power": 51,
+    "Jumping": 91,
+    "Stamina": 85,
+    "Strength": 84,
+    "Long Shots": 48,
+    "Acceleration": 85,
+    "Sprint Speed": 83,
+    "Agility": 72,
+    "Reactions": 85,
+    "Balance": 78,
+    "Aggression": 78,
+    "Interceptions": 83,
+    "Att. Position": 71,
+    "Vision": 74,
+    "Penalties": 43,
+    "Composure": 80,
+    "Def. Awareness": 83,
+    "Stand Tackle": 85,
+    "Slide Tackle": 84,
+    "GK Diving": 11,
+    "GK Handling": 10,
+    "GK Kicking": 8,
+    "GK Positioning": 14,
+    "GK Reflexes": 13
+   },
+   "roles": {
+    "RB": [
+     {
+      "role": "Wingback",
+      "level": 2
+     },
+     {
+      "role": "Falseback",
+      "level": 1
+     },
+     {
+      "role": "Attacking Wingback",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Quick Step",
+    "Relentless"
+   ],
+   "playstylesPlus": [
+    "Jockey"
+   ],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/241486/jules-kounde"
+  },
+  {
+   "id": "olmo",
+   "name": "Olmo",
+   "nameRu": "Ольмо",
+   "fullName": "Daniel Olmo Carvajal",
+   "number": 20,
+   "age": 27,
+   "heightCm": 179,
+   "foot": "R",
+   "skillMoves": 4,
+   "weakFoot": 4,
+   "positions": [
+    "CAM",
+    "CM"
+   ],
+   "ovr": 84,
+   "ovrLaunch": 85,
+   "face": {
+    "PAC": 74,
+    "SHO": 79,
+    "PAS": 81,
+    "DRI": 85,
+    "DEF": 51,
+    "PHY": 60
+   },
+   "attr": {
+    "Crossing": 76,
+    "Finishing": 80,
+    "Heading Acc.": 43,
+    "Short Pass": 85,
+    "Volleys": 76,
+    "Dribbling": 84,
+    "Curve": 75,
+    "FK Acc.": 72,
+    "Long Pass": 80,
+    "Ball Control": 86,
+    "Shot Power": 79,
+    "Jumping": 62,
+    "Stamina": 71,
+    "Strength": 56,
+    "Long Shots": 79,
+    "Acceleration": 78,
+    "Sprint Speed": 71,
+    "Agility": 86,
+    "Reactions": 86,
+    "Balance": 87,
+    "Aggression": 54,
+    "Interceptions": 58,
+    "Att. Position": 83,
+    "Vision": 85,
+    "Penalties": 70,
+    "Composure": 82,
+    "Def. Awareness": 50,
+    "Stand Tackle": 53,
+    "Slide Tackle": 38,
+    "GK Diving": 15,
+    "GK Handling": 15,
+    "GK Kicking": 13,
+    "GK Positioning": 12,
+    "GK Reflexes": 11
+   },
+   "roles": {
+    "CAM": [
+     {
+      "role": "Playmaker",
+      "level": 1
+     },
+     {
+      "role": "Shadow Striker",
+      "level": 1
+     }
+    ],
+    "CM": [
+     {
+      "role": "Deep-Lying Playmaker",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Finesse Shot",
+    "Low Driven Shot",
+    "Gamechanger",
+    "Incisive Pass",
+    "Tiki Taka",
+    "Technical",
+    "First Touch"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/244260/daniel-olmo-carvajal"
+  },
+  {
+   "id": "eric-garcia",
+   "name": "Eric García",
+   "nameRu": "Эрик Гарсия",
+   "fullName": "Eric García Martret",
+   "number": 24,
+   "age": 24,
+   "heightCm": 183,
+   "foot": "R",
+   "skillMoves": 2,
+   "weakFoot": 3,
+   "positions": [
+    "CB",
+    "RB",
+    "CDM",
+    "RM"
+   ],
+   "ovr": 83,
+   "ovrLaunch": 79,
+   "face": {
+    "PAC": 79,
+    "SHO": 58,
+    "PAS": 75,
+    "DRI": 76,
+    "DEF": 84,
+    "PHY": 81
+   },
+   "attr": {
+    "Crossing": 67,
+    "Finishing": 60,
+    "Heading Acc.": 79,
+    "Short Pass": 85,
+    "Volleys": 60,
+    "Dribbling": 73,
+    "Curve": 67,
+    "FK Acc.": 31,
+    "Long Pass": 81,
+    "Ball Control": 82,
+    "Shot Power": 59,
+    "Jumping": 87,
+    "Stamina": 80,
+    "Strength": 79,
+    "Long Shots": 52,
+    "Acceleration": 77,
+    "Sprint Speed": 81,
+    "Agility": 70,
+    "Reactions": 83,
+    "Balance": 70,
+    "Aggression": 84,
+    "Interceptions": 85,
+    "Att. Position": 69,
+    "Vision": 75,
+    "Penalties": 44,
+    "Composure": 81,
+    "Def. Awareness": 86,
+    "Stand Tackle": 86,
+    "Slide Tackle": 80,
+    "GK Diving": 11,
+    "GK Handling": 9,
+    "GK Kicking": 12,
+    "GK Positioning": 11,
+    "GK Reflexes": 7
+   },
+   "roles": {
+    "CB": [
+     {
+      "role": "Ball-Playing Defender",
+      "level": 1
+     },
+     {
+      "role": "Wide Back",
+      "level": 1
+     }
+    ],
+    "RB": [
+     {
+      "role": "Wingback",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Precision Header",
+    "Incisive Pass",
+    "Anticipate",
+    "Slide Tackle"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/245037/eric-garcia-martret"
+  },
+  {
+   "id": "inaki-pena",
+   "name": "Iñaki Peña",
+   "nameRu": "Пенья",
+   "fullName": "Ignacio Peña Sotorres",
+   "number": null,
+   "age": 26,
+   "heightCm": 184,
+   "foot": "R",
+   "skillMoves": 1,
+   "weakFoot": 3,
+   "positions": [
+    "GK"
+   ],
+   "ovr": 76,
+   "ovrLaunch": null,
+   "face": {
+    "DIV": 75,
+    "HAN": 74,
+    "KIC": 76,
+    "REF": 76,
+    "SPD": 36,
+    "POS": 75
+   },
+   "attr": {
+    "Crossing": 10,
+    "Finishing": 6,
+    "Heading Acc.": 11,
+    "Short Pass": 33,
+    "Volleys": 5,
+    "Dribbling": 12,
+    "Curve": 12,
+    "FK Acc.": 12,
+    "Long Pass": 57,
+    "Ball Control": 21,
+    "Shot Power": 57,
+    "Jumping": 55,
+    "Stamina": 27,
+    "Strength": 54,
+    "Long Shots": 8,
+    "Acceleration": 33,
+    "Sprint Speed": 38,
+    "Agility": 49,
+    "Reactions": 72,
+    "Balance": 51,
+    "Aggression": 17,
+    "Interceptions": 6,
+    "Att. Position": 5,
+    "Vision": 65,
+    "Penalties": 17,
+    "Composure": 38,
+    "Def. Awareness": 9,
+    "Stand Tackle": 10,
+    "Slide Tackle": 11,
+    "GK Diving": 75,
+    "GK Handling": 74,
+    "GK Kicking": 76,
+    "GK Positioning": 75,
+    "GK Reflexes": 76
+   },
+   "roles": {
+    "GK": [
+     {
+      "role": "Ball-Playing Keeper",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Footwork"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/246139/ignacio-pena-sotorres"
+  },
+  {
+   "id": "pedri",
+   "name": "Pedri",
+   "nameRu": "Педри",
+   "fullName": "Pedro González López",
+   "number": 8,
+   "age": 22,
+   "heightCm": 174,
+   "foot": "R",
+   "skillMoves": 4,
+   "weakFoot": 4,
+   "positions": [
+    "CM",
+    "CDM",
+    "CAM"
+   ],
+   "ovr": 90,
+   "ovrLaunch": 89,
+   "face": {
+    "PAC": 77,
+    "SHO": 75,
+    "PAS": 86,
+    "DRI": 90,
+    "DEF": 78,
+    "PHY": 77
+   },
+   "attr": {
+    "Crossing": 76,
+    "Finishing": 77,
+    "Heading Acc.": 50,
+    "Short Pass": 92,
+    "Volleys": 56,
+    "Dribbling": 90,
+    "Curve": 83,
+    "FK Acc.": 62,
+    "Long Pass": 88,
+    "Ball Control": 91,
+    "Shot Power": 76,
+    "Jumping": 72,
+    "Stamina": 90,
+    "Strength": 73,
+    "Long Shots": 79,
+    "Acceleration": 79,
+    "Sprint Speed": 76,
+    "Agility": 89,
+    "Reactions": 87,
+    "Balance": 92,
+    "Aggression": 72,
+    "Interceptions": 86,
+    "Att. Position": 83,
+    "Vision": 91,
+    "Penalties": 53,
+    "Composure": 92,
+    "Def. Awareness": 74,
+    "Stand Tackle": 85,
+    "Slide Tackle": 79,
+    "GK Diving": 12,
+    "GK Handling": 7,
+    "GK Kicking": 11,
+    "GK Positioning": 8,
+    "GK Reflexes": 8
+   },
+   "roles": {
+    "CM": [
+     {
+      "role": "Playmaker",
+      "level": 2
+     }
+    ],
+    "CDM": [
+     {
+      "role": "Deep-Lying Playmaker",
+      "level": 2
+     }
+    ]
+   },
+   "playstyles": [
+    "Incisive Pass",
+    "Long Ball Pass",
+    "Tiki Taka",
+    "Inventive",
+    "Technical",
+    "Relentless"
+   ],
+   "playstylesPlus": [
+    "First Touch"
+   ],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/251854/pedro-gonzalez-lopez"
+  },
+  {
+   "id": "ansu-fati",
+   "name": "Ansu Fati",
+   "nameRu": "Ансу Фати",
+   "fullName": "Anssumane Fati",
+   "number": null,
+   "age": 22,
+   "heightCm": 178,
+   "foot": "R",
+   "skillMoves": 4,
+   "weakFoot": 4,
+   "positions": [
+    "LM",
+    "LW",
+    "CAM"
+   ],
+   "ovr": 75,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 81,
+    "SHO": 74,
+    "PAS": 72,
+    "DRI": 78,
+    "DEF": 28,
+    "PHY": 52
+   },
+   "attr": {
+    "Crossing": 70,
+    "Finishing": 74,
+    "Heading Acc.": 62,
+    "Short Pass": 73,
+    "Volleys": 70,
+    "Dribbling": 77,
+    "Curve": 75,
+    "FK Acc.": 72,
+    "Long Pass": 70,
+    "Ball Control": 77,
+    "Shot Power": 75,
+    "Jumping": 68,
+    "Stamina": 60,
+    "Strength": 49,
+    "Long Shots": 71,
+    "Acceleration": 82,
+    "Sprint Speed": 81,
+    "Agility": 83,
+    "Reactions": 71,
+    "Balance": 83,
+    "Aggression": 48,
+    "Interceptions": 20,
+    "Att. Position": 75,
+    "Vision": 72,
+    "Penalties": 78,
+    "Composure": 79,
+    "Def. Awareness": 23,
+    "Stand Tackle": 32,
+    "Slide Tackle": 28,
+    "GK Diving": 6,
+    "GK Handling": 9,
+    "GK Kicking": 8,
+    "GK Positioning": 10,
+    "GK Reflexes": 7
+   },
+   "roles": {
+    "LM": [
+     {
+      "role": "Inside Forward",
+      "level": 1
+     },
+     {
+      "role": "Wide Midfielder",
+      "level": 1
+     }
+    ],
+    "LW": [
+     {
+      "role": "Inside Forward",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Quick Step"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/253004/anssumane-fati"
+  },
+  {
+   "id": "araujo",
+   "name": "Araujo",
+   "nameRu": "Араухо",
+   "fullName": "Ronald Araujo",
+   "number": 4,
+   "age": 26,
+   "heightCm": 188,
+   "foot": "R",
+   "skillMoves": 2,
+   "weakFoot": 3,
+   "positions": [
+    "CB"
+   ],
+   "ovr": 81,
+   "ovrLaunch": 83,
+   "face": {
+    "PAC": 79,
+    "SHO": 54,
+    "PAS": 64,
+    "DRI": 59,
+    "DEF": 79,
+    "PHY": 82
+   },
+   "attr": {
+    "Crossing": 56,
+    "Finishing": 58,
+    "Heading Acc.": 81,
+    "Short Pass": 75,
+    "Volleys": 40,
+    "Dribbling": 53,
+    "Curve": 47,
+    "FK Acc.": 45,
+    "Long Pass": 66,
+    "Ball Control": 66,
+    "Shot Power": 68,
+    "Jumping": 91,
+    "Stamina": 71,
+    "Strength": 87,
+    "Long Shots": 35,
+    "Acceleration": 73,
+    "Sprint Speed": 84,
+    "Agility": 54,
+    "Reactions": 78,
+    "Balance": 55,
+    "Aggression": 81,
+    "Interceptions": 78,
+    "Att. Position": 57,
+    "Vision": 59,
+    "Penalties": 43,
+    "Composure": 73,
+    "Def. Awareness": 77,
+    "Stand Tackle": 81,
+    "Slide Tackle": 78,
+    "GK Diving": 11,
+    "GK Handling": 14,
+    "GK Kicking": 9,
+    "GK Positioning": 11,
+    "GK Reflexes": 8
+   },
+   "roles": {
+    "CB": [
+     {
+      "role": "Stopper",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Jockey",
+    "Anticipate",
+    "Aerial Fortress"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/253163/ronald-araujo"
+  },
+  {
+   "id": "joan-garcia",
+   "name": "Joan García",
+   "nameRu": "Жоан Гарсия",
+   "fullName": "Joan García Pons",
+   "number": 1,
+   "age": 24,
+   "heightCm": 193,
+   "foot": "R",
+   "skillMoves": 1,
+   "weakFoot": 3,
+   "positions": [
+    "GK"
+   ],
+   "ovr": 86,
+   "ovrLaunch": 83,
+   "face": {
+    "DIV": 85,
+    "HAN": 85,
+    "KIC": 80,
+    "REF": 88,
+    "SPD": 46,
+    "POS": 84
+   },
+   "attr": {
+    "Crossing": 13,
+    "Finishing": 6,
+    "Heading Acc.": 12,
+    "Short Pass": 51,
+    "Volleys": 7,
+    "Dribbling": 17,
+    "Curve": 12,
+    "FK Acc.": 12,
+    "Long Pass": 49,
+    "Ball Control": 28,
+    "Shot Power": 60,
+    "Jumping": 65,
+    "Stamina": 35,
+    "Strength": 59,
+    "Long Shots": 9,
+    "Acceleration": 48,
+    "Sprint Speed": 44,
+    "Agility": 59,
+    "Reactions": 78,
+    "Balance": 42,
+    "Aggression": 30,
+    "Interceptions": 13,
+    "Att. Position": 6,
+    "Vision": 63,
+    "Penalties": 18,
+    "Composure": 59,
+    "Def. Awareness": 7,
+    "Stand Tackle": 13,
+    "Slide Tackle": 14,
+    "GK Diving": 85,
+    "GK Handling": 85,
+    "GK Kicking": 80,
+    "GK Positioning": 84,
+    "GK Reflexes": 88
+   },
+   "roles": {
+    "GK": [
+     {
+      "role": "Ball-Playing Keeper",
+      "level": 2
+     }
+    ]
+   },
+   "playstyles": [
+    "Far Throw",
+    "Deflector"
+   ],
+   "playstylesPlus": [
+    "Rush Out"
+   ],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/259532/joan-garcia-pons"
+  },
+  {
+   "id": "balde",
+   "name": "Balde",
+   "nameRu": "Бальде",
+   "fullName": "Alejandro Balde Martínez",
+   "number": 3,
+   "age": 21,
+   "heightCm": 175,
+   "foot": "L",
+   "skillMoves": 3,
+   "weakFoot": 4,
+   "positions": [
+    "LB",
+    "LM"
+   ],
+   "ovr": 83,
+   "ovrLaunch": 83,
+   "face": {
+    "PAC": 90,
+    "SHO": 50,
+    "PAS": 75,
+    "DRI": 80,
+    "DEF": 78,
+    "PHY": 68
+   },
+   "attr": {
+    "Crossing": 82,
+    "Finishing": 51,
+    "Heading Acc.": 71,
+    "Short Pass": 82,
+    "Volleys": 32,
+    "Dribbling": 80,
+    "Curve": 69,
+    "FK Acc.": 28,
+    "Long Pass": 72,
+    "Ball Control": 81,
+    "Shot Power": 55,
+    "Jumping": 84,
+    "Stamina": 77,
+    "Strength": 69,
+    "Long Shots": 43,
+    "Acceleration": 90,
+    "Sprint Speed": 90,
+    "Agility": 81,
+    "Reactions": 80,
+    "Balance": 78,
+    "Aggression": 52,
+    "Interceptions": 78,
+    "Att. Position": 65,
+    "Vision": 72,
+    "Penalties": 43,
+    "Composure": 64,
+    "Def. Awareness": 77,
+    "Stand Tackle": 80,
+    "Slide Tackle": 80,
+    "GK Diving": 5,
+    "GK Handling": 8,
+    "GK Kicking": 7,
+    "GK Positioning": 10,
+    "GK Reflexes": 13
+   },
+   "roles": {
+    "LB": [
+     {
+      "role": "Attacking Wingback",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Jockey",
+    "Anticipate",
+    "Quick Step"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/263578/alejandro-balde-martinez"
+  },
+  {
+   "id": "gavi",
+   "name": "Gavi",
+   "nameRu": "Гави",
+   "fullName": "Pablo Martín Páez Gavira",
+   "number": 6,
+   "age": 20,
+   "heightCm": 173,
+   "foot": "R",
+   "skillMoves": 3,
+   "weakFoot": 3,
+   "positions": [
+    "CM",
+    "CDM",
+    "CAM"
+   ],
+   "ovr": 83,
+   "ovrLaunch": 83,
+   "face": {
+    "PAC": 76,
+    "SHO": 66,
+    "PAS": 78,
+    "DRI": 85,
+    "DEF": 68,
+    "PHY": 70
+   },
+   "attr": {
+    "Crossing": 69,
+    "Finishing": 71,
+    "Heading Acc.": 42,
+    "Short Pass": 84,
+    "Volleys": 49,
+    "Dribbling": 86,
+    "Curve": 74,
+    "FK Acc.": 47,
+    "Long Pass": 82,
+    "Ball Control": 85,
+    "Shot Power": 56,
+    "Jumping": 62,
+    "Stamina": 84,
+    "Strength": 58,
+    "Long Shots": 70,
+    "Acceleration": 77,
+    "Sprint Speed": 75,
+    "Agility": 86,
+    "Reactions": 86,
+    "Balance": 90,
+    "Aggression": 85,
+    "Interceptions": 79,
+    "Att. Position": 81,
+    "Vision": 83,
+    "Penalties": 51,
+    "Composure": 77,
+    "Def. Awareness": 59,
+    "Stand Tackle": 78,
+    "Slide Tackle": 72,
+    "GK Diving": 8,
+    "GK Handling": 10,
+    "GK Kicking": 11,
+    "GK Positioning": 7,
+    "GK Reflexes": 13
+   },
+   "roles": {
+    "CM": [
+     {
+      "role": "Playmaker",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Tiki Taka",
+    "Press Proven",
+    "Relentless"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/264240/pablo-martin-paez-gavira"
+  },
+  {
+   "id": "bardghji",
+   "name": "Bardghji",
+   "nameRu": "Бардгжи",
+   "fullName": "Roony Bardghji",
+   "number": 19,
+   "age": 19,
+   "heightCm": 173,
+   "foot": "L",
+   "skillMoves": 4,
+   "weakFoot": 4,
+   "positions": [
+    "RW",
+    "RM"
+   ],
+   "ovr": 74,
+   "ovrLaunch": 69,
+   "face": {
+    "PAC": 76,
+    "SHO": 71,
+    "PAS": 70,
+    "DRI": 79,
+    "DEF": 26,
+    "PHY": 58
+   },
+   "attr": {
+    "Crossing": 73,
+    "Finishing": 72,
+    "Heading Acc.": 24,
+    "Short Pass": 70,
+    "Volleys": 63,
+    "Dribbling": 79,
+    "Curve": 71,
+    "FK Acc.": 63,
+    "Long Pass": 63,
+    "Ball Control": 76,
+    "Shot Power": 71,
+    "Jumping": 52,
+    "Stamina": 62,
+    "Strength": 55,
+    "Long Shots": 74,
+    "Acceleration": 75,
+    "Sprint Speed": 76,
+    "Agility": 87,
+    "Reactions": 70,
+    "Balance": 86,
+    "Aggression": 60,
+    "Interceptions": 23,
+    "Att. Position": 71,
+    "Vision": 74,
+    "Penalties": 63,
+    "Composure": 69,
+    "Def. Awareness": 26,
+    "Stand Tackle": 31,
+    "Slide Tackle": 24,
+    "GK Diving": 8,
+    "GK Handling": 14,
+    "GK Kicking": 13,
+    "GK Positioning": 14,
+    "GK Reflexes": 14
+   },
+   "roles": {
+    "RW": [
+     {
+      "role": "Wide Playmaker",
+      "level": 1
+     }
+    ],
+    "RM": [
+     {
+      "role": "Inside Forward",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Gamechanger",
+    "Technical",
+    "Trickster"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/265600/roony-bardghji"
+  },
+  {
+   "id": "casado",
+   "name": "Casadó",
+   "nameRu": "Касадо",
+   "fullName": "Marc Casadó Torras",
+   "number": 17,
+   "age": 21,
+   "heightCm": 171,
+   "foot": "R",
+   "skillMoves": 3,
+   "weakFoot": 4,
+   "positions": [
+    "CDM",
+    "CM"
+   ],
+   "ovr": 78,
+   "ovrLaunch": 79,
+   "face": {
+    "PAC": 62,
+    "SHO": 64,
+    "PAS": 72,
+    "DRI": 80,
+    "DEF": 75,
+    "PHY": 64
+   },
+   "attr": {
+    "Crossing": 53,
+    "Finishing": 64,
+    "Heading Acc.": 62,
+    "Short Pass": 82,
+    "Volleys": 53,
+    "Dribbling": 79,
+    "Curve": 64,
+    "FK Acc.": 53,
+    "Long Pass": 78,
+    "Ball Control": 82,
+    "Shot Power": 68,
+    "Jumping": 65,
+    "Stamina": 71,
+    "Strength": 55,
+    "Long Shots": 65,
+    "Acceleration": 66,
+    "Sprint Speed": 58,
+    "Agility": 78,
+    "Reactions": 78,
+    "Balance": 84,
+    "Aggression": 78,
+    "Interceptions": 76,
+    "Att. Position": 69,
+    "Vision": 77,
+    "Penalties": 51,
+    "Composure": 78,
+    "Def. Awareness": 77,
+    "Stand Tackle": 78,
+    "Slide Tackle": 78,
+    "GK Diving": 12,
+    "GK Handling": 14,
+    "GK Kicking": 11,
+    "GK Positioning": 8,
+    "GK Reflexes": 12
+   },
+   "roles": {
+    "CDM": [
+     {
+      "role": "Wide Half",
+      "level": 1
+     },
+     {
+      "role": "Deep-Lying Playmaker",
+      "level": 1
+     },
+     {
+      "role": "Centre-Half",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "First Touch",
+    "Press Proven"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/272600/marc-casado-torras"
+  },
+  {
+   "id": "yaakobishvili",
+   "name": "Yaakobishvili",
+   "nameRu": "Якобишвили",
+   "fullName": "Áron Yaakobishvili",
+   "number": null,
+   "age": 19,
+   "heightCm": 187,
+   "foot": "R",
+   "skillMoves": 1,
+   "weakFoot": 3,
+   "positions": [
+    "GK"
+   ],
+   "ovr": 70,
+   "ovrLaunch": null,
+   "face": {
+    "DIV": 70,
+    "HAN": 70,
+    "KIC": 68,
+    "REF": 70,
+    "SPD": 34,
+    "POS": 68
+   },
+   "attr": {
+    "Crossing": 11,
+    "Finishing": 9,
+    "Heading Acc.": 10,
+    "Short Pass": 42,
+    "Volleys": 9,
+    "Dribbling": 8,
+    "Curve": 10,
+    "FK Acc.": 13,
+    "Long Pass": 35,
+    "Ball Control": 26,
+    "Shot Power": 51,
+    "Jumping": 52,
+    "Stamina": 24,
+    "Strength": 50,
+    "Long Shots": 9,
+    "Acceleration": 36,
+    "Sprint Speed": 33,
+    "Agility": 49,
+    "Reactions": 67,
+    "Balance": 49,
+    "Aggression": 24,
+    "Interceptions": 8,
+    "Att. Position": 6,
+    "Vision": 39,
+    "Penalties": 12,
+    "Composure": 30,
+    "Def. Awareness": 9,
+    "Stand Tackle": 11,
+    "Slide Tackle": 12,
+    "GK Diving": 70,
+    "GK Handling": 70,
+    "GK Kicking": 68,
+    "GK Positioning": 68,
+    "GK Reflexes": 70
+   },
+   "roles": {
+    "GK": [
+     {
+      "role": "Ball-Playing Keeper",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/276198/aron-yaakobishvili"
+  },
+  {
+   "id": "fermin",
+   "name": "Fermín",
+   "nameRu": "Фермин",
+   "fullName": "Fermín López Marín",
+   "number": 7,
+   "age": 22,
+   "heightCm": 174,
+   "foot": "R",
+   "skillMoves": 3,
+   "weakFoot": 4,
+   "positions": [
+    "CAM",
+    "CM",
+    "ST"
+   ],
+   "ovr": 83,
+   "ovrLaunch": 80,
+   "face": {
+    "PAC": 79,
+    "SHO": 82,
+    "PAS": 79,
+    "DRI": 83,
+    "DEF": 62,
+    "PHY": 70
+   },
+   "attr": {
+    "Crossing": 70,
+    "Finishing": 83,
+    "Heading Acc.": 76,
+    "Short Pass": 83,
+    "Volleys": 67,
+    "Dribbling": 82,
+    "Curve": 69,
+    "FK Acc.": 69,
+    "Long Pass": 80,
+    "Ball Control": 85,
+    "Shot Power": 85,
+    "Jumping": 78,
+    "Stamina": 84,
+    "Strength": 59,
+    "Long Shots": 85,
+    "Acceleration": 78,
+    "Sprint Speed": 79,
+    "Agility": 83,
+    "Reactions": 84,
+    "Balance": 81,
+    "Aggression": 77,
+    "Interceptions": 68,
+    "Att. Position": 87,
+    "Vision": 84,
+    "Penalties": 63,
+    "Composure": 81,
+    "Def. Awareness": 43,
+    "Stand Tackle": 74,
+    "Slide Tackle": 68,
+    "GK Diving": 8,
+    "GK Handling": 14,
+    "GK Kicking": 8,
+    "GK Positioning": 7,
+    "GK Reflexes": 7
+   },
+   "roles": {
+    "CAM": [
+     {
+      "role": "Shadow Striker",
+      "level": 1
+     }
+    ],
+    "CM": [
+     {
+      "role": "Holding",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Precision Header",
+    "Incisive Pass",
+    "Pinged Pass"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/277179/fermin-lopez-marin"
+  },
+  {
+   "id": "astralaga",
+   "name": "Astralaga",
+   "nameRu": "Астралага",
+   "fullName": "Ander Astralaga Aranguren",
+   "number": null,
+   "age": 21,
+   "heightCm": 190,
+   "foot": "R",
+   "skillMoves": 1,
+   "weakFoot": 3,
+   "positions": [
+    "GK"
+   ],
+   "ovr": 64,
+   "ovrLaunch": null,
+   "face": {
+    "DIV": 60,
+    "HAN": 62,
+    "KIC": 65,
+    "REF": 63,
+    "SPD": 25,
+    "POS": 66
+   },
+   "attr": {
+    "Crossing": 12,
+    "Finishing": 6,
+    "Heading Acc.": 10,
+    "Short Pass": 26,
+    "Volleys": 6,
+    "Dribbling": 14,
+    "Curve": 11,
+    "FK Acc.": 12,
+    "Long Pass": 23,
+    "Ball Control": 15,
+    "Shot Power": 49,
+    "Jumping": 53,
+    "Stamina": 17,
+    "Strength": 64,
+    "Long Shots": 6,
+    "Acceleration": 22,
+    "Sprint Speed": 27,
+    "Agility": 37,
+    "Reactions": 60,
+    "Balance": 29,
+    "Aggression": 20,
+    "Interceptions": 14,
+    "Att. Position": 6,
+    "Vision": 42,
+    "Penalties": 15,
+    "Composure": 41,
+    "Def. Awareness": 5,
+    "Stand Tackle": 12,
+    "Slide Tackle": 10,
+    "GK Diving": 60,
+    "GK Handling": 62,
+    "GK Kicking": 65,
+    "GK Positioning": 66,
+    "GK Reflexes": 63
+   },
+   "roles": {
+    "GK": [
+     {
+      "role": "Ball-Playing Keeper",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/277642/ander-astralaga-aranguren"
+  },
+  {
+   "id": "lamine-yamal",
+   "name": "Lamine Yamal",
+   "nameRu": "Ламин Ямаль",
+   "fullName": "Lamine Yamal Nasraoui Ebana",
+   "number": 10,
+   "age": 17,
+   "heightCm": 181,
+   "foot": "L",
+   "skillMoves": 5,
+   "weakFoot": 3,
+   "positions": [
+    "RW",
+    "RM"
+   ],
+   "ovr": 89,
+   "ovrLaunch": 89,
+   "face": {
+    "PAC": 86,
+    "SHO": 84,
+    "PAS": 87,
+    "DRI": 91,
+    "DEF": 24,
+    "PHY": 61
+   },
+   "attr": {
+    "Crossing": 89,
+    "Finishing": 84,
+    "Heading Acc.": 33,
+    "Short Pass": 88,
+    "Volleys": 76,
+    "Dribbling": 92,
+    "Curve": 89,
+    "FK Acc.": 69,
+    "Long Pass": 84,
+    "Ball Control": 90,
+    "Shot Power": 83,
+    "Jumping": 64,
+    "Stamina": 76,
+    "Strength": 60,
+    "Long Shots": 86,
+    "Acceleration": 88,
+    "Sprint Speed": 84,
+    "Agility": 94,
+    "Reactions": 88,
+    "Balance": 83,
+    "Aggression": 45,
+    "Interceptions": 18,
+    "Att. Position": 88,
+    "Vision": 88,
+    "Penalties": 79,
+    "Composure": 84,
+    "Def. Awareness": 23,
+    "Stand Tackle": 27,
+    "Slide Tackle": 28,
+    "GK Diving": 9,
+    "GK Handling": 13,
+    "GK Kicking": 7,
+    "GK Positioning": 10,
+    "GK Reflexes": 7
+   },
+   "roles": {
+    "RW": [
+     {
+      "role": "Inside Forward",
+      "level": 2
+     },
+     {
+      "role": "Winger",
+      "level": 1
+     }
+    ],
+    "RM": [
+     {
+      "role": "Inside Forward",
+      "level": 2
+     }
+    ]
+   },
+   "playstyles": [
+    "Finesse Shot",
+    "Gamechanger",
+    "Incisive Pass",
+    "Inventive",
+    "First Touch",
+    "Quick Step"
+   ],
+   "playstylesPlus": [
+    "Technical"
+   ],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/277643/lamine-yamal-nasraoui-ebana"
+  },
+  {
+   "id": "kochen",
+   "name": "Kochen",
+   "nameRu": "Кочен",
+   "fullName": "Diego Kochen",
+   "number": null,
+   "age": 19,
+   "heightCm": 189,
+   "foot": "R",
+   "skillMoves": 1,
+   "weakFoot": 2,
+   "positions": [
+    "GK"
+   ],
+   "ovr": 62,
+   "ovrLaunch": null,
+   "face": {
+    "DIV": 61,
+    "HAN": 62,
+    "KIC": 60,
+    "REF": 63,
+    "SPD": 21,
+    "POS": 62
+   },
+   "attr": {
+    "Crossing": 14,
+    "Finishing": 7,
+    "Heading Acc.": 13,
+    "Short Pass": 20,
+    "Volleys": 7,
+    "Dribbling": 7,
+    "Curve": 14,
+    "FK Acc.": 12,
+    "Long Pass": 29,
+    "Ball Control": 13,
+    "Shot Power": 45,
+    "Jumping": 53,
+    "Stamina": 17,
+    "Strength": 62,
+    "Long Shots": 6,
+    "Acceleration": 21,
+    "Sprint Speed": 21,
+    "Agility": 45,
+    "Reactions": 56,
+    "Balance": 35,
+    "Aggression": 21,
+    "Interceptions": 6,
+    "Att. Position": 8,
+    "Vision": 22,
+    "Penalties": 16,
+    "Composure": 35,
+    "Def. Awareness": 6,
+    "Stand Tackle": 13,
+    "Slide Tackle": 14,
+    "GK Diving": 61,
+    "GK Handling": 62,
+    "GK Kicking": 60,
+    "GK Positioning": 62,
+    "GK Reflexes": 63
+   },
+   "roles": {
+    "GK": [
+     {
+      "role": "Goalkeeper",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/277908/diego-kochen"
+  },
+  {
+   "id": "cubarsi",
+   "name": "Cubarsí",
+   "nameRu": "Кубарси",
+   "fullName": "Pau Cubarsí Paredes",
+   "number": 5,
+   "age": 18,
+   "heightCm": 183,
+   "foot": "R",
+   "skillMoves": 2,
+   "weakFoot": 4,
+   "positions": [
+    "CB"
+   ],
+   "ovr": 83,
+   "ovrLaunch": 83,
+   "face": {
+    "PAC": 75,
+    "SHO": 44,
+    "PAS": 67,
+    "DRI": 78,
+    "DEF": 84,
+    "PHY": 77
+   },
+   "attr": {
+    "Crossing": 31,
+    "Finishing": 41,
+    "Heading Acc.": 83,
+    "Short Pass": 86,
+    "Volleys": 41,
+    "Dribbling": 78,
+    "Curve": 22,
+    "FK Acc.": 33,
+    "Long Pass": 85,
+    "Ball Control": 82,
+    "Shot Power": 58,
+    "Jumping": 87,
+    "Stamina": 70,
+    "Strength": 79,
+    "Long Shots": 36,
+    "Acceleration": 72,
+    "Sprint Speed": 77,
+    "Agility": 67,
+    "Reactions": 83,
+    "Balance": 66,
+    "Aggression": 80,
+    "Interceptions": 83,
+    "Att. Position": 54,
+    "Vision": 75,
+    "Penalties": 41,
+    "Composure": 80,
+    "Def. Awareness": 84,
+    "Stand Tackle": 84,
+    "Slide Tackle": 83,
+    "GK Diving": 10,
+    "GK Handling": 6,
+    "GK Kicking": 14,
+    "GK Positioning": 7,
+    "GK Reflexes": 14
+   },
+   "roles": {
+    "CB": [
+     {
+      "role": "Ball-Playing Defender",
+      "level": 1
+     },
+     {
+      "role": "Defender",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Long Ball Pass",
+    "Aerial Fortress"
+   ],
+   "playstylesPlus": [
+    "Pinged Pass"
+   ],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/278046/pau-cubarsi-paredes"
+  },
+  {
+   "id": "hector-fort",
+   "name": "Héctor Fort",
+   "nameRu": "Эктор Форт",
+   "fullName": "Héctor Fort García",
+   "number": 32,
+   "age": 18,
+   "heightCm": 185,
+   "foot": "R",
+   "skillMoves": 3,
+   "weakFoot": 3,
+   "positions": [
+    "RB",
+    "LB",
+    "RM",
+    "CM"
+   ],
+   "ovr": 71,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 83,
+    "SHO": 52,
+    "PAS": 66,
+    "DRI": 70,
+    "DEF": 65,
+    "PHY": 66
+   },
+   "attr": {
+    "Crossing": 71,
+    "Finishing": 64,
+    "Heading Acc.": 64,
+    "Short Pass": 68,
+    "Volleys": 35,
+    "Dribbling": 70,
+    "Curve": 65,
+    "FK Acc.": 38,
+    "Long Pass": 65,
+    "Ball Control": 71,
+    "Shot Power": 43,
+    "Jumping": 77,
+    "Stamina": 65,
+    "Strength": 63,
+    "Long Shots": 40,
+    "Acceleration": 82,
+    "Sprint Speed": 84,
+    "Agility": 70,
+    "Reactions": 68,
+    "Balance": 76,
+    "Aggression": 70,
+    "Interceptions": 67,
+    "Att. Position": 65,
+    "Vision": 64,
+    "Penalties": 41,
+    "Composure": 62,
+    "Def. Awareness": 63,
+    "Stand Tackle": 66,
+    "Slide Tackle": 65,
+    "GK Diving": 7,
+    "GK Handling": 10,
+    "GK Kicking": 6,
+    "GK Positioning": 8,
+    "GK Reflexes": 9
+   },
+   "roles": {
+    "RB": [
+     {
+      "role": "Inverted Wingback",
+      "level": 1
+     },
+     {
+      "role": "Attacking Wingback",
+      "level": 1
+     }
+    ],
+    "LB": [
+     {
+      "role": "Inverted Wingback",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/278923/hector-fort-garcia"
+  },
+  {
+   "id": "gerard-martin",
+   "name": "Gerard Martín",
+   "nameRu": "Жерар Мартин",
+   "fullName": "Gerard Martín Langreo",
+   "number": 18,
+   "age": 23,
+   "heightCm": 186,
+   "foot": "L",
+   "skillMoves": 3,
+   "weakFoot": 3,
+   "positions": [
+    "CB",
+    "LB"
+   ],
+   "ovr": 78,
+   "ovrLaunch": 74,
+   "face": {
+    "PAC": 78,
+    "SHO": 53,
+    "PAS": 74,
+    "DRI": 69,
+    "DEF": 79,
+    "PHY": 79
+   },
+   "attr": {
+    "Crossing": 75,
+    "Finishing": 44,
+    "Heading Acc.": 70,
+    "Short Pass": 78,
+    "Volleys": 43,
+    "Dribbling": 69,
+    "Curve": 70,
+    "FK Acc.": 59,
+    "Long Pass": 73,
+    "Ball Control": 73,
+    "Shot Power": 70,
+    "Jumping": 84,
+    "Stamina": 73,
+    "Strength": 82,
+    "Long Shots": 57,
+    "Acceleration": 76,
+    "Sprint Speed": 79,
+    "Agility": 60,
+    "Reactions": 75,
+    "Balance": 60,
+    "Aggression": 79,
+    "Interceptions": 80,
+    "Att. Position": 66,
+    "Vision": 69,
+    "Penalties": 48,
+    "Composure": 73,
+    "Def. Awareness": 80,
+    "Stand Tackle": 79,
+    "Slide Tackle": 80,
+    "GK Diving": 10,
+    "GK Handling": 11,
+    "GK Kicking": 14,
+    "GK Positioning": 13,
+    "GK Reflexes": 9
+   },
+   "roles": {
+    "CB": [
+     {
+      "role": "Ball-Playing Defender",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/74462/gerard-martin-langreo"
+  },
+  {
+   "id": "bernal",
+   "name": "Bernal",
+   "nameRu": "Берналь",
+   "fullName": "Marc Bernal Casas",
+   "number": 22,
+   "age": 18,
+   "heightCm": 193,
+   "foot": "L",
+   "skillMoves": 2,
+   "weakFoot": 3,
+   "positions": [
+    "CDM",
+    "CM"
+   ],
+   "ovr": 75,
+   "ovrLaunch": 73,
+   "face": {
+    "PAC": 68,
+    "SHO": 61,
+    "PAS": 71,
+    "DRI": 75,
+    "DEF": 70,
+    "PHY": 72
+   },
+   "attr": {
+    "Crossing": 63,
+    "Finishing": 67,
+    "Heading Acc.": 52,
+    "Short Pass": 78,
+    "Volleys": 49,
+    "Dribbling": 74,
+    "Curve": 63,
+    "FK Acc.": 54,
+    "Long Pass": 74,
+    "Ball Control": 77,
+    "Shot Power": 57,
+    "Jumping": 68,
+    "Stamina": 65,
+    "Strength": 75,
+    "Long Shots": 55,
+    "Acceleration": 66,
+    "Sprint Speed": 70,
+    "Agility": 73,
+    "Reactions": 75,
+    "Balance": 72,
+    "Aggression": 73,
+    "Interceptions": 72,
+    "Att. Position": 67,
+    "Vision": 72,
+    "Penalties": 51,
+    "Composure": 71,
+    "Def. Awareness": 70,
+    "Stand Tackle": 75,
+    "Slide Tackle": 73,
+    "GK Diving": 12,
+    "GK Handling": 8,
+    "GK Kicking": 7,
+    "GK Positioning": 14,
+    "GK Reflexes": 5
+   },
+   "roles": {
+    "CDM": [
+     {
+      "role": "Deep-Lying Playmaker",
+      "level": 1
+     },
+     {
+      "role": "Holding",
+      "level": 1
+     }
+    ],
+    "CM": [
+     {
+      "role": "Deep-Lying Playmaker",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/74463/marc-bernal-casas"
+  },
+  {
+   "id": "cuenca",
+   "name": "Cuenca",
+   "nameRu": "Куэнка",
+   "fullName": "Andrés Cuenca Cejudo",
+   "number": null,
+   "age": 18,
+   "heightCm": 184,
+   "foot": "L",
+   "skillMoves": 2,
+   "weakFoot": 3,
+   "positions": [
+    "CB"
+   ],
+   "ovr": 61,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 72,
+    "SHO": 39,
+    "PAS": 63,
+    "DRI": 63,
+    "DEF": 59,
+    "PHY": 62
+   },
+   "attr": {
+    "Crossing": 57,
+    "Finishing": 35,
+    "Heading Acc.": 58,
+    "Short Pass": 67,
+    "Volleys": 38,
+    "Dribbling": 60,
+    "Curve": 54,
+    "FK Acc.": 39,
+    "Long Pass": 66,
+    "Ball Control": 68,
+    "Shot Power": 39,
+    "Jumping": 66,
+    "Stamina": 60,
+    "Strength": 63,
+    "Long Shots": 46,
+    "Acceleration": 67,
+    "Sprint Speed": 76,
+    "Agility": 62,
+    "Reactions": 60,
+    "Balance": 63,
+    "Aggression": 62,
+    "Interceptions": 62,
+    "Att. Position": 44,
+    "Vision": 68,
+    "Penalties": 37,
+    "Composure": 60,
+    "Def. Awareness": 55,
+    "Stand Tackle": 62,
+    "Slide Tackle": 57,
+    "GK Diving": 9,
+    "GK Handling": 10,
+    "GK Kicking": 8,
+    "GK Positioning": 9,
+    "GK Reflexes": 8
+   },
+   "roles": {
+    "CB": [
+     {
+      "role": "Defender",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/74746/andres-cuenca-cejudo"
+  },
+  {
+   "id": "guille-fernandez",
+   "name": "Guille Fernández",
+   "nameRu": "Гийе Фернандес",
+   "fullName": "Guillermo Fernández Casino",
+   "number": null,
+   "age": 17,
+   "heightCm": 181,
+   "foot": "R",
+   "skillMoves": 2,
+   "weakFoot": 3,
+   "positions": [
+    "CM",
+    "CDM"
+   ],
+   "ovr": 60,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 67,
+    "SHO": 60,
+    "PAS": 55,
+    "DRI": 63,
+    "DEF": 42,
+    "PHY": 63
+   },
+   "attr": {
+    "Crossing": 39,
+    "Finishing": 60,
+    "Heading Acc.": 47,
+    "Short Pass": 64,
+    "Volleys": 30,
+    "Dribbling": 62,
+    "Curve": 42,
+    "FK Acc.": 43,
+    "Long Pass": 57,
+    "Ball Control": 64,
+    "Shot Power": 68,
+    "Jumping": 60,
+    "Stamina": 68,
+    "Strength": 67,
+    "Long Shots": 62,
+    "Acceleration": 66,
+    "Sprint Speed": 68,
+    "Agility": 65,
+    "Reactions": 58,
+    "Balance": 69,
+    "Aggression": 46,
+    "Interceptions": 36,
+    "Att. Position": 68,
+    "Vision": 58,
+    "Penalties": 44,
+    "Composure": 60,
+    "Def. Awareness": 39,
+    "Stand Tackle": 51,
+    "Slide Tackle": 48,
+    "GK Diving": 15,
+    "GK Handling": 10,
+    "GK Kicking": 9,
+    "GK Positioning": 11,
+    "GK Reflexes": 8
+   },
+   "roles": {
+    "CM": [
+     {
+      "role": "Box-To-Box",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/75068/guillermo-fernandez-casino"
+  },
+  {
+   "id": "toni-fernandez",
+   "name": "Toni Fernández",
+   "nameRu": "Тони Фернандес",
+   "fullName": "Antonio Fernández Casino",
+   "number": null,
+   "age": 16,
+   "heightCm": 174,
+   "foot": "L",
+   "skillMoves": 4,
+   "weakFoot": 2,
+   "positions": [
+    "RW",
+    "RM"
+   ],
+   "ovr": 64,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 74,
+    "SHO": 59,
+    "PAS": 58,
+    "DRI": 66,
+    "DEF": 23,
+    "PHY": 49
+   },
+   "attr": {
+    "Crossing": 57,
+    "Finishing": 61,
+    "Heading Acc.": 44,
+    "Short Pass": 63,
+    "Volleys": 50,
+    "Dribbling": 66,
+    "Curve": 57,
+    "FK Acc.": 39,
+    "Long Pass": 50,
+    "Ball Control": 65,
+    "Shot Power": 63,
+    "Jumping": 53,
+    "Stamina": 56,
+    "Strength": 51,
+    "Long Shots": 55,
+    "Acceleration": 75,
+    "Sprint Speed": 73,
+    "Agility": 76,
+    "Reactions": 60,
+    "Balance": 69,
+    "Aggression": 35,
+    "Interceptions": 20,
+    "Att. Position": 61,
+    "Vision": 60,
+    "Penalties": 55,
+    "Composure": 60,
+    "Def. Awareness": 20,
+    "Stand Tackle": 23,
+    "Slide Tackle": 17,
+    "GK Diving": 5,
+    "GK Handling": 5,
+    "GK Kicking": 14,
+    "GK Positioning": 13,
+    "GK Reflexes": 6
+   },
+   "roles": {
+    "RW": [
+     {
+      "role": "Winger",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/75156/antonio-fernandez-casino"
+  },
+  {
+   "id": "cortes",
+   "name": "Cortés",
+   "nameRu": "Кортес",
+   "fullName": "Álvaro Cortés Moyano",
+   "number": null,
+   "age": 20,
+   "heightCm": 190,
+   "foot": "L",
+   "skillMoves": 2,
+   "weakFoot": 2,
+   "positions": [
+    "CB"
+   ],
+   "ovr": 66,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 65,
+    "SHO": 35,
+    "PAS": 54,
+    "DRI": 54,
+    "DEF": 66,
+    "PHY": 66
+   },
+   "attr": {
+    "Crossing": 43,
+    "Finishing": 24,
+    "Heading Acc.": 69,
+    "Short Pass": 64,
+    "Volleys": 20,
+    "Dribbling": 52,
+    "Curve": 23,
+    "FK Acc.": 28,
+    "Long Pass": 59,
+    "Ball Control": 57,
+    "Shot Power": 55,
+    "Jumping": 74,
+    "Stamina": 58,
+    "Strength": 72,
+    "Long Shots": 46,
+    "Acceleration": 62,
+    "Sprint Speed": 67,
+    "Agility": 49,
+    "Reactions": 62,
+    "Balance": 54,
+    "Aggression": 58,
+    "Interceptions": 67,
+    "Att. Position": 33,
+    "Vision": 58,
+    "Penalties": 36,
+    "Composure": 60,
+    "Def. Awareness": 65,
+    "Stand Tackle": 67,
+    "Slide Tackle": 66,
+    "GK Diving": 5,
+    "GK Handling": 12,
+    "GK Kicking": 9,
+    "GK Positioning": 8,
+    "GK Reflexes": 13
+   },
+   "roles": {
+    "CB": [
+     {
+      "role": "Defender",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/75746/alvaro-cortes-moyano"
+  },
+  {
+   "id": "torrents",
+   "name": "Torrents",
+   "nameRu": "Торрентс",
+   "fullName": "Jofre Torrents Salvat",
+   "number": null,
+   "age": 18,
+   "heightCm": 185,
+   "foot": "L",
+   "skillMoves": 2,
+   "weakFoot": 3,
+   "positions": [
+    "LB"
+   ],
+   "ovr": 61,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 66,
+    "SHO": 32,
+    "PAS": 55,
+    "DRI": 59,
+    "DEF": 54,
+    "PHY": 63
+   },
+   "attr": {
+    "Crossing": 58,
+    "Finishing": 27,
+    "Heading Acc.": 51,
+    "Short Pass": 61,
+    "Volleys": 35,
+    "Dribbling": 56,
+    "Curve": 67,
+    "FK Acc.": 37,
+    "Long Pass": 56,
+    "Ball Control": 61,
+    "Shot Power": 41,
+    "Jumping": 62,
+    "Stamina": 65,
+    "Strength": 63,
+    "Long Shots": 24,
+    "Acceleration": 65,
+    "Sprint Speed": 67,
+    "Agility": 68,
+    "Reactions": 62,
+    "Balance": 66,
+    "Aggression": 59,
+    "Interceptions": 58,
+    "Att. Position": 63,
+    "Vision": 40,
+    "Penalties": 39,
+    "Composure": 56,
+    "Def. Awareness": 51,
+    "Stand Tackle": 56,
+    "Slide Tackle": 54,
+    "GK Diving": 10,
+    "GK Handling": 15,
+    "GK Kicking": 8,
+    "GK Positioning": 13,
+    "GK Reflexes": 6
+   },
+   "roles": {
+    "LB": [
+     {
+      "role": "Fullback",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/80663/jofre-torrents-salvat"
+  },
+  {
+   "id": "xavi-espart",
+   "name": "Xavi Espart",
+   "nameRu": "Эспарт",
+   "fullName": "Xavi Espart Font",
+   "number": 12,
+   "age": 18,
+   "heightCm": 175,
+   "foot": "R",
+   "skillMoves": 3,
+   "weakFoot": 2,
+   "positions": [
+    "RB",
+    "CDM",
+    "CM"
+   ],
+   "ovr": 63,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 77,
+    "SHO": 40,
+    "PAS": 56,
+    "DRI": 58,
+    "DEF": 58,
+    "PHY": 55
+   },
+   "attr": {
+    "Crossing": 58,
+    "Finishing": 35,
+    "Heading Acc.": 60,
+    "Short Pass": 61,
+    "Volleys": 44,
+    "Dribbling": 54,
+    "Curve": 54,
+    "FK Acc.": 46,
+    "Long Pass": 50,
+    "Ball Control": 60,
+    "Shot Power": 46,
+    "Jumping": 66,
+    "Stamina": 55,
+    "Strength": 54,
+    "Long Shots": 41,
+    "Acceleration": 75,
+    "Sprint Speed": 79,
+    "Agility": 64,
+    "Reactions": 56,
+    "Balance": 65,
+    "Aggression": 56,
+    "Interceptions": 59,
+    "Att. Position": 54,
+    "Vision": 55,
+    "Penalties": 41,
+    "Composure": 51,
+    "Def. Awareness": 57,
+    "Stand Tackle": 57,
+    "Slide Tackle": 60,
+    "GK Diving": 15,
+    "GK Handling": 11,
+    "GK Kicking": 12,
+    "GK Positioning": 14,
+    "GK Reflexes": 7
+   },
+   "roles": {
+    "RB": [
+     {
+      "role": "Inverted Wingback",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": true,
+   "note": "",
+   "source": "https://www.fifacm.com/26/player/81863/xavi-espart-font"
+  },
+  {
+   "id": "tomas-marques",
+   "name": "Tomás Marqués",
+   "nameRu": "Томас Маркес",
+   "fullName": "Tomás Noël Marqués Morera",
+   "number": null,
+   "age": 18,
+   "heightCm": 186,
+   "foot": "R",
+   "skillMoves": 2,
+   "weakFoot": 3,
+   "positions": [
+    "CDM",
+    "CM"
+   ],
+   "ovr": 61,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 64,
+    "SHO": 41,
+    "PAS": 54,
+    "DRI": 59,
+    "DEF": 60,
+    "PHY": 65
+   },
+   "attr": {
+    "Crossing": 45,
+    "Finishing": 35,
+    "Heading Acc.": 65,
+    "Short Pass": 61,
+    "Volleys": 33,
+    "Dribbling": 57,
+    "Curve": 42,
+    "FK Acc.": 38,
+    "Long Pass": 56,
+    "Ball Control": 63,
+    "Shot Power": 52,
+    "Jumping": 71,
+    "Stamina": 58,
+    "Strength": 69,
+    "Long Shots": 44,
+    "Acceleration": 66,
+    "Sprint Speed": 63,
+    "Agility": 56,
+    "Reactions": 57,
+    "Balance": 58,
+    "Aggression": 60,
+    "Interceptions": 62,
+    "Att. Position": 57,
+    "Vision": 56,
+    "Penalties": 36,
+    "Composure": 59,
+    "Def. Awareness": 59,
+    "Stand Tackle": 58,
+    "Slide Tackle": 54,
+    "GK Diving": 10,
+    "GK Handling": 10,
+    "GK Kicking": 13,
+    "GK Positioning": 11,
+    "GK Reflexes": 11
+   },
+   "roles": {
+    "CDM": [
+     {
+      "role": "Deep-Lying Playmaker",
+      "level": 1
+     },
+     {
+      "role": "Holding",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [],
+   "playstylesPlus": [],
+   "inFc26Barca": true,
+   "inReal2627": false,
+   "note": "Left the club before 2026/27",
+   "source": "https://www.fifacm.com/26/player/82439/tomas-noel-marques-morera"
+  },
+  {
+   "id": "rodri",
+   "name": "Rodri",
+   "nameRu": "Родри",
+   "fullName": "Rodrigo Hernández Cascante",
+   "number": 16,
+   "age": 29,
+   "heightCm": 190,
+   "foot": "R",
+   "skillMoves": 3,
+   "weakFoot": 4,
+   "positions": [
+    "CDM",
+    "CM"
+   ],
+   "ovr": 89,
+   "ovrLaunch": 90,
+   "face": {
+    "PAC": 65,
+    "SHO": 79,
+    "PAS": 85,
+    "DRI": 82,
+    "DEF": 85,
+    "PHY": 84
+   },
+   "attr": {
+    "Crossing": 76,
+    "Finishing": 74,
+    "Heading Acc.": 80,
+    "Short Pass": 92,
+    "Volleys": 71,
+    "Dribbling": 81,
+    "Curve": 86,
+    "FK Acc.": 64,
+    "Long Pass": 90,
+    "Ball Control": 89,
+    "Shot Power": 90,
+    "Jumping": 83,
+    "Stamina": 86,
+    "Strength": 83,
+    "Long Shots": 87,
+    "Acceleration": 65,
+    "Sprint Speed": 65,
+    "Agility": 65,
+    "Reactions": 89,
+    "Balance": 67,
+    "Aggression": 85,
+    "Interceptions": 84,
+    "Att. Position": 76,
+    "Vision": 84,
+    "Penalties": 62,
+    "Composure": 92,
+    "Def. Awareness": 88,
+    "Stand Tackle": 87,
+    "Slide Tackle": 82,
+    "GK Diving": 10,
+    "GK Handling": 10,
+    "GK Kicking": 7,
+    "GK Positioning": 14,
+    "GK Reflexes": 8
+   },
+   "roles": {
+    "CDM": [
+     {
+      "role": "Deep-Lying Playmaker",
+      "level": 2
+     }
+    ],
+    "CM": [
+     {
+      "role": "Deep-Lying Playmaker",
+      "level": 2
+     }
+    ]
+   },
+   "playstyles": [
+    "Power Shot",
+    "Long Ball Pass",
+    "Press Proven",
+    "Bruiser"
+   ],
+   "playstylesPlus": [
+    "Tiki Taka"
+   ],
+   "inFc26Barca": false,
+   "inReal2627": true,
+   "note": "FC 26 data from his FC 26 club (signed by Barça for 2026/27)",
+   "source": "https://www.fifacm.com/26/player/231866/rodrigo-hernandez-cascante"
+  },
+  {
+   "id": "gabriel-jesus",
+   "name": "Gabriel Jesus",
+   "nameRu": "Габриэл Жезус",
+   "fullName": "Gabriel Fernando de Jesus",
+   "number": 9,
+   "age": 28,
+   "heightCm": 175,
+   "foot": "R",
+   "skillMoves": 4,
+   "weakFoot": 3,
+   "positions": [
+    "ST",
+    "CAM"
+   ],
+   "ovr": 80,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 81,
+    "SHO": 79,
+    "PAS": 74,
+    "DRI": 86,
+    "DEF": 40,
+    "PHY": 69
+   },
+   "attr": {
+    "Crossing": 73,
+    "Finishing": 80,
+    "Heading Acc.": 76,
+    "Short Pass": 79,
+    "Volleys": 77,
+    "Dribbling": 87,
+    "Curve": 75,
+    "FK Acc.": 54,
+    "Long Pass": 66,
+    "Ball Control": 84,
+    "Shot Power": 82,
+    "Jumping": 84,
+    "Stamina": 62,
+    "Strength": 65,
+    "Long Shots": 75,
+    "Acceleration": 85,
+    "Sprint Speed": 78,
+    "Agility": 88,
+    "Reactions": 80,
+    "Balance": 89,
+    "Aggression": 82,
+    "Interceptions": 32,
+    "Att. Position": 81,
+    "Vision": 78,
+    "Penalties": 75,
+    "Composure": 79,
+    "Def. Awareness": 45,
+    "Stand Tackle": 30,
+    "Slide Tackle": 28,
+    "GK Diving": 13,
+    "GK Handling": 8,
+    "GK Kicking": 6,
+    "GK Positioning": 6,
+    "GK Reflexes": 15
+   },
+   "roles": {
+    "ST": [
+     {
+      "role": "False 9",
+      "level": 1
+     },
+     {
+      "role": "Advanced Forward",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Technical",
+    "First Touch",
+    "Relentless"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": false,
+   "inReal2627": true,
+   "note": "FC 26 data from his FC 26 club (signed by Barça for 2026/27)",
+   "source": "https://www.fifacm.com/26/player/230666/gabriel-fernando-de-jesus"
+  },
+  {
+   "id": "adeyemi",
+   "name": "Adeyemi",
+   "nameRu": "Адейеми",
+   "fullName": "Karim Adeyemi",
+   "number": 14,
+   "age": 23,
+   "heightCm": 180,
+   "foot": "L",
+   "skillMoves": 4,
+   "weakFoot": 3,
+   "positions": [
+    "RM",
+    "LW",
+    "CAM",
+    "RW"
+   ],
+   "ovr": 82,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 96,
+    "SHO": 80,
+    "PAS": 72,
+    "DRI": 82,
+    "DEF": 36,
+    "PHY": 69
+   },
+   "attr": {
+    "Crossing": 73,
+    "Finishing": 81,
+    "Heading Acc.": 75,
+    "Short Pass": 74,
+    "Volleys": 71,
+    "Dribbling": 84,
+    "Curve": 69,
+    "FK Acc.": 62,
+    "Long Pass": 69,
+    "Ball Control": 80,
+    "Shot Power": 86,
+    "Jumping": 93,
+    "Stamina": 77,
+    "Strength": 67,
+    "Long Shots": 76,
+    "Acceleration": 96,
+    "Sprint Speed": 96,
+    "Agility": 86,
+    "Reactions": 82,
+    "Balance": 81,
+    "Aggression": 59,
+    "Interceptions": 31,
+    "Att. Position": 82,
+    "Vision": 74,
+    "Penalties": 70,
+    "Composure": 76,
+    "Def. Awareness": 25,
+    "Stand Tackle": 34,
+    "Slide Tackle": 49,
+    "GK Diving": 12,
+    "GK Handling": 12,
+    "GK Kicking": 7,
+    "GK Positioning": 12,
+    "GK Reflexes": 7
+   },
+   "roles": {
+    "RM": [
+     {
+      "role": "Inside Forward",
+      "level": 1
+     },
+     {
+      "role": "Winger",
+      "level": 1
+     }
+    ],
+    "LW": [
+     {
+      "role": "Inside Forward",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Power Shot",
+    "Rapid"
+   ],
+   "playstylesPlus": [
+    "Quick Step"
+   ],
+   "inFc26Barca": false,
+   "inReal2627": true,
+   "note": "FC 26 data from his FC 26 club (signed by Barça for 2026/27)",
+   "source": "https://www.fifacm.com/26/player/251852/karim-adeyemi"
+  },
+  {
+   "id": "gordon",
+   "name": "Gordon",
+   "nameRu": "Гордон",
+   "fullName": "Anthony Gordon",
+   "number": 17,
+   "age": 24,
+   "heightCm": 183,
+   "foot": "R",
+   "skillMoves": 3,
+   "weakFoot": 3,
+   "positions": [
+    "LW",
+    "ST",
+    "RW",
+    "LM"
+   ],
+   "ovr": 82,
+   "ovrLaunch": null,
+   "face": {
+    "PAC": 91,
+    "SHO": 78,
+    "PAS": 76,
+    "DRI": 82,
+    "DEF": 49,
+    "PHY": 72
+   },
+   "attr": {
+    "Crossing": 80,
+    "Finishing": 78,
+    "Heading Acc.": 59,
+    "Short Pass": 78,
+    "Volleys": 74,
+    "Dribbling": 84,
+    "Curve": 82,
+    "FK Acc.": 66,
+    "Long Pass": 66,
+    "Ball Control": 82,
+    "Shot Power": 80,
+    "Jumping": 75,
+    "Stamina": 87,
+    "Strength": 61,
+    "Long Shots": 76,
+    "Acceleration": 89,
+    "Sprint Speed": 92,
+    "Agility": 78,
+    "Reactions": 82,
+    "Balance": 71,
+    "Aggression": 80,
+    "Interceptions": 40,
+    "Att. Position": 80,
+    "Vision": 79,
+    "Penalties": 80,
+    "Composure": 80,
+    "Def. Awareness": 49,
+    "Stand Tackle": 56,
+    "Slide Tackle": 48,
+    "GK Diving": 5,
+    "GK Handling": 6,
+    "GK Kicking": 14,
+    "GK Positioning": 7,
+    "GK Reflexes": 8
+   },
+   "roles": {
+    "LW": [
+     {
+      "role": "Winger",
+      "level": 1
+     },
+     {
+      "role": "Inside Forward",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Finesse Shot",
+    "Whipped Pass",
+    "Rapid",
+    "Quick Step"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": false,
+   "inReal2627": true,
+   "note": "FC 26 data from his FC 26 club (signed by Barça for 2026/27)",
+   "source": "https://www.fifacm.com/26/player/242964/anthony-gordon"
+  },
+  {
+   "id": "livakovic",
+   "name": "Livaković",
+   "nameRu": "Ливакович",
+   "fullName": "Dominik Livaković",
+   "number": 25,
+   "age": 30,
+   "heightCm": 188,
+   "foot": "R",
+   "skillMoves": 1,
+   "weakFoot": 2,
+   "positions": [
+    "GK"
+   ],
+   "ovr": 78,
+   "ovrLaunch": null,
+   "face": {
+    "DIV": 78,
+    "HAN": 75,
+    "KIC": 70,
+    "REF": 80,
+    "SPD": 55,
+    "POS": 78
+   },
+   "attr": {
+    "Crossing": 13,
+    "Finishing": 12,
+    "Heading Acc.": 13,
+    "Short Pass": 50,
+    "Volleys": 10,
+    "Dribbling": 19,
+    "Curve": 12,
+    "FK Acc.": 11,
+    "Long Pass": 60,
+    "Ball Control": 28,
+    "Shot Power": 53,
+    "Jumping": 73,
+    "Stamina": 32,
+    "Strength": 75,
+    "Long Shots": 9,
+    "Acceleration": 57,
+    "Sprint Speed": 54,
+    "Agility": 65,
+    "Reactions": 78,
+    "Balance": 30,
+    "Aggression": 26,
+    "Interceptions": 21,
+    "Att. Position": 11,
+    "Vision": 60,
+    "Penalties": 15,
+    "Composure": 64,
+    "Def. Awareness": 24,
+    "Stand Tackle": 20,
+    "Slide Tackle": 21,
+    "GK Diving": 78,
+    "GK Handling": 75,
+    "GK Kicking": 70,
+    "GK Positioning": 78,
+    "GK Reflexes": 80
+   },
+   "roles": {
+    "GK": [
+     {
+      "role": "Goalkeeper",
+      "level": 1
+     }
+    ]
+   },
+   "playstyles": [
+    "Far Throw",
+    "Footwork",
+    "Career Injury Prone"
+   ],
+   "playstylesPlus": [],
+   "inFc26Barca": false,
+   "inReal2627": true,
+   "note": "FC 26 data from his FC 26 club (signed by Barça for 2026/27)",
+   "source": "https://www.fifacm.com/26/player/241671"
+  }
+ ]
+}
