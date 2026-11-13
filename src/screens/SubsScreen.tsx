@@ -3,51 +3,51 @@ import { View } from 'react-native';
 import { planSubs } from '../model/subs';
 import { applyPatch } from '../model/setup';
 import { useStore } from '../state';
-import { Badge, Btn, Card, Disclaimer, H, Row, T } from '../ui/kit';
+import { Badge, Btn, Card, Row, SectionTitle, T, useExplain } from '../ui/kit';
 import { EnergyChart } from '../ui/charts';
 import { C } from '../ui/theme';
 
 export function SubsScreen({ W }: { W: number }) {
   const { setup, commit } = useStore();
+  const explain = useExplain();
   const plan = useMemo(() => planSubs(setup), [setup]);
   const windows = [...new Set(plan.subs.map((s) => s.window))];
   return (
     <View>
       <Card>
-        <H>Планировщик замен</H>
-        <T dim small>Энергия каждого полевого игрока по ходу матча (модель): расход зависит от роли (прессинг, забегания), подхода в обороне, стиля розыгрыша, атрибута Stamina и PlayStyle Relentless. Красная полоса — зона, где игрок заметно теряет скорость и точность.</T>
-        <View style={{ marginTop: 8 }}><EnergyChart curves={plan.curves} W={W - 26} subs={plan.subs} /></View>
+        <SectionTitle>Энергия</SectionTitle>
+        <EnergyChart curves={plan.curves} W={W - 26} subs={plan.subs} />
       </Card>
       <Card accent={C.gold}>
-        <H>Кого и когда менять</H>
-        {plan.subs.length === 0 ? <T dim small>По модели никто не «садится» критично — замены можно делать по ситуации (жёлтые карточки, счёт).</T> : null}
+        <SectionTitle onExplain={() => explain.open('Замены', plan.subs.length ? plan.subs.map((s) => `${s.minute}' · ${s.outRu} → ${s.inRu}. ${s.reasonRu}`).join('\n\n') + `\n\n${plan.noteRu}` : plan.noteRu)}>Кого менять</SectionTitle>
         {windows.map((w) => (
-          <View key={w} style={{ marginBottom: 10 }}>
-            <Badge label={`Окно ${w}`} color={C.gold} />
+          <View key={w} style={{ marginBottom: 12 }}>
+            <Badge label={w} color={C.gold} />
             {plan.subs.filter((s) => s.window === w).map((s) => (
-              <View key={s.outId} style={{ marginTop: 6, padding: 8, backgroundColor: C.card2, borderRadius: 10 }}>
-                <T b>{s.minute}' · {s.outRu} → {s.inRu} <T dim small>({s.slot})</T></T>
-                <T dim small>{s.reasonRu}</T>
-                <Btn label="Применить к составу" kind="ghost" onPress={() => commit(applyPatch(setup, s.patch), `Замена: ${s.outRu} → ${s.inRu}`)} style={{ marginTop: 6, paddingVertical: 6 }} />
+              <View key={s.outId} style={{ marginTop: 8, padding: 10, backgroundColor: C.card2, borderRadius: 12 }}>
+                <Row style={{ justifyContent: 'space-between' }}>
+                  <T b style={{ flex: 1, fontSize: 17 }}>{s.minute}' · {s.outRu} → {s.inRu}</T>
+                </Row>
+                <Btn label="В состав" kind="ghost" onPress={() => commit(applyPatch(setup, s.patch), `Замена: ${s.outRu} → ${s.inRu}`)} style={{ marginTop: 8 }} />
               </View>
             ))}
           </View>
         ))}
-        <T dim small>Не больше 5 замен в 3 окна (+ перерыв), как в правилах FC 26.</T>
       </Card>
       <Card accent={C.blueL}>
-        <H>Когда менять тактику</H>
+        <SectionTitle onExplain={() => explain.open('Тактика по ходу', plan.tactics.map((t) => `${t.window}' · ${t.situationRu}. ${t.changeRu} ${t.reasonRu}`).join('\n\n'))}>Когда менять</SectionTitle>
         {plan.tactics.map((t, i) => (
-          <View key={i} style={{ marginBottom: 10, paddingBottom: 8, borderBottomWidth: 1, borderColor: C.line }}>
-            <Row style={{ flexWrap: 'wrap' }}><Badge label={t.window + "'"} color={C.blueL} /><T small b>{t.situationRu}</T></Row>
-            <T small style={{ marginTop: 4, color: C.gold }}>{t.changeRu}</T>
-            <T dim small>{t.reasonRu}</T>
-            {t.patch ? <Btn label="Попробовать (можно отменить)" kind="ghost" onPress={() => commit(applyPatch(setup, t.patch!), `${t.window}: ${t.changeRu}`)} style={{ marginTop: 6, paddingVertical: 6 }} /> : null}
+          <View key={i} style={{ marginBottom: 12, paddingBottom: 8, borderBottomWidth: 1, borderColor: C.line }}>
+            <Row style={{ flexWrap: 'wrap' }} gap={8}>
+              <Badge label={`${t.window}'`} color={C.blueL} />
+              <T b style={{ fontSize: 16 }}>{t.situationRu}</T>
+            </Row>
+            <T style={{ marginTop: 6, color: C.gold, fontSize: 16, fontWeight: '700' }}>{t.changeRu}</T>
+            {t.patch ? <Btn label="Попробовать" kind="ghost" onPress={() => commit(applyPatch(setup, t.patch!), `${t.window}: ${t.changeRu}`)} style={{ marginTop: 8 }} /> : null}
           </View>
         ))}
       </Card>
-      <T dim small>{plan.noteRu}</T>
-      <Disclaimer compact />
+      {explain.sheet}
     </View>
   );
 }

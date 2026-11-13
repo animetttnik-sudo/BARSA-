@@ -4,7 +4,7 @@ import Svg, { Circle, G, Line, Path, Polygon, Rect, Text as SvgText } from 'reac
 import { SVG_FONT, C, scoreColor } from './theme';
 
 export function Spider({ data, prev, size = 240 }: { data: { label: string; v: number }[]; prev?: number[]; size?: number }) {
-  const cx = size / 2, cy = size / 2, R = size / 2 - 58;
+  const cx = size / 2, cy = size / 2, R = size / 2 - 64;
   const pt = (i: number, v: number) => { const a = -Math.PI / 2 + (i * 2 * Math.PI) / data.length; return [cx + Math.cos(a) * R * (v / 100), cy + Math.sin(a) * R * (v / 100)]; };
   const poly = (vals: number[]) => vals.map((v, i) => pt(i, Math.max(4, v)).join(',')).join(' ');
   return (
@@ -13,7 +13,7 @@ export function Spider({ data, prev, size = 240 }: { data: { label: string; v: n
       {data.map((_, i) => { const [x, y] = pt(i, 100); return <Line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={C.grid} />; })}
       {prev ? <Polygon points={poly(prev)} fill="rgba(154,167,194,0.12)" stroke={C.sub} strokeDasharray="4,3" strokeWidth={1.2} /> : null}
       <Polygon points={poly(data.map((d) => d.v))} fill="rgba(165,0,68,0.35)" stroke={C.garnetL} strokeWidth={2} />
-      {data.map((d, i) => { const [x, y] = pt(i, 122); return <SvgText fontFamily={SVG_FONT} key={d.label} x={x} y={y} fill={C.text} fontSize={10.5} fontWeight="700" textAnchor="middle">{`${d.label} ${d.v}`}</SvgText>; })}
+      {data.map((d, i) => { const [x, y] = pt(i, 128); return <SvgText fontFamily={SVG_FONT} key={d.label} x={x} y={y} fill={C.text} fontSize={13} fontWeight="700" textAnchor="middle">{`${d.label} ${d.v}`}</SvgText>; })}
     </Svg>
   );
 }
@@ -30,7 +30,7 @@ export function Gauge({ value, size = 200, label }: { value: number; size?: numb
       <Path d={arc(0, 100)} stroke={C.grid} strokeWidth={16} fill="none" strokeLinecap="round" />
       <Path d={arc(0, Math.max(1, value))} stroke={scoreColor(value)} strokeWidth={16} fill="none" strokeLinecap="round" />
       <SvgText fontFamily={SVG_FONT} x={cx} y={cy - 8} fill={C.text} fontSize={42} fontWeight="900" textAnchor="middle">{String(value)}</SvgText>
-      {label ? <SvgText fontFamily={SVG_FONT} x={cx} y={cy + 16} fill={C.sub} fontSize={11} textAnchor="middle">{label}</SvgText> : null}
+      {label ? <SvgText fontFamily={SVG_FONT} x={cx} y={cy + 18} fill={C.sub} fontSize={15} textAnchor="middle">{label}</SvgText> : null}
     </Svg>
   );
 }
@@ -42,8 +42,8 @@ export function EnergyChart({ curves, W, subs }: { curves: { nameRu: string; poi
   return (
     <View>
       <Svg width={W} height={H}>
-        {[40, 60, 80, 100].map((e) => <G key={e}><Line x1={L} x2={W - 8} y1={y(e)} y2={y(e)} stroke={C.grid} /><SvgText fontFamily={SVG_FONT} x={4} y={y(e) + 4} fill={C.dim} fontSize={9}>{String(e)}</SvgText></G>)}
-        {[0, 15, 30, 45, 60, 75, 90].map((m) => <SvgText fontFamily={SVG_FONT} key={m} x={x(m)} y={H - 6} fill={C.dim} fontSize={9} textAnchor="middle">{`${m}'`}</SvgText>)}
+        {[40, 60, 80, 100].map((e) => <G key={e}><Line x1={L} x2={W - 8} y1={y(e)} y2={y(e)} stroke={C.grid} /><SvgText fontFamily={SVG_FONT} x={0} y={y(e) + 4} fill={C.dim} fontSize={13}>{String(e)}</SvgText></G>)}
+        {[0, 15, 30, 45, 60, 75, 90].map((m) => <SvgText fontFamily={SVG_FONT} key={m} x={x(m)} y={H - 4} fill={C.dim} fontSize={13} textAnchor="middle">{`${m}'`}</SvgText>)}
         <Line x1={x(45)} x2={x(45)} y1={T} y2={H - B} stroke={C.sub} strokeDasharray="3,3" />
         <Rect x={L} y={y(64)} width={W - L - 8} height={y(56) - y(64)} fill="rgba(240,80,110,0.12)" />
         {curves.map((c, i) => (
@@ -52,7 +52,7 @@ export function EnergyChart({ curves, W, subs }: { curves: { nameRu: string; poi
         {(subs ?? []).map((s, i) => <Circle key={i} cx={x(s.minute)} cy={T + 6} r={4} fill={C.gold} />)}
       </Svg>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
-        {curves.map((c, i) => <Text key={c.nameRu} style={{ color: PALETTE[i % PALETTE.length], fontSize: 10.5 }}>● {c.nameRu} {c.points[18]}%</Text>)}
+        {curves.map((c, i) => <Text key={c.nameRu} style={{ color: PALETTE[i % PALETTE.length], fontSize: 15, fontWeight: '600' }}>{c.nameRu} {c.points[18]}%</Text>)}
       </View>
     </View>
   );
@@ -61,11 +61,11 @@ export function EnergyChart({ curves, W, subs }: { curves: { nameRu: string; poi
 export function LaneBars({ title, d, color }: { title: string; d: { L: number; C: number; R: number }; color: string }) {
   return (
     <View style={{ marginBottom: 8 }}>
-      <Text style={{ color: C.sub, fontSize: 12, marginBottom: 4 }}>{title}</Text>
-      <View style={{ flexDirection: 'row', height: 26, borderRadius: 8, overflow: 'hidden' }}>
+      <Text style={{ color: C.text, fontSize: 16, fontWeight: '700', marginBottom: 6 }}>{title}</Text>
+      <View style={{ flexDirection: 'row', height: 32, borderRadius: 10, overflow: 'hidden' }}>
         {(['L', 'C', 'R'] as const).map((k, i) => (
-          <View key={k} style={{ flex: Math.max(d[k], 4), backgroundColor: color, opacity: 0.45 + (d[k] / 100) * 1.2, alignItems: 'center', justifyContent: 'center', borderLeftWidth: i ? 1 : 0, borderColor: C.bg }}>
-            <Text style={{ color: '#fff', fontWeight: '800', fontSize: 11 }}>{k === 'L' ? 'Лев' : k === 'C' ? 'Центр' : 'Прав'} {d[k]}%</Text>
+          <View key={k} style={{ flex: Math.max(d[k], 8), backgroundColor: color, opacity: 0.45 + (d[k] / 100) * 1.2, alignItems: 'center', justifyContent: 'center', borderLeftWidth: i ? 1 : 0, borderColor: C.bg }}>
+            <Text style={{ color: '#fff', fontWeight: '800', fontSize: 13 }}>{k === 'L' ? 'Лев' : k === 'C' ? 'Центр' : 'Прав'} {d[k]}%</Text>
           </View>
         ))}
       </View>

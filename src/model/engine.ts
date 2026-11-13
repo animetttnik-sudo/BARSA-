@@ -4,7 +4,7 @@
  * скорость/выносливость/рост/сопутствующие атрибуты, PlayStyles и сочетания ролей.
  */
 import type { Setup, Player, Role, Focus, RoleVector, Slot, Pos } from './types';
-import { getFormation, getPlayer, getRole, getApproach, getBuildUp } from './data';
+import { getFormation, getPlayer, getRole, getApproach, getBuildUp, rolesForPos, focusesFor } from './data';
 import { profile, Profile, clamp, familiarity, Familiarity, FAM_MULT, roleFit, has } from './profile';
 
 export interface SlotEval {
@@ -62,6 +62,49 @@ export function slotEvals(setup: Setup): SlotEval[] {
     for (const s of out) if (s.v.dropBack > 0.5) s.posIn = { x: 0.5, y: Math.max(0.12, s.posIn.y) };
   }
   return out;
+}
+
+export interface RoleSnap {
+  roleId: string;
+  focus: string;
+  roleRu: string;
+  focusRu: string;
+  pos: { x: number; y: number };
+  dist: number;
+}
+
+/**
+ * Ближайшая пара роль+фокус FC 26 для слота: позиция с мячом (posIn) минимально
+ * удалена от точки (x, y). Учитывает тактику и чужой dropBack через slotEvals.
+ */
+export function snapRoleFocus(setup: Setup, slotId: string, x: number, y: number): RoleSnap {
+  const formation = getFormation(setup.formationId);
+  const slot = formation.slots.find((s) => s.id === slotId);
+  if (!slot) throw new Error(`слот ${slotId}`);
+  const tx = clamp(x, 0, 1);
+  const ty = clamp(y, 0, 1);
+  const assign = setup.slots[slotId];
+  let best: RoleSnap | null = null;
+  for (const role of rolesForPos(slot.pos)) {
+    for (const focusId of focusesFor(role, slot.pos)) {
+      const focus = role.focuses.find((f) => f.id === focusId);
+      if (!focus) continue;
+      const next: Setup = {
+        ...setup,
+        slots: {
+          ...setup.slots,
+          [slotId]: { playerId: assign?.playerId ?? null, roleId: role.id, focus: focus.id },
+        },
+      };
+      const pos = slotEvals(next).find((s) => s.slot.id === slotId)!.posIn;
+      const dist = Math.hypot(pos.x - tx, pos.y - ty);
+      if (!best || dist < best.dist) {
+        best = { roleId: role.id, focus: focus.id, roleRu: role.nameRu, focusRu: focus.nameRu, pos: { x: pos.x, y: pos.y }, dist };
+      }
+    }
+  }
+  if (!best) throw new Error(`нет ролей для ${slot.pos}`);
+  return best;
 }
 
 /** Энергия игрока (0..100) на минуте m. Подробности — subs.ts; здесь простая версия для рейтинга. */

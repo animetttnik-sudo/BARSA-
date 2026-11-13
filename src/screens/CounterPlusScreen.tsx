@@ -3,15 +3,29 @@ import { Text, View } from 'react-native';
 import { Circle, G, Line, Path } from 'react-native-svg';
 import { counterPlus } from '../model/counter';
 import { useStore } from '../state';
-import { Bar, Card, Disclaimer, H, Metric, Row, T } from '../ui/kit';
+import { Bar, Card, H, Metric, Row, SectionTitle, useExplain } from '../ui/kit';
 import { Pitch, toPx } from '../ui/Pitch';
 import { FixCard } from '../ui/FixCard';
 import { C, scoreColor } from '../ui/theme';
 
 export function CounterPlusScreen({ W }: { W: number }) {
   const { setup, ev } = useStore();
+  const explain = useExplain();
   const cp = useMemo(() => counterPlus(setup), [setup]);
   const top = cp.runners.slice(0, 3).map((r) => r.s.slot.id).concat(cp.passers.slice(0, 1).map((p) => p.s.slot.id));
+  const breakdown = [
+    cp.patternRu.map((p, i) => `${i + 1}. ${p}`).join('\n'),
+    '',
+    ...cp.channels.map((c) => `${c.nameRu} · ${c.score}. ${c.whyRu}`),
+    '',
+    'Бегуны',
+    ...cp.runners.slice(0, 5).map((r) => `${r.s.player!.nameRu} · ${r.score}. ${r.whyRu}`),
+    '',
+    'Первый пас',
+    ...cp.passers.slice(0, 3).map((p) => `${p.s.player!.nameRu} · ${p.score}. ${p.whyRu}`),
+    '',
+    cp.noteRu,
+  ].join('\n');
   const arrows = (
     <G>
       {cp.arrows.map((a, i) => {
@@ -32,47 +46,54 @@ export function CounterPlusScreen({ W }: { W: number }) {
   return (
     <View>
       <Card>
-        <H>Контратака + : как бить в ответ</H>
-        <T dim small>Кто лучше всех убегает после отбора, кто отдаёт первый пас и через какой коридор контратака опаснее. Стрелки — главный и запасной маршрут.</T>
-        <Row style={{ marginTop: 8 }}>
-          <Metric label="Угроза контратаки" value={cp.counterScore} color={scoreColor(cp.counterScore)} />
-          <Metric label="Главный коридор" value={cp.channels[0]?.nameRu ?? '—'} />
+        <SectionTitle onExplain={() => explain.open('Контратака', breakdown)}>Контратака</SectionTitle>
+        <Row>
+          <Metric label="Угроза" value={cp.counterScore} color={scoreColor(cp.counterScore)} />
+          <Metric label="Коридор" value={cp.channels[0]?.nameRu ?? '—'} />
         </Row>
       </Card>
-      <Pitch setup={setup} ev={ev} W={W} mode="out" overlay={arrows} highlight={top} dimTokens label="Момент отбора · маршруты" />
-      <Card style={{ marginTop: 10 }} accent={C.gold}>
-        <H>Схема контратаки</H>
-        {cp.patternRu.map((p, i) => <T key={i} small style={{ marginBottom: 4 }}>{i + 1}. {p}</T>)}
-      </Card>
-      <Card>
+      <Pitch setup={setup} ev={ev} W={W} mode="out" overlay={arrows} highlight={top} dimTokens />
+      <Card style={{ marginTop: 12 }}>
         <H>Коридоры</H>
         {cp.channels.map((c) => (
-          <View key={c.lane} style={{ marginBottom: 8 }}>
-            <Row><Text style={{ color: C.text, width: 110, fontWeight: '700' }}>{c.nameRu}</Text><Bar value={c.score} color={scoreColor(c.score)} /><Text style={{ color: C.text, width: 30, textAlign: 'right' }}>{c.score}</Text></Row>
-            <T dim small>{c.whyRu}</T>
+          <View key={c.lane} style={{ marginBottom: 10 }}>
+            <Row>
+              <Text style={{ color: C.text, width: 120, fontWeight: '700', fontSize: 16 }}>{c.nameRu}</Text>
+              <Bar value={c.score} color={scoreColor(c.score)} />
+              <Text style={{ color: C.text, width: 36, textAlign: 'right', fontSize: 17, fontWeight: '800' }}>{c.score}</Text>
+            </Row>
           </View>
         ))}
       </Card>
       <Card>
         <H>Бегуны</H>
         {cp.runners.slice(0, 5).map((r) => (
-          <View key={r.s.slot.id} style={{ marginBottom: 6 }}>
-            <Row><Text style={{ color: C.text, width: 110 }} numberOfLines={1}>{r.s.player!.nameRu}</Text><Bar value={r.score} color={C.garnetL} /><Text style={{ color: C.text, width: 30, textAlign: 'right' }}>{r.score}</Text></Row>
-            <T dim small>{r.whyRu}</T>
+          <View key={r.s.slot.id} style={{ marginBottom: 8 }}>
+            <Row>
+              <Text style={{ color: C.text, width: 120, fontSize: 16, fontWeight: '600' }} numberOfLines={1}>{r.s.player!.nameRu}</Text>
+              <Bar value={r.score} color={C.garnetL} />
+              <Text style={{ color: C.text, width: 36, textAlign: 'right', fontSize: 17, fontWeight: '800' }}>{r.score}</Text>
+            </Row>
           </View>
         ))}
         <H style={{ marginTop: 8 }}>Первый пас</H>
         {cp.passers.slice(0, 3).map((p) => (
-          <View key={p.s.slot.id} style={{ marginBottom: 6 }}>
-            <Row><Text style={{ color: C.text, width: 110 }} numberOfLines={1}>{p.s.player!.nameRu}</Text><Bar value={p.score} color={C.blueL} /><Text style={{ color: C.text, width: 30, textAlign: 'right' }}>{p.score}</Text></Row>
-            <T dim small>{p.whyRu}</T>
+          <View key={p.s.slot.id} style={{ marginBottom: 8 }}>
+            <Row>
+              <Text style={{ color: C.text, width: 120, fontSize: 16, fontWeight: '600' }} numberOfLines={1}>{p.s.player!.nameRu}</Text>
+              <Bar value={p.score} color={C.blueL} />
+              <Text style={{ color: C.text, width: 36, textAlign: 'right', fontSize: 17, fontWeight: '800' }}>{p.score}</Text>
+            </Row>
           </View>
         ))}
       </Card>
-      <H style={{ marginTop: 4 }}>Как усилить контратаку</H>
-      {cp.adjustments.length ? cp.adjustments.map((f) => <FixCard key={f.id + f.titleRu} fix={f} W={W} metricLabel="Угроза" minimize={false} />) : <T dim small>Модель не нашла изменений, которые заметно усиливают контратаку без больших потерь.</T>}
-      <T dim small style={{ marginTop: 6 }}>{cp.noteRu}</T>
-      <Disclaimer compact />
+      {cp.adjustments.length ? (
+        <>
+          <H style={{ marginTop: 4 }}>Усилить</H>
+          {cp.adjustments.map((f) => <FixCard key={f.id + f.titleRu} fix={f} W={W} metricLabel="Угроза" minimize={false} />)}
+        </>
+      ) : null}
+      {explain.sheet}
     </View>
   );
 }
