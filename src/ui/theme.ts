@@ -47,55 +47,64 @@ export const nums: TextStyle = {
   fontVariant: ['tabular-nums'],
 };
 
+export const glass = {
+  bg: '#091124',
+  blue: '#163A86',
+  garnet: '#3A0E22',
+  line: 'rgba(255,255,255,0.14)',
+  sheen: 'rgba(255,255,255,0.28)',
+};
+
+/** Apple HIG: основной текст от 17, вторичный не ниже 13. */
 export const type = {
   title: {
     color: C.text,
-    fontSize: 17,
-    lineHeight: 22,
+    fontSize: 20,
+    lineHeight: 26,
     fontWeight: '700',
     letterSpacing: -0.4,
   } as TextStyle,
   subtitle: {
     color: C.sub,
-    fontSize: 12,
-    lineHeight: 16,
-    fontWeight: '500',
+    fontSize: 15,
+    lineHeight: 20,
+    fontWeight: '600',
   } as TextStyle,
   body: {
     color: C.text,
-    fontSize: 15,
-    lineHeight: 20,
+    fontSize: 17,
+    lineHeight: 24,
     fontWeight: '400',
   } as TextStyle,
   callout: {
     color: C.text,
-    fontSize: 13.5,
-    lineHeight: 19,
-    fontWeight: '400',
+    fontSize: 16,
+    lineHeight: 22,
+    fontWeight: '500',
   } as TextStyle,
   footnote: {
     color: C.sub,
-    fontSize: 12,
-    lineHeight: 16,
-    fontWeight: '400',
+    fontSize: 13,
+    lineHeight: 18,
+    fontWeight: '500',
   } as TextStyle,
   caption: {
     color: C.sub,
-    fontSize: 11,
-    lineHeight: 14,
-    fontWeight: '500',
+    fontSize: 13,
+    lineHeight: 18,
+    fontWeight: '600',
   } as TextStyle,
   tab: {
-    fontSize: 10,
-    lineHeight: 12,
-    fontWeight: '500',
+    fontSize: 13,
+    lineHeight: 16,
+    fontWeight: '600',
   } as TextStyle,
   metric: {
     color: C.text,
-    fontSize: 22,
-    lineHeight: 26,
+    fontSize: 26,
+    lineHeight: 30,
     fontWeight: '700',
-    letterSpacing: -0.5,
+    letterSpacing: -0.6,
     fontVariant: ['tabular-nums'],
   } as TextStyle,
 };

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { CloseIcon, InfoIcon } from './icons';
+import { GlassTile } from './glass';
 import { haptic } from './haptics';
 import { C, nums, radius, signed, type as typo } from './theme';
 
@@ -18,7 +19,34 @@ export function H({ children, style }: { children: React.ReactNode; style?: Text
 }
 
 export function T({ children, style, dim, small, b }: { children: React.ReactNode; style?: TextStyle | TextStyle[]; dim?: boolean; small?: boolean; b?: boolean }) {
-  return <Text style={[s.t, dim && { color: C.sub }, small && { fontSize: 12, lineHeight: 16 }, b && { fontWeight: '700' }, style as any]}>{children}</Text>;
+  return <Text style={[s.t, dim && { color: C.sub }, small && { fontSize: 15, lineHeight: 20 }, b && { fontWeight: '700' }, style as any]}>{children}</Text>;
+}
+
+export function SectionTitle({ children, onExplain }: { children: React.ReactNode; onExplain?: () => void }) {
+  return (
+    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+      <Text style={[s.h, { flex: 1, marginBottom: 0 }]}>{children}</Text>
+      {onExplain ? <ExplainButton onPress={onExplain} /> : null}
+    </View>
+  );
+}
+
+export function ExplainButton({ onPress, label = 'Пояснения' }: { onPress: () => void; label?: string }) {
+  return (
+    <GlassTile size={34} onPress={onPress} accessibilityLabel={label}>
+      <Text style={{ color: C.gold, fontSize: 18, fontWeight: '800', marginTop: -1 }}>?</Text>
+    </GlassTile>
+  );
+}
+
+export function useExplain() {
+  const [item, setItem] = useState<{ title: string; body: string } | null>(null);
+  const sheet = (
+    <Sheet visible={!!item} onClose={() => setItem(null)} title={item?.title ?? 'Пояснение'}>
+      {item ? <Text style={{ color: C.text, fontSize: 17, lineHeight: 24 }}>{item.body}</Text> : null}
+    </Sheet>
+  );
+  return { open: (title: string, body: string) => setItem({ title, body }), sheet };
 }
 
 export function Chip({ label, active, onPress, color, small, testID }: { label: string; active?: boolean; onPress?: () => void; color?: string; small?: boolean; testID?: string }) {
@@ -35,7 +63,7 @@ export function Chip({ label, active, onPress, color, small, testID }: { label: 
         pressed && { opacity: 0.72, transform: [{ scale: 0.98 }] },
       ]}
     >
-      <Text style={[s.chipT, small && { fontSize: 11 }, active && { color: '#fff' }]}>{label}</Text>
+      <Text style={[s.chipT, small && { fontSize: 14, lineHeight: 18 }, active && { color: '#fff' }]}>{label}</Text>
     </Pressable>
   );
 }
@@ -83,9 +111,9 @@ export function Bar({ value, color, max = 100, height = 6, bg = C.grid }: { valu
 }
 
 export function Delta({ v, invert, suffix = '' }: { v: number; invert?: boolean; suffix?: string }) {
-  if (!v) return <Text style={[s.t, s.num, { color: C.dim, fontSize: 12 }]}>±0{suffix}</Text>;
+  if (!v) return <Text style={[s.t, s.num, { color: C.dim, fontSize: 16 }]}>±0{suffix}</Text>;
   const good = invert ? v < 0 : v > 0;
-  return <Text style={[s.t, s.num, { color: good ? C.good : C.bad, fontSize: 12, fontWeight: '700' }]}>{signed(v)}{suffix}</Text>;
+  return <Text style={[s.t, s.num, { color: good ? C.good : C.bad, fontSize: 16, fontWeight: '700' }]}>{signed(v)}{suffix}</Text>;
 }
 
 export function Row({ children, style, gap = 8 }: { children: React.ReactNode; style?: ViewStyle; gap?: number }) {
@@ -188,16 +216,17 @@ export const s = StyleSheet.create({
     justifyContent: 'center',
   },
   chipSm: { paddingHorizontal: 8, paddingVertical: 4, minHeight: 28 },
-  chipT: { color: C.sub, fontSize: 13, fontWeight: '600' },
+  chipT: { color: C.sub, fontSize: 15, fontWeight: '600' },
   btn: {
     paddingVertical: 12,
     paddingHorizontal: 14,
     borderRadius: radius.md,
     alignItems: 'center',
     justifyContent: 'center',
+    minHeight: 44,
   },
   btnInner: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 },
-  btnT: { color: '#fff', fontWeight: '700', fontSize: 15, letterSpacing: -0.2 },
+  btnT: { color: '#fff', fontWeight: '700', fontSize: 17, letterSpacing: -0.2 },
   badge: {
     paddingHorizontal: 8,
     paddingVertical: 3,
@@ -205,7 +234,7 @@ export const s = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     alignSelf: 'flex-start',
   },
-  badgeT: { fontSize: 11, fontWeight: '700' },
+  badgeT: { fontSize: 13, fontWeight: '700' },
   disc: {
     backgroundColor: 'rgba(47,123,216,0.10)',
     borderColor: 'rgba(47,123,216,0.22)',
@@ -217,7 +246,7 @@ export const s = StyleSheet.create({
     gap: 10,
     alignItems: 'flex-start',
   },
-  discT: { color: C.sub, fontSize: 12, lineHeight: 17, flex: 1 },
+  discT: { color: C.sub, fontSize: 16, lineHeight: 22, flex: 1 },
   backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.6)', justifyContent: 'flex-end' },
   sheet: {
     backgroundColor: C.bg2,

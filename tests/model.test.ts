@@ -1,12 +1,12 @@
 /// <reference types="node" />
 import assert from 'node:assert/strict';
-import { evaluate } from '../src/model/engine';
+import { evaluate, slotEvals, snapRoleFocus } from '../src/model/engine';
 import { defaultSetup, applyPatch, changeFormation, swapSlots, switchSquadMode, bench } from '../src/model/setup';
 import { vulnerabilities } from '../src/model/fixes';
 import { counterPlus } from '../src/model/counter';
 import { planSubs } from '../src/model/subs';
 import { diagnose, findAlternative, objective, Category } from '../src/model/diagnose';
-import { PLAYERS, ROLES, FORMATIONS, rolesForPos, focusesFor, getPlayer } from '../src/model/data';
+import { PLAYERS, ROLES, FORMATIONS, rolesForPos, focusesFor, getPlayer, getFormation, getRole } from '../src/model/data';
 import type { Setup } from '../src/model/types';
 
 let pass = 0, fail = 0;
@@ -90,6 +90,54 @@ test('Таргетмен без навесов — минус в сочетан�
 });
 test('пустой слот ухудшает рейтинг', () => { const s = base(); const t: Setup = { ...s, slots: { ...s.slots, ST: { ...s.slots.ST, playerId: null } } }; assert.ok(ev(t).rating < ev(s).rating); });
 test('drag&drop обмен двух игроков меняет модель и обратим', () => { const s = base(); const t = swapSlots(s, 'LM', 'RM'); assert.notDeepEqual(ev(t).risks, ev(s).risks); assert.deepEqual(swapSlots(t, 'LM', 'RM'), s); });
+
+console.log('Доска тактики: автоподбор роли и фокуса с мячом');
+test('snapRoleFocus берёт ближайшую позицию с мячом среди ролей и фокусов слота', () => {
+  const s = base();
+  const points: [number, number][] = [[0.08, 0.2], [0.22, 0.55], [0.5, 0.16], [0.84, 0.78], [0.42, 0.66]];
+  for (const slotId of ['LB', 'LCB', 'LDM', 'ST', 'CAM']) {
+    const slot = getFormation(s.formationId).slots.find((x) => x.id === slotId)!;
+    const allowed = new Set(rolesForPos(slot.pos).map((r) => r.id));
+    for (const [x, y] of points) {
+      const snap = snapRoleFocus(s, slotId, x, y);
+      assert.ok(allowed.has(snap.roleId), `${slotId} ${snap.roleId}`);
+      const role = getRole(snap.roleId)!;
+      assert.ok(focusesFor(role, slot.pos).includes(snap.focus), `${slotId} ${snap.focus}`);
+      let best = Infinity;
+      for (const r of rolesForPos(slot.pos)) {
+        for (const focus of focusesFor(r, slot.pos)) {
+          const next = applyPatch(s, { roles: [{ slot: slotId, roleId: r.id, focus }] });
+          const p = slotEvals(next).find((z) => z.slot.id === slotId)!.posIn;
+          best = Math.min(best, Math.hypot(p.x - Math.max(0, Math.min(1, x)), p.y - Math.max(0, Math.min(1, y))));
+        }
+      }
+      assert.ok(Math.abs(snap.dist - best) < 1e-9, `${slotId} @ ${x},${y}: ${snap.dist} vs ${best} (${snap.roleId}/${snap.focus})`);
+      const applied = slotEvals(applyPatch(s, { roles: [{ slot: slotId, roleId: snap.roleId, focus: snap.focus }] })).find((z) => z.slot.id === slotId)!.posIn;
+      assert.ok(Math.abs(applied.x - snap.pos.x) < 1e-9 && Math.abs(applied.y - snap.pos.y) < 1e-9);
+    }
+  }
+});
+test('точка у своих ворот для крайнего ниже, чем точка у чужих', () => {
+  const s = base();
+  const low = snapRoleFocus(s, 'LB', 0.12, 0.18);
+  const high = snapRoleFocus(s, 'LB', 0.12, 0.82);
+  assert.ok(low.pos.y < high.pos.y, `${low.roleRu}/${low.focusRu} y=${low.pos.y} vs ${high.roleRu}/${high.focusRu} y=${high.pos.y}`);
+});
+test('координаты вне поля зажимаются в 0..1', () => {
+  const s = base();
+  const edge = snapRoleFocus(s, 'ST', 1, 1);
+  const over = snapRoleFocus(s, 'ST', 4, 3);
+  assert.equal(over.roleId, edge.roleId);
+  assert.equal(over.focus, edge.focus);
+  assert.ok(Math.abs(over.dist - edge.dist) < 1e-9);
+});
+test('вратарь остаётся в ролях GK', () => {
+  const s = base();
+  const snap = snapRoleFocus(s, 'GK', 0.5, 0.4);
+  const allowed = new Set(rolesForPos('GK').map((r) => r.id));
+  assert.ok(allowed.has(snap.roleId), snap.roleId);
+  assert.ok(snap.pos.y < 0.2, `GK ушёл слишком высоко: ${snap.pos.y}`);
+});
 test('смена схемы сохраняет тех же 11 игроков', () => { const s = base(); for (const f of FORMATIONS) { const t = changeFormation(s, f.id); assert.deepEqual(Object.values(t.slots).map((a) => a.playerId).sort(), Object.values(s.slots).map((a) => a.playerId).sort(), f.id); } });
 test('переключение на 2026/27 убирает ушедших игроков', () => { const t = switchSquadMode(base(), 'real2627'); for (const a of Object.values(t.slots)) if (a.playerId) assert.ok(getPlayer(a.playerId)!.inReal2627, a.playerId); });
 
