@@ -9,8 +9,8 @@ export function Spider({ data, prev, size = 240 }: { data: { label: string; v: n
   const poly = (vals: number[]) => vals.map((v, i) => pt(i, Math.max(4, v)).join(',')).join(' ');
   return (
     <Svg width={size} height={size}>
-      {[25, 50, 75, 100].map((r) => <Polygon key={r} points={poly(data.map(() => r))} fill="none" stroke={C.line} strokeWidth={1} />)}
-      {data.map((_, i) => { const [x, y] = pt(i, 100); return <Line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={C.line} />; })}
+      {[25, 50, 75, 100].map((r) => <Polygon key={r} points={poly(data.map(() => r))} fill="none" stroke={C.grid} strokeWidth={1} />)}
+      {data.map((_, i) => { const [x, y] = pt(i, 100); return <Line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke={C.grid} />; })}
       {prev ? <Polygon points={poly(prev)} fill="rgba(154,167,194,0.12)" stroke={C.sub} strokeDasharray="4,3" strokeWidth={1.2} /> : null}
       <Polygon points={poly(data.map((d) => d.v))} fill="rgba(165,0,68,0.35)" stroke={C.garnetL} strokeWidth={2} />
       {data.map((d, i) => { const [x, y] = pt(i, 122); return <SvgText fontFamily={SVG_FONT} key={d.label} x={x} y={y} fill={C.text} fontSize={10.5} fontWeight="700" textAnchor="middle">{`${d.label} ${d.v}`}</SvgText>; })}
@@ -27,7 +27,7 @@ export function Gauge({ value, size = 200, label }: { value: number; size?: numb
   };
   return (
     <Svg width={size} height={size / 2 + 30}>
-      <Path d={arc(0, 100)} stroke={C.line} strokeWidth={16} fill="none" strokeLinecap="round" />
+      <Path d={arc(0, 100)} stroke={C.grid} strokeWidth={16} fill="none" strokeLinecap="round" />
       <Path d={arc(0, Math.max(1, value))} stroke={scoreColor(value)} strokeWidth={16} fill="none" strokeLinecap="round" />
       <SvgText fontFamily={SVG_FONT} x={cx} y={cy - 8} fill={C.text} fontSize={42} fontWeight="900" textAnchor="middle">{String(value)}</SvgText>
       {label ? <SvgText fontFamily={SVG_FONT} x={cx} y={cy + 16} fill={C.sub} fontSize={11} textAnchor="middle">{label}</SvgText> : null}
@@ -42,7 +42,7 @@ export function EnergyChart({ curves, W, subs }: { curves: { nameRu: string; poi
   return (
     <View>
       <Svg width={W} height={H}>
-        {[40, 60, 80, 100].map((e) => <G key={e}><Line x1={L} x2={W - 8} y1={y(e)} y2={y(e)} stroke={C.line} /><SvgText fontFamily={SVG_FONT} x={4} y={y(e) + 4} fill={C.dim} fontSize={9}>{String(e)}</SvgText></G>)}
+        {[40, 60, 80, 100].map((e) => <G key={e}><Line x1={L} x2={W - 8} y1={y(e)} y2={y(e)} stroke={C.grid} /><SvgText fontFamily={SVG_FONT} x={4} y={y(e) + 4} fill={C.dim} fontSize={9}>{String(e)}</SvgText></G>)}
         {[0, 15, 30, 45, 60, 75, 90].map((m) => <SvgText fontFamily={SVG_FONT} key={m} x={x(m)} y={H - 6} fill={C.dim} fontSize={9} textAnchor="middle">{`${m}'`}</SvgText>)}
         <Line x1={x(45)} x2={x(45)} y1={T} y2={H - B} stroke={C.sub} strokeDasharray="3,3" />
         <Rect x={L} y={y(64)} width={W - L - 8} height={y(56) - y(64)} fill="rgba(240,80,110,0.12)" />

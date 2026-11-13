@@ -3,16 +3,17 @@ import { Text, View } from 'react-native';
 import { CATEGORY_RU, Category, diagnose, Diagnosis } from '../model/diagnose';
 import { getFormation } from '../model/data';
 import { useStore } from '../state';
+import { BallIcon, RepeatIcon, ShieldIcon, SparkIcon, type IconProps } from '../ui/icons';
 import { Badge, Btn, Card, Delta, Disclaimer, H, Row, Sheet, Spinner, T } from '../ui/kit';
 import { Pitch } from '../ui/Pitch';
 import { C, riskColor, scoreColor } from '../ui/theme';
 import { BUILDUP_RU, APPROACH_RU } from '../ui/labels';
 
-const CATS: { id: Category; icon: string; hint: string }[] = [
-  { id: 'defence', icon: '🛡', hint: 'Пропускаем с контратак, за спину, с флангов' },
-  { id: 'possession', icon: '🔄', hint: 'Теряем мяч, не можем выйти из обороны' },
-  { id: 'attack', icon: '⚽', hint: 'Мало моментов, нет забеганий, нет людей в штрафной' },
-  { id: 'all', icon: '🔥', hint: 'Всё сразу — ищем лучший общий баланс' },
+const CATS: { id: Category; Icon: React.ComponentType<IconProps>; hint: string }[] = [
+  { id: 'defence', Icon: ShieldIcon, hint: 'Пропускаем с контратак, за спину, с флангов' },
+  { id: 'possession', Icon: RepeatIcon, hint: 'Теряем мяч, не можем выйти из обороны' },
+  { id: 'attack', Icon: BallIcon, hint: 'Мало моментов, нет забеганий, нет людей в штрафной' },
+  { id: 'all', Icon: SparkIcon, hint: 'Всё сразу — ищем лучший общий баланс' },
 ];
 const KIND_RU = { formation: 'СХЕМА', tactic: 'ТАКТИКА', role: 'РОЛЬ', swap: 'ИГРОК' };
 
@@ -28,12 +29,15 @@ export function WhyModal({ visible, onClose, W }: { visible: boolean; onClose: (
   };
   const apply = () => { if (!res) return; commit(res.alternative, `«Почему не работает»: ${CATEGORY_RU[res.category]}`); onClose(); };
   const half = (W - 52) / 2;
-  const row = (label: string, a: number, b: number, invert?: boolean) => (
+  const row = (label: string, a: number, b: number, invert?: boolean, icon?: React.ReactNode) => (
     <Row key={label} style={{ paddingVertical: 4, borderBottomWidth: 1, borderColor: C.line }}>
-      <Text style={{ color: C.sub, flex: 1, fontSize: 12.5 }}>{label}</Text>
-      <Text style={{ color: C.text, width: 40, textAlign: 'right' }}>{a}</Text>
+      <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 6, paddingRight: 6 }}>
+        {icon}
+        <Text style={{ color: C.sub, flex: 1, fontSize: 12.5 }}>{label}</Text>
+      </View>
+      <Text style={{ color: C.text, width: 40, textAlign: 'right', fontVariant: ['tabular-nums'] }}>{a}</Text>
       <Text style={{ color: C.dim, width: 18, textAlign: 'center' }}>→</Text>
-      <Text style={{ color: C.text, width: 34, fontWeight: '800' }}>{b}</Text>
+      <Text style={{ color: C.text, width: 34, fontWeight: '700', fontVariant: ['tabular-nums'] }}>{b}</Text>
       <View style={{ width: 36, alignItems: 'flex-end' }}><Delta v={b - a} invert={invert} /></View>
     </Row>
   );
@@ -44,7 +48,7 @@ export function WhyModal({ visible, onClose, W }: { visible: boolean; onClose: (
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
         {CATS.map((c) => (
           <View key={c.id} style={{ width: '48%' }}>
-            <Btn testID={`why-${c.id}`} label={`${c.icon} ${CATEGORY_RU[c.id]}`} kind={cat === c.id ? 'garnet' : 'ghost'} onPress={() => run(c.id)} disabled={busy} />
+            <Btn testID={`why-${c.id}`} label={CATEGORY_RU[c.id]} icon={<c.Icon size={16} color={cat === c.id ? '#fff' : C.sub} focused={cat === c.id} />} kind={cat === c.id ? 'garnet' : 'ghost'} onPress={() => run(c.id)} disabled={busy} />
             <Text style={{ color: C.dim, fontSize: 10.5, marginTop: 2, textAlign: 'center' }}>{c.hint}</Text>
           </View>
         ))}
@@ -76,8 +80,8 @@ export function WhyModal({ visible, onClose, W }: { visible: boolean; onClose: (
               {row('Рейтинг опасности', res.before.rating, res.after.rating)}
               {row('Атака', res.before.attackScore, res.after.attackScore)}
               {row('Риск в обороне', res.before.defRisk, res.after.defRisk, true)}
-              {res.before.defence.map((c) => { const a = res.after.defence.find((x) => x.id === c.id)!; return Math.abs(a.value - c.value) >= 5 ? row('🛡 ' + c.nameRu, c.value, a.value, true) : null; })}
-              {res.before.attack.map((c) => { const a = res.after.attack.find((x) => x.id === c.id)!; return Math.abs(a.value - c.value) >= 5 ? row('⚽ ' + c.nameRu, c.value, a.value) : null; })}
+              {res.before.defence.map((c) => { const a = res.after.defence.find((x) => x.id === c.id)!; return Math.abs(a.value - c.value) >= 5 ? row(c.nameRu, c.value, a.value, true, <ShieldIcon size={12} color={C.sub} />) : null; })}
+              {res.before.attack.map((c) => { const a = res.after.attack.find((x) => x.id === c.id)!; return Math.abs(a.value - c.value) >= 5 ? row(c.nameRu, c.value, a.value, false, <BallIcon size={12} color={C.sub} />) : null; })}
               <Row style={{ marginTop: 10, alignItems: 'flex-start' }} gap={8}>
                 <View style={{ alignItems: 'center' }}><Pitch setup={setup} ev={res.before} W={half} small mode="out" /><Text style={{ color: scoreColor(res.before.rating), fontSize: 12 }}>Сейчас · {res.before.rating}</Text></View>
                 <View style={{ alignItems: 'center' }}><Pitch setup={res.alternative} ev={res.after} W={half} small mode="out" /><Text style={{ color: scoreColor(res.after.rating), fontSize: 12 }}>Альтернатива · {res.after.rating}</Text></View>

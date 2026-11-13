@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { useStore } from '../state';
 import type { Component } from '../model/engine';
+import { BallIcon, ShieldIcon } from '../ui/icons';
 import { Bar, Card, Delta, Disclaimer, H, Metric, Row, T } from '../ui/kit';
 import { Gauge } from '../ui/charts';
 import { C, riskColor, scoreColor } from '../ui/theme';
@@ -15,7 +16,7 @@ function CompRow({ c, prev, risk }: { c: Component; prev?: Component; risk?: boo
         <Text style={{ color: C.text, flex: 1.5, fontSize: 12.5 }} numberOfLines={open ? 3 : 1}>{c.nameRu}</Text>
         <Text style={{ color: C.dim, fontSize: 10, width: 30 }}>×{Math.round(c.weight * 100)}%</Text>
         <Bar value={c.value} color={col} />
-        <Text style={{ color: col, width: 26, textAlign: 'right', fontWeight: '800' }}>{c.value}</Text>
+        <Text style={{ color: col, width: 26, textAlign: 'right', fontWeight: '700', fontVariant: ['tabular-nums'] }}>{c.value}</Text>
         <View style={{ width: 30, alignItems: 'flex-end' }}>{prev ? <Delta v={c.value - prev.value} invert={risk} /> : null}</View>
       </Row>
       {open ? <T dim small style={{ marginTop: 4 }}>{c.reasonRu}</T> : null}
@@ -43,8 +44,14 @@ export function RatingScreen({ W }: { W: number }) {
       </Card>
       <Card accent={C.warn}>
         <H>Что тянет вниз сильнее всего</H>
-        <T small>⚽ Атака: «{worstA.nameRu}» — {worstA.value}. {worstA.reasonRu}</T>
-        <T small style={{ marginTop: 4 }}>🛡 Оборона: «{worstD.nameRu}» — риск {worstD.value}. {worstD.reasonRu}</T>
+        <Row style={{ alignItems: 'flex-start' }} gap={6}>
+          <View style={{ marginTop: 2 }}><BallIcon size={14} color={C.sub} /></View>
+          <T small style={{ flex: 1 }}>Атака: «{worstA.nameRu}» — {worstA.value}. {worstA.reasonRu}</T>
+        </Row>
+        <Row style={{ alignItems: 'flex-start', marginTop: 4 }} gap={6}>
+          <View style={{ marginTop: 2 }}><ShieldIcon size={14} color={C.sub} /></View>
+          <T small style={{ flex: 1 }}>Оборона: «{worstD.nameRu}» — риск {worstD.value}. {worstD.reasonRu}</T>
+        </Row>
       </Card>
       <Card>
         <H>Атака — из чего складывается</H>

@@ -4,6 +4,7 @@ import { APPROACHES, BUILDUPS, FORMATIONS, getApproach, getFormation, getPlayer 
 import { applyPatch, bench, changeFormation, swapSlots, switchSquadMode } from '../model/setup';
 import { posFamiliarity } from '../model/profile';
 import { useStore } from '../state';
+import { DiagnoseIcon } from '../ui/icons';
 import { Btn, Card, Chip, Disclaimer, H, Row, T } from '../ui/kit';
 import { Legend, Pitch, PitchMode } from '../ui/Pitch';
 import { C } from '../ui/theme';
@@ -71,7 +72,7 @@ export function PitchScreen({ W, onWhy, setScroll }: { W: number; onWhy: () => v
         </ScrollView>
       </View>
 
-      <Btn testID="btn-why" label="ПОЧЕМУ НЕ РАБОТАЕТ?" kind="garnet" icon="🩺" onPress={onWhy} style={{ marginVertical: 12 }} />
+      <Btn testID="btn-why" label="ПОЧЕМУ НЕ РАБОТАЕТ?" kind="garnet" icon={<DiagnoseIcon size={18} color="#fff" />} onPress={onWhy} style={{ marginVertical: 12 }} />
 
       <Card>
         <H>Тактика команды</H>

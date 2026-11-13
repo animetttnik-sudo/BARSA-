@@ -1,10 +1,13 @@
-import { Platform } from 'react-native';
+import { Platform, type TextStyle } from 'react-native';
+
 export const C = {
-  bg: '#070B16',
-  bg2: '#0D1324',
-  card: '#121A30',
-  card2: '#18223D',
-  line: '#24304F',
+  bg: '#0A0D14',
+  bg2: '#121722',
+  card: '#121722',
+  card2: '#1A2030',
+  line: 'rgba(255,255,255,0.12)',
+  hairline: 'rgba(255,255,255,0.08)',
+  grid: 'rgba(255,255,255,0.16)',
   blue: '#004D98',
   blueL: '#2F7BD8',
   garnet: '#A50044',
@@ -20,6 +23,83 @@ export const C = {
   pitch2: '#103027',
   pitchLine: 'rgba(255,255,255,0.28)',
 };
+
+/** 8pt-сетка: 4 / 8 / 12 / 16 / 20 / 24 / 32 */
+export const space = {
+  xs: 4,
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 20,
+  xxl: 24,
+  xxxl: 32,
+} as const;
+
+export const radius = {
+  sm: 10,
+  md: 14,
+  lg: 18,
+  xl: 22,
+  pill: 999,
+} as const;
+
+export const nums: TextStyle = {
+  fontVariant: ['tabular-nums'],
+};
+
+export const type = {
+  title: {
+    color: C.text,
+    fontSize: 17,
+    lineHeight: 22,
+    fontWeight: '700',
+    letterSpacing: -0.4,
+  } as TextStyle,
+  subtitle: {
+    color: C.sub,
+    fontSize: 12,
+    lineHeight: 16,
+    fontWeight: '500',
+  } as TextStyle,
+  body: {
+    color: C.text,
+    fontSize: 15,
+    lineHeight: 20,
+    fontWeight: '400',
+  } as TextStyle,
+  callout: {
+    color: C.text,
+    fontSize: 13.5,
+    lineHeight: 19,
+    fontWeight: '400',
+  } as TextStyle,
+  footnote: {
+    color: C.sub,
+    fontSize: 12,
+    lineHeight: 16,
+    fontWeight: '400',
+  } as TextStyle,
+  caption: {
+    color: C.sub,
+    fontSize: 11,
+    lineHeight: 14,
+    fontWeight: '500',
+  } as TextStyle,
+  tab: {
+    fontSize: 10,
+    lineHeight: 12,
+    fontWeight: '500',
+  } as TextStyle,
+  metric: {
+    color: C.text,
+    fontSize: 22,
+    lineHeight: 26,
+    fontWeight: '700',
+    letterSpacing: -0.5,
+    fontVariant: ['tabular-nums'],
+  } as TextStyle,
+};
+
 export const sevColor = (s: 'high' | 'medium' | 'low') => (s === 'high' ? C.bad : s === 'medium' ? C.warn : C.good);
 export const riskColor = (r: number) => (r >= 60 ? C.bad : r >= 38 ? C.warn : C.good);
 export const scoreColor = (v: number) => (v >= 75 ? C.good : v >= 55 ? C.gold : v >= 40 ? C.warn : C.bad);

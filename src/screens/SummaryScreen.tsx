@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { laneDistribution } from '../model/engine';
 import { getApproach, getBuildUp, getFormation } from '../model/data';
 import { useStore } from '../state';
+import { BallIcon, ShieldIcon, UndoIcon } from '../ui/icons';
 import { Badge, Btn, Card, Delta, Disclaimer, H, Metric, Row, T } from '../ui/kit';
 import { Pitch } from '../ui/Pitch';
 import { LaneBars, Spider } from '../ui/charts';
@@ -76,7 +77,7 @@ export function SummaryScreen({ W }: { W: number }) {
       <Card accent={C.gold}>
         <Row style={{ justifyContent: 'space-between' }}>
           <H>Что изменилось</H>
-          {prev ? <Btn label="↶ Отменить" kind="ghost" onPress={undo} style={{ paddingVertical: 5 }} /> : null}
+          {prev ? <Btn label="Отменить" kind="ghost" icon={<UndoIcon size={14} color={C.text} />} onPress={undo} style={{ paddingVertical: 5 }} /> : null}
         </Row>
         {!prev ? <T dim small>Изменений пока нет. Поменяй что-нибудь на вкладке «Поле» — здесь появится сравнение с предыдущей версией.</T> : (
           <>
@@ -87,7 +88,7 @@ export function SummaryScreen({ W }: { W: number }) {
                 const p = [...prevEv!.attack, ...prevEv!.defence].find((x) => x.id === c.id)!;
                 const d = c.value - p.value;
                 if (Math.abs(d) < 2) return null;
-                return <Row key={c.id} style={{ justifyContent: 'space-between' }}><T small>{c.group === 'attack' ? '⚽' : '🛡'} {c.nameRu}</T><Row><T dim small>{p.value}→{c.value}</T><Delta v={d} invert={c.group === 'defence'} /></Row></Row>;
+                return <Row key={c.id} style={{ justifyContent: 'space-between' }}><Row gap={6} style={{ flex: 1, paddingRight: 8 }}>{c.group === 'attack' ? <BallIcon size={14} color={C.sub} /> : <ShieldIcon size={14} color={C.sub} />}<T small style={{ flex: 1 }}>{c.nameRu}</T></Row><Row><T dim small>{p.value}→{c.value}</T><Delta v={d} invert={c.group === 'defence'} /></Row></Row>;
               })}
             </View>
             {history.length > 1 ? <T dim small style={{ marginTop: 8 }}>История: {history.slice(-6).map((h) => h.labelRu).reverse().join(' ← ')}</T> : null}

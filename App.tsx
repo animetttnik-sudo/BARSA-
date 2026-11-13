@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Pressable, ScrollView, Text, useWindowDimensions, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StoreProvider, useStore } from './src/state';
@@ -10,16 +10,18 @@ import { CounterMinusScreen } from './src/screens/CounterMinusScreen';
 import { RatingScreen } from './src/screens/RatingScreen';
 import { SubsScreen } from './src/screens/SubsScreen';
 import { WhyModal } from './src/screens/WhyModal';
-import { C, scoreColor } from './src/ui/theme';
+import { haptic } from './src/ui/haptics';
+import { TAB_ICONS, UndoIcon, type IconProps } from './src/ui/icons';
+import { C, nums, scoreColor, type as typo } from './src/ui/theme';
 
 type Tab = 'pitch' | 'summary' | 'cplus' | 'cminus' | 'rating' | 'subs';
-const TABS: { id: Tab; label: string; icon: string }[] = [
-  { id: 'pitch', label: 'Поле', icon: '⚽' },
-  { id: 'summary', label: 'Сводка', icon: '📋' },
-  { id: 'cplus', label: 'Контра +', icon: '⚡' },
-  { id: 'cminus', label: 'Контра −', icon: '🛡' },
-  { id: 'rating', label: 'Рейтинг', icon: '📈' },
-  { id: 'subs', label: 'Замены', icon: '🔁' },
+const TABS: { id: Tab; label: string; Icon: React.ComponentType<IconProps> }[] = [
+  { id: 'pitch', label: 'Поле', Icon: TAB_ICONS.pitch },
+  { id: 'summary', label: 'Сводка', Icon: TAB_ICONS.summary },
+  { id: 'cplus', label: 'Контра +', Icon: TAB_ICONS.cplus },
+  { id: 'cminus', label: 'Контра −', Icon: TAB_ICONS.cminus },
+  { id: 'rating', label: 'Рейтинг', Icon: TAB_ICONS.rating },
+  { id: 'subs', label: 'Замены', Icon: TAB_ICONS.subs },
 ];
 
 function Main() {
@@ -31,22 +33,37 @@ function Main() {
   const sv = useRef<React.ComponentRef<typeof ScrollView>>(null);
   const W = Math.min(width, 560) - 24;
   const go = (t: Tab) => { setTab(t); sv.current?.scrollTo({ y: 0, animated: false }); };
+  const ratingColor = scoreColor(ev.rating);
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: C.bg }} edges={['top', 'left', 'right']}>
       <StatusBar style="light" />
-      <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 12, paddingVertical: 8, borderBottomWidth: 1, borderColor: C.line, gap: 8 }}>
-        <View style={{ width: 6, height: 30, borderRadius: 3, backgroundColor: C.garnet }} />
-        <View style={{ width: 6, height: 30, borderRadius: 3, backgroundColor: C.blue, marginLeft: -6 }} />
-        <View style={{ flex: 1 }}>
-          <Text style={{ color: C.text, fontWeight: '900', fontSize: 16 }}>Барса · тактик-лаб</Text>
-          <Text style={{ color: C.sub, fontSize: 10.5 }}>EA FC 26 · эвристика, не движок игры</Text>
+      <View style={styles.header}>
+        <View style={styles.mark} accessibilityLabel="Blaugrana">
+          <View style={[styles.markBar, { backgroundColor: C.garnet }]} />
+          <View style={[styles.markBar, { backgroundColor: C.blue }]} />
         </View>
-        <Pressable onPress={undo} disabled={!history.length} hitSlop={8} style={{ opacity: history.length ? 1 : 0.3, paddingHorizontal: 6 }}>
-          <Text style={{ color: C.text, fontSize: 20 }}>↶</Text>
+        <View style={{ flex: 1 }}>
+          <Text style={styles.title}>Барса · тактик-лаб</Text>
+          <Text style={styles.subtitle}>EA FC 26 · эвристика, не движок игры</Text>
+        </View>
+        <Pressable
+          onPress={() => { if (history.length) { haptic('selection'); undo(); } }}
+          disabled={!history.length}
+          hitSlop={4}
+          accessibilityRole="button"
+          accessibilityLabel="Отменить"
+          style={({ pressed }) => [styles.iconBtn, { opacity: history.length ? (pressed ? 0.6 : 1) : 0.3 }]}
+        >
+          <UndoIcon size={20} color={C.text} />
         </Pressable>
-        <Pressable onPress={() => go('rating')} style={{ backgroundColor: C.card2, borderRadius: 12, paddingHorizontal: 10, paddingVertical: 4, borderWidth: 1, borderColor: scoreColor(ev.rating), alignItems: 'center' }}>
-          <Text style={{ color: scoreColor(ev.rating), fontWeight: '900', fontSize: 18 }}>{ev.rating}</Text>
-          <Text style={{ color: C.sub, fontSize: 8.5 }}>опасность</Text>
+        <Pressable
+          onPress={() => { haptic('selection'); go('rating'); }}
+          accessibilityRole="button"
+          accessibilityLabel={`Опасность ${ev.rating}`}
+          style={({ pressed }) => [styles.badge, { backgroundColor: ratingColor + '22', borderColor: ratingColor + '59' }, pressed && { opacity: 0.8 }]}
+        >
+          <Text style={[styles.badgeValue, { color: ratingColor }]}>{ev.rating}</Text>
+          <Text style={styles.badgeLabel}>опасность</Text>
         </Pressable>
       </View>
       <ScrollView ref={sv} scrollEnabled={scroll} style={{ flex: 1 }} contentContainerStyle={{ padding: 12, paddingBottom: 40, width: '100%', maxWidth: 560, alignSelf: 'center' }}>
@@ -56,16 +73,37 @@ function Main() {
           : tab === 'cminus' ? <CounterMinusScreen W={W} />
           : tab === 'rating' ? <RatingScreen W={W} />
           : <SubsScreen W={W} />}
-        {tab === 'pitch' ? <Pressable onPress={reset} style={{ alignSelf: 'center', marginTop: 8 }}><Text style={{ color: C.dim, fontSize: 12 }}>Сбросить к стартовому составу</Text></Pressable> : null}
+        {tab === 'pitch' ? (
+          <Pressable onPress={() => { haptic('light'); reset(); }} hitSlop={8} style={{ alignSelf: 'center', marginTop: 8, minHeight: 44, justifyContent: 'center' }}>
+            <Text style={{ color: C.dim, fontSize: 13 }}>Сбросить к стартовому составу</Text>
+          </Pressable>
+        ) : null}
       </ScrollView>
-      <SafeAreaView edges={['bottom']} style={{ backgroundColor: C.bg2, borderTopWidth: 1, borderColor: C.line }}>
-        <View style={{ flexDirection: 'row' }}>
-          {TABS.map((t) => (
-            <Pressable key={t.id} testID={`tab-${t.id}`} onPress={() => go(t.id)} style={{ flex: 1, alignItems: 'center', paddingVertical: 7, borderTopWidth: 2, borderColor: tab === t.id ? C.garnetL : 'transparent' }}>
-              <Text style={{ fontSize: 16, opacity: tab === t.id ? 1 : 0.6 }}>{t.icon}</Text>
-              <Text style={{ color: tab === t.id ? C.text : C.sub, fontSize: 10, fontWeight: tab === t.id ? '800' : '500' }} numberOfLines={1}>{t.label}</Text>
-            </Pressable>
-          ))}
+      <SafeAreaView edges={['bottom']} style={styles.tabBar}>
+        <View style={styles.tabs}>
+          {TABS.map((t) => {
+            const active = tab === t.id;
+            const Icon = t.Icon;
+            const color = active ? C.garnetL : C.dim;
+            return (
+              <Pressable
+                key={t.id}
+                testID={`tab-${t.id}`}
+                onPress={() => { haptic('selection'); go(t.id); }}
+                style={({ pressed }) => [styles.tab, pressed && { opacity: 0.7 }]}
+                accessibilityRole="button"
+                accessibilityState={{ selected: active }}
+                accessibilityLabel={t.label}
+              >
+                <View style={[styles.tabIconWell, active && styles.tabIconWellActive]}>
+                  <Icon size={22} color={color} focused={active} />
+                </View>
+                <Text style={[styles.tabLabel, { color: active ? C.text : C.sub, fontWeight: active ? '600' : '500' }]} numberOfLines={1}>
+                  {t.label}
+                </Text>
+              </Pressable>
+            );
+          })}
         </View>
       </SafeAreaView>
       <WhyModal visible={why} onClose={() => setWhy(false)} W={W} />
@@ -82,3 +120,89 @@ export default function App() {
     </SafeAreaProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    minHeight: 56,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: C.hairline,
+    gap: 10,
+  },
+  mark: {
+    width: 18,
+    height: 22,
+    flexDirection: 'row',
+    gap: 3,
+  },
+  markBar: {
+    flex: 1,
+    borderRadius: 2,
+  },
+  title: typo.title,
+  subtitle: typo.subtitle,
+  iconBtn: {
+    width: 44,
+    height: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  badge: {
+    minWidth: 56,
+    minHeight: 44,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 14,
+    borderWidth: StyleSheet.hairlineWidth,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  badgeValue: {
+    fontSize: 20,
+    lineHeight: 24,
+    fontWeight: '700',
+    letterSpacing: -0.5,
+    ...nums,
+  },
+  badgeLabel: {
+    color: C.sub,
+    fontSize: 9,
+    lineHeight: 11,
+    fontWeight: '500',
+    letterSpacing: 0.2,
+  },
+  tabBar: {
+    backgroundColor: 'rgba(12,16,24,0.94)',
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopColor: C.hairline,
+  },
+  tabs: {
+    flexDirection: 'row',
+    paddingTop: 4,
+    paddingHorizontal: 2,
+  },
+  tab: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 44,
+    paddingVertical: 4,
+  },
+  tabIconWell: {
+    width: 44,
+    height: 28,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  tabIconWellActive: {
+    backgroundColor: 'rgba(224,48,110,0.16)',
+  },
+  tabLabel: {
+    ...typo.tab,
+    marginTop: 1,
+  },
+});
